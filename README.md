@@ -1,5 +1,5 @@
 # shibat-students
-<span>![Swisslink](https://user-images.githubusercontent.com/37219226/145691285-3322a23c-4f22-447f-89c7-8da6a6ec4319.png)</span><span align="right">![Swisslink](https://user-images.githubusercontent.com/37219226/145691285-3322a23c-4f22-447f-89c7-8da6a6ec4319.png)</span>
+![Swisslink](https://user-images.githubusercontent.com/37219226/145691285-3322a23c-4f22-447f-89c7-8da6a6ec4319.png)
 
 ## Student Information System for SwissLink Higher Institute of Business and Technology Kumba and Bonaberi - Douala
 
