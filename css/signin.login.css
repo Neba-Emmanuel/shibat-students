@@ -20,8 +20,11 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 134px 700px;
-    grid-template-areas: "nav nav nav nav nav nav nav nav" "form form form form form form form form";
+    grid-template-rows: 134px 700px 105px;
+    grid-template-areas: "nav nav nav nav nav nav nav nav" 
+    "form form form form form form form form"
+    "left-gutter left-gutter left-gutter form-container form-container right-gutter right-gutter right-gutter"
+    "footer footer footer footer footer footer footer footer";
 }
 
 .left-gutter{
@@ -57,4 +60,19 @@ nav ul li a{
     background-position-y: -180px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.form-container{
+    grid-area: form-container;
+    background-color: blueviole;
+}
+
+footer{
+    display: flex;
+    grid-area: footer;
+    background-color: #0487D9;
+    color: #FFF;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
