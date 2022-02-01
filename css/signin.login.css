@@ -16,11 +16,21 @@ ul{
     list-style-type: none;
 }
 
-.container{
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 235px;
-    grid-template-areas: ;
+header{
+    background-color: #0487D9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: nav;
 }
 
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li a{
+    color: #FFF;
+    text-transform: uppercase;
+    padding-right: 37px;
+}
