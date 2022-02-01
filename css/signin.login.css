@@ -33,6 +33,7 @@ nav ul li a{
     text-transform: uppercase;
     border-radius: 5px;
     padding: 15px;
+    font-weight: bold;
 }
 
 nav ul li a:hover{
