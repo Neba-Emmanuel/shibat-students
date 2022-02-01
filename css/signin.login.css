@@ -15,3 +15,12 @@ a{
 ul{
     list-style-type: none;
 }
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 235px;
+    grid-template-areas: ;
+}
+
