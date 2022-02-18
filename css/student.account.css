@@ -21,10 +21,11 @@ ul{
 .container{
     display: flex;
     background: #0487D9;
-    justify-content: space-between;    
+    justify-content: space-between; 
+    padding: 0 10% 0 10%;   
 }
  nav{
-     display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
  }

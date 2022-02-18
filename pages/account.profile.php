@@ -11,7 +11,7 @@
         <?php include_once "../css/student.account.css" ?>
     </style>
     <div class="container">
-    <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="200" height="180"></a>
+    <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
         <nav>
             
             <img src="../img/user.png" alt="user-icon">
