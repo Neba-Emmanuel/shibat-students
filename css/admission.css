@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+header{
+    background-color: #0487D9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav p{
+    color: #FFF;
+    font-size: 20px;
+}
+
+/* Admission signin layout */
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 360px;
+    width: 418px;
+    background-color: #0487D9;
+    background: #CCCCCC;
+}
+
+.form-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: #0487D9;
+    width: 418px;
+    height: 70px;    
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details p{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.details select{
+    width: 360px;
+    height: 40px;
+}
+
+/* Admission Payment */
+.main-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-statement{
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFCC00;
+}
+
+.payment-statement p{
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.caption{
+    font-style: italic;
+}
+
+.mtn-to-shibat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mtn-to-shibat td{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.disabled{
+    width: 60px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    background: rgb(206, 197, 197);
+}
+
+.momo-number{
+    width: 350px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+p .payment-btn{
+    width: 250px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    background: #FFCC00;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Admission Personal Info */
+
+
+footer{
+    display: flex;
+    height: 100px;
+    background-color: #0487D9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: #FFF;
+}
