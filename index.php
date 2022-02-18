@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHIBAT Students - Admissions</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>SHIBAT Students - Admissions</title>    
     <link rel="icon" href="icon.ico" type="image/x-icon">
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <style>
+        <?php include_once "css/style.css" ?>
+    </style>
     <div class="container">
         <div class="left-gutter"></div>
         <header>
@@ -16,12 +19,26 @@
             <nav>
                 <ul>
                     <li><a href="#">Back to SHIBAT</a></li>
-                    <li><a href="#">Already a Student</a></li>
-                    <li><a href="pages/admission.signup.html">Admission</a></li>
+                    <li><a href="pages/account.signup.php">Already a Student</a></li>
+                    <li><a href="pages/admission.signup.php">Admission</a></li>
                 </ul>
             </nav>
         </header>
         <div class="hero-section">
+        <!-- <div class="slideshow-container"> -->
+
+        <!-- Full-width images with number and caption text -->
+        <!-- <div class="mySlides fade">
+        <img src="img/bg.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+        <img src="img/mtn.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+        <img src="img/bg.png" style="width:100%">
+        </div> -->
             <h1>Admissions</h1>
             <p>Get all info about admission requirements and our programs here</p>
         </div>
