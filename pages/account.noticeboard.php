@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Profile</title>
+    <title>Notice Board</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
 </head>
 <body>
@@ -22,7 +22,7 @@
         <p><a href="account.profile.php">PROFILE</a></p>
         <p><a href="account.payment.php">PAYMENT</a></p>
         <p><a href="#">NOTICE BOARD</a></p>
-        <p><a href="account.noticeboard.php">TIME TABLE</a></p>
+        <p><a href="account.timetable.php">TIME TABLE</a></p>
     </div>
 
     <footer>

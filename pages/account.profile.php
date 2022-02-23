@@ -22,7 +22,7 @@
         <p><a href="#">PROFILE</a></p>
         <p><a href="account.payment.php">PAYMENT</a></p>
         <p><a href="account.noticeboard.php">NOTICE BOARD</a></p>
-        <p><a href="sccount.timetable">TIME TABLE</a></p>
+        <p><a href="account.timetable.php">TIME TABLE</a></p>
     </div>
 
     <footer>
