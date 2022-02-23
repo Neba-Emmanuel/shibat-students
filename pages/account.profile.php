@@ -19,7 +19,7 @@
     </div>
     
     <div class="side-bar">
-        <p><a href="#">PROFILE</a></p>
+        <p><a href="#" class="active">PROFILE</a></p>
         <p><a href="account.payment.php">PAYMENT</a></p>
         <p><a href="account.noticeboard.php">NOTICE BOARD</a></p>
         <p><a href="account.timetable.php">TIME TABLE</a></p>
@@ -29,5 +29,7 @@
         <p>Powered by Emmis Technologies</p>
         <p>&copy copyright swisslink 2022</p>
     </footer>
+
+    <script src="../js.script.js"></script>
 </body>
 </html>
