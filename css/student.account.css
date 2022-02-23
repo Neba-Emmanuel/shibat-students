@@ -22,7 +22,8 @@ ul{
     display: flex;
     background: #0487D9;
     justify-content: space-between; 
-    padding: 0 5% 0 5%;   
+    padding: 0 5% 0 5%;
+    color: #FFF;   
 }
  nav{
     display: flex;
