@@ -24,5 +24,10 @@
         <p><a href="#">NOTICE BOARD</a></p>
         <p><a href="#">TIME TABLE</a></p>
     </div>
+
+    <footer>
+        <p>Powered by Emmis Technologies</p>
+        <p>&copy copyright swisslink 2022</p>
+    </footer>
 </body>
 </html>

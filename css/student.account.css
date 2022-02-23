@@ -55,3 +55,21 @@ ul{
     color: #0487D9;
     background: #FFF;
 }
+
+form p a{
+    color: #FFF;
+    font-size: 16px;
+}
+
+footer{
+    display: flex;
+    height: 100px;
+    background-color: #0487D9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: #FFF;
+}
