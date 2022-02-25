@@ -30,6 +30,6 @@
         <p>&copy copyright swisslink 2022</p>
     </footer>
 
-    <script src="../js.script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
