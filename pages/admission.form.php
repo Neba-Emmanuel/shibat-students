@@ -6,6 +6,9 @@
     <title>Admission Form</title>
 </head>
 <body>
+    <style>
+        <?php include_once "../css/admission.css" ?>
+    </style>
     <form id="regForm" action="">
 
     <h1>Register:</h1>
@@ -48,5 +51,6 @@
     </div>
 
     </form>
+    <script src="../js/script.js"></script>
 </body>
 </html>
