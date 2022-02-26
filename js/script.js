@@ -35,7 +35,7 @@ for (var i = 0; i < btns.length; i++) {
 }
 
 
-// ************** Admission Form ****************
+// ************** Admission Form ****************               
 
 function nextPrev(n) {
   // This function will figure out which tab to display
