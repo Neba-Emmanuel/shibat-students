@@ -200,6 +200,7 @@ p .payment-btn{
     color: #ffffff;
     border: none;
     padding: 10px 20px;
+    margin-top: 10px;
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
@@ -218,7 +219,9 @@ p .payment-btn{
       justify-content: center;
       height: 10%;
       width: auto;
-      background: grey;
+      /* background: grey; */
+      color: #0487D9;
+      border-bottom: 1px solid #0487D9;
       text-align: center;
   }
 
@@ -231,12 +234,21 @@ p .payment-btn{
     width: auto;
     font-size: 20px;
     font-weight: bold;
-    padding-left: 1.2%;
-    padding-right: 1.2%;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .step:last-child{
+    padding-right: 8px;    
+    border-radius: 0 5px 5px 0;
+  }
+
+  .step:first-child{    
+    border-radius: 5px 0 0 5px;
   }
 
   span img{ 
-    padding-right: 5px;
+    padding: 0 5px 0 20px;
   }
   
   /* Mark the active step: */
@@ -246,9 +258,7 @@ p .payment-btn{
   
   /* Mark the steps that are finished and valid: */
   .step.finish {
-    background-color:#0487D9;
-    color: #FFF;
-    
+    background: #AADDFE;
   }
 
   table{

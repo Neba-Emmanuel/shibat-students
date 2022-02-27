@@ -61,9 +61,24 @@
         </table>
     </div>
 
-    <div class="tab">Contact Info:
-        <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-        <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+    <div class="tab">
+        <table>
+            <tr>
+                <td><p>Father's Name</p><input type="text" name="father-name"></td>
+                <td><p>Father's Address</p><input type="text" name="father-address"></td>
+                <td><p>Father's Tel.</p><input type="text" name="father-num"></td>
+            </tr>
+            <tr>
+                <td><p>Mother's Name</p><input type="text" name="mother-name"></td>
+                <td><p>Mother's Address</p><input type="text" name="mother-address"></td>
+                <td><p>Father's Tel.</p><input type="text" name="mother-num"></td>
+            </tr>
+            <tr>
+                <td><p>Gaurdian/Sponsor's Name</p><input type="text" name="sponsor-name"></td>
+                <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
+                <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
+            </tr>
+        </table>
     </div>
 
     <div class="tab">Birthday:
