@@ -170,9 +170,9 @@ p .payment-btn{
 /* Style the form */
 #regForm {
     background-color: #ffffff;
-    height: 100%;
+    height: 75%;
     margin: 0 auto;
-    padding: 40px;
+    padding: 20px;
     width: 70%;
     min-width: 300px;
   }
@@ -182,7 +182,6 @@ p .payment-btn{
     padding: 10px;
     width: 100%;
     font-size: 17px;
-    font-family: Raleway;
     border: 1px solid #aaaaaa;
   }
   
@@ -197,12 +196,13 @@ p .payment-btn{
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #0487D9;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
+    margin-top: 10px;
     font-size: 17px;
-    font-family: Raleway;
+    font-weight: bold;
     cursor: pointer;
   }
   
@@ -219,34 +219,36 @@ p .payment-btn{
       justify-content: center;
       height: 10%;
       width: auto;
-      background: grey;
+      /* background: grey; */
+      color: #0487D9;
+      border-bottom: 1px solid #0487D9;
       text-align: center;
   }
 
-  /* Make circles that indicate the steps of the form: */
+  /* Make buttons indicate the steps of the form: */
   .step {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: auto;
     font-size: 20px;
     font-weight: bold;
-    padding-left: 1.5%;
-    padding-right: 1.2%;
-    /* margin-top: 20px; */
-    /* width: 10%; */  
-    /* height: 15px;
-    width: 100%;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5; */
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .step:last-child{
+    padding-right: 8px;    
+    border-radius: 0 5px 5px 0;
+  }
+
+  .step:first-child{    
+    border-radius: 5px 0 0 5px;
   }
 
   span img{ 
-    padding-right: 5px;
+    padding: 0 5px 0 20px;
   }
   
   /* Mark the active step: */
@@ -256,11 +258,64 @@ p .payment-btn{
   
   /* Mark the steps that are finished and valid: */
   .step.finish {
-    background-color:#0487D9;
-    color: #FFF;
-    
+    background: #AADDFE;
   }
 
+  table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td p span{
+    color: #FF0000;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+ td{
+   width: 20%;
+   /* padding-left: 5%; */
+ }
+
+ td p{
+   font-weight: bold;
+ }
+
+ td:first-child{
+   padding-left: 0;
+ }
+
+td div{
+  width: auto;
+  height: 190px;
+  border: 1px dashed grey;
+}
+
+input[type="file"]{
+  opacity: 0;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin-top: -8px;
+}
+
+td label{
+  display: inline-block;
+  position: absolute;
+  width: 19%;
+  height: 50px;
+  border-radius: 5px;
+  background: #0487D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
 
 footer{
     display: flex;

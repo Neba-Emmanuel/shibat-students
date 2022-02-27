@@ -20,41 +20,104 @@
             </nav>
         </header>
     </div>
-    <form id="regForm" action="">
+    <form id="regForm" action="" method="post">
         <!-- Circles which indicates the steps of the form: -->
     <div class="step-container">
-        <span class="step"><img src="../img/user-check.svg" alt=""> Personal Information</span>
-        <span class="step"><img src="../img/book.svg" alt="">Other Information</span>
-        <span class="step"><img src="../img/check.svg" alt="">Program Choice</span>
-        <span class="step"><img src="../img/graduation-cap.svg" alt="">Academic Qualification</span>
+        <span class="step"><img src="../img/user-check.png" alt=""> Personal Information</span>
+        <span class="step"><img src="../img/book.png" alt="">Other Information</span>
+        <span class="step"><img src="../img/check.png" alt="">Program Choice</span>
+        <span class="step"><img src="../img/graduation-cap.png" alt="">Academic Qualification</span>
     </div>
-    <h1>Register:</h1>
+    <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
-    <div class="tab">Name:
-        <p><input placeholder="First name..." oninput="this.className = ''"></p>
-        <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+    <div class="tab">
+        <!-- <table>
+            <tr>                
+                <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
+                <td><p>Gender</p><input type="text" name="gender"></td>
+                <td><p>National ID or Passport No.</p><input type="text" name="NI/P"></td>
+            </tr>
+            <tr>
+                <td><p>Date of Birth</p><input type="text" name="dob"></td>
+                <td><p>Nationality</p><input type="text" name="nationality"></td>
+                <td rowspan="3"><div></div><p><span>Picture must be on a red or white background</span></p></td>
+            </tr>
+            <tr>
+                <td><p>Place of Birth</p><input type="text" name="pob"></td>
+                <td><p>Marital Status</p><input type="text" name="marital-status"></td>                
+            </tr>
+            <tr>
+                <td><p>Telephone</p><input type="text" name="number"></td>
+                <td><p>Special Needs</p><input type="text" name="p-address"></td>
+            </tr>
+            <tr>
+                <td><p>Email</p><input type="email" name="email"></td>
+                <td><p>Permanent Address</p><input type="text" name="p-address"></td>
+                <td><label for="file">Upload Picture</label><input type="file" name="admission-pic" class="file"></td>
+            </tr>
+            <tr>
+                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="admission-pic" class="file"></td>
+            </tr>
+        </table> -->
     </div>
 
-    <div class="tab">Contact Info:
-        <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-        <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+    <div class="tab">
+        <!-- <table>
+            <tr>
+                <td><p>Father's Name</p><input type="text" name="father-name"></td>
+                <td><p>Father's Address</p><input type="text" name="father-address"></td>
+                <td><p>Father's Tel.</p><input type="text" name="father-num"></td>
+            </tr>
+            <tr>
+                <td><p>Mother's Name</p><input type="text" name="mother-name"></td>
+                <td><p>Mother's Address</p><input type="text" name="mother-address"></td>
+                <td><p>Father's Tel.</p><input type="text" name="mother-num"></td>
+            </tr>
+            <tr>
+                <td><p>Gaurdian/Sponsor's Name</p><input type="text" name="sponsor-name"></td>
+                <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
+                <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
+            </tr>
+        </table> -->
     </div>
 
-    <div class="tab">Birthday:
-        <p><input placeholder="dd" oninput="this.className = ''"></p>
-        <p><input placeholder="mm" oninput="this.className = ''"></p>
-        <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+    <div class="tab">
+        <p>Select School and Programme you wish to be admiited</p>
     </div>
 
-    <div class="tab">Login Info:
-        <p><input placeholder="Username..." oninput="this.className = ''"></p>
-        <p><input placeholder="Password..." oninput="this.className = ''"></p>
+    <div class="tab">
+        <h4>Qualification Requirement</h4>
+        <p>Upload all copies of qualification or certificate that are relevant to this application.</p>
+        <table border=1 style="text-align: center;">
+            <tr>
+                <td rowspan="2">Institute Attended</td>
+                <td colspan="2">Date</td>
+                <td rowspan="2">Programme of Study</td>
+                <td rowspan="2">Qualification Earned</td>
+                <td rowspan="2">Remarks/Honors</td>
+            </tr>
+            <tr>
+                <td>From</td>
+                <td>To</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="institute-name"></td>
+                <td><input type="text" name="from" placeholder="dd/mm/yyyy"></td>
+                <td><input type="text" name="to" placeholder="dd/mm/yyyy"></td>
+                <td><input type="text" name="program"></td>
+                <td><input type="text" name="qualification"></td>
+                <td><input type="text" name="remark"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left; display: inline;">Upload Qualification <label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
+            </tr>
+        </table>
     </div>
 
     <div style="overflow:auto;">
     <div style="float:right;">
-        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Save and Continue</button>
     </div>
     </div>
 
@@ -82,7 +145,7 @@
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
     } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").innerHTML = "Save and Continue";
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
