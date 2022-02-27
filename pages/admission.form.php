@@ -23,16 +23,42 @@
     <form id="regForm" action="">
         <!-- Circles which indicates the steps of the form: -->
     <div class="step-container">
-        <span class="step"><img src="../img/user-check.svg" alt=""> Personal Information</span>
-        <span class="step"><img src="../img/book.svg" alt="">Other Information</span>
-        <span class="step"><img src="../img/check.svg" alt="">Program Choice</span>
-        <span class="step"><img src="../img/graduation-cap.svg" alt="">Academic Qualification</span>
+        <span class="step"><img src="../img/user-check.png" alt=""> Personal Information</span>
+        <span class="step"><img src="../img/book.png" alt="">Other Information</span>
+        <span class="step"><img src="../img/check.png" alt="">Program Choice</span>
+        <span class="step"><img src="../img/graduation-cap.png" alt="">Academic Qualification</span>
     </div>
-    <h1>Register:</h1>
+    <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
-    <div class="tab">Name:
-        <p><input placeholder="First name..." oninput="this.className = ''"></p>
-        <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+    <div class="tab">
+        <table>
+            <tr>                
+                <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
+                <td><p>Gender</p><input type="text" name="gender"></td>
+                <td><p>National ID or Passport No.</p><input type="text" name="NI/P"></td>
+            </tr>
+            <tr>
+                <td><p>Date of Birth</p><input type="text" name="dob"></td>
+                <td><p>Nationality</p><input type="text" name="nationality"></td>
+                <td rowspan="3"><div></div><p><span>Picture must be on a red or white background</span></p></td>
+            </tr>
+            <tr>
+                <td><p>Place of Birth</p><input type="text" name="pob"></td>
+                <td><p>Marital Status</p><input type="text" name="marital-status"></td>                
+            </tr>
+            <tr>
+                <td><p>Telephone</p><input type="text" name="number"></td>
+                <td><p>Special Needs</p><input type="text" name="p-address"></td>
+            </tr>
+            <tr>
+                <td><p>Email</p><input type="email" name="email"></td>
+                <td><p>Permanent Address</p><input type="text" name="p-address"></td>
+                <td><label for="file">Upload Picture</label><input type="file" name="admission-pic" class="file"></td>
+            </tr>
+            <tr>
+                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="admission-pic" class="file"></td>
+            </tr>
+        </table>
     </div>
 
     <div class="tab">Contact Info:
@@ -53,8 +79,8 @@
 
     <div style="overflow:auto;">
     <div style="float:right;">
-        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Save and Continue</button>
     </div>
     </div>
 
@@ -82,7 +108,7 @@
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
     } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").innerHTML = "Save and Continue";
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
