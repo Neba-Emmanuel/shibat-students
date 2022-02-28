@@ -263,6 +263,8 @@ p .payment-btn{
 
   table{
     margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
   }
 
   td p span{
@@ -274,7 +276,7 @@ p .payment-btn{
 
  td{
    width: 20%;
-   padding-left: 5%;
+   /* padding-left: 5%; */
  }
 
  td p{

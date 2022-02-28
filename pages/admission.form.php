@@ -20,7 +20,7 @@
             </nav>
         </header>
     </div>
-    <form id="regForm" action="">
+    <form id="regForm" action="" method="post">
         <!-- Circles which indicates the steps of the form: -->
     <div class="step-container">
         <span class="step"><img src="../img/user-check.png" alt=""> Personal Information</span>
@@ -31,7 +31,7 @@
     <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
@@ -58,11 +58,11 @@
             <tr>
                 <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="admission-pic" class="file"></td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>
                 <td><p>Father's Name</p><input type="text" name="father-name"></td>
                 <td><p>Father's Address</p><input type="text" name="father-address"></td>
@@ -78,18 +78,40 @@
                 <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
                 <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
             </tr>
+        </table> -->
+    </div>
+
+    <div class="tab">
+        <p>Select School and Programme you wish to be admiited</p>
+    </div>
+
+    <div class="tab">
+        <h4>Qualification Requirement</h4>
+        <p>Upload all copies of qualification or certificate that are relevant to this application.</p>
+        <table border=1 style="text-align: center;">
+            <tr>
+                <td rowspan="2">Institute Attended</td>
+                <td colspan="2">Date</td>
+                <td rowspan="2">Programme of Study</td>
+                <td rowspan="2">Qualification Earned</td>
+                <td rowspan="2">Remarks/Honors</td>
+            </tr>
+            <tr>
+                <td>From</td>
+                <td>To</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="institute-name"></td>
+                <td><input type="text" name="from" placeholder="dd/mm/yyyy"></td>
+                <td><input type="text" name="to" placeholder="dd/mm/yyyy"></td>
+                <td><input type="text" name="program"></td>
+                <td><input type="text" name="qualification"></td>
+                <td><input type="text" name="remark"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left; display: inline;">Upload Qualification <label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
+            </tr>
         </table>
-    </div>
-
-    <div class="tab">Birthday:
-        <p><input placeholder="dd" oninput="this.className = ''"></p>
-        <p><input placeholder="mm" oninput="this.className = ''"></p>
-        <p><input placeholder="yyyy" oninput="this.className = ''"></p>
-    </div>
-
-    <div class="tab">Login Info:
-        <p><input placeholder="Username..." oninput="this.className = ''"></p>
-        <p><input placeholder="Password..." oninput="this.className = ''"></p>
     </div>
 
     <div style="overflow:auto;">
