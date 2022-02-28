@@ -1,3 +1,11 @@
+<?php 
+    if (!session_id()) session_start(); 
+    include '../include/db_connection.php';
+	$_SESSION["ID"] = $ID;
+	$sql = mysqli_query($conn,"SELECT * FROM registration WHERE ID='$ID'");
+	$row  = mysqli_fetch_array($sql);    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +24,7 @@
             <a href="../index.php"><p><img src="../img/nav logo.png" alt="SwissLink logo"></p></a>
             <nav>
                 <img src="../img/user.png" alt="user-icon">
-                <p>Neba Emmanuel Fuh <img src="../img/dropdown.png" alt=""></p>
+                <p><?php echo $row["Name"]; ?><img src="../img/dropdown.png" alt=""></p>
             </nav>
         </header>
         <div class="form-container">

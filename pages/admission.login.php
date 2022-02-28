@@ -23,15 +23,15 @@
             </nav>
         </header>
         <div class="admission-form-container">
-            <form action="" method="post">
+            <form action="../drivers/admission.login.php" method="post">
                 <div class="form-head">
                     <!-- <img src="../img/form-head.svg" alt="swisslink logo"> -->
                     <h2>SWISSLINK University</h2>
                     <h4>Apply for Admission into SwissLink University</h4>
                 </div>
-                <p><input type="email" placeholder="Email Address"></p>
-                <p><input type="password" placeholder="Password"></p>
-                <p class="submit-btn"><input type="submit" value="Login"></p>
+                <p><input type="email" placeholder="Email Address" name="email" required></p>
+                <p><input type="password" placeholder="Password" name="password" required></p>
+                <p class="submit-btn"><input type="submit" value="Login" name="login"></p>
                 <p class="other-links">
                     <a href="admission.signup.php">I don't have an account</a>
                     &nbsp;&nbsp;
