@@ -65,7 +65,7 @@
             <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>HND School Transcript (Year 1 and 2)</span></p>
             <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Photocopy of National Identity Card</span></p>
             <p id="enrolment-txt">Enrollment is Ongoing at SwissLink Campuses: Kumba & Bonaberi-Douala. Register now and benefit from<span>a free Smartphone and a Laptop</span></p>
-            <p id="apply-btn"><a href="pages/admission.signup.html">Apply Now</a></p>
+            <p id="apply-btn"><a href="pages/admission.signup.php">Apply Now</a></p>
         </div>
         <div class="our-programs">
             <h1>Our Programs - Distance Learning/On-Campus</h1>

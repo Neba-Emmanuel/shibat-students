@@ -55,6 +55,12 @@ nav ul li a:hover{
     background-position-y: center;
 }
 
+.error{
+    display: flex;
+    justify-content: center;
+    background: rgb(253, 167, 167);
+}
+
 .form-container form{
     display: flex;
     flex-direction: column;
@@ -130,7 +136,7 @@ form p input{
     background: none;
     border: none;
     border-bottom: 1px solid #0487D9;
-    color: #FFF;
+    /* color: #FFF; */
     font-weight: bold;
 }
 
