@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(isset($_POST['register'])){
         include_once '../include/db_connection.php';
 
@@ -31,5 +32,25 @@
         }
     }
 
-    
+    if(isset($_POST['login'])){
+        include_once '../include/db_connection.php';
+
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $pwd = mysqli_real_escape_string($conn, $_POST['password']);
+        $hpwd = MD5($pwd);
+
+        $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email='$email' AND `Password`='$hpwd'");
+        $row  = mysqli_fetch_array($sql);
+        if($row)
+        {
+            $_SESSION["ID"] = $row['ID'];
+            // $_SESSION["Email"]=$row['Email'];
+            // $_SESSION["Name"]=$row['Name'];
+            header("Location: ../pages/admission.program.php"); 
+        }
+        else
+        {
+            echo "Invalid Email ID/Password";
+        }
+    }
 ?>
