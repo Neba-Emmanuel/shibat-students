@@ -28,18 +28,15 @@
             <nav>                
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        <!-- <p> -->
-                            <img src="../img/user.png" alt="user-icon">
-                            <?php echo $_SESSION['username']; ?>
-                            <img src="../img/dropdown.png" alt="dropdown">
-                        <!-- </p> -->
+                        <img src="../img/user.png" alt="user-icon">
+                        <?php echo $_SESSION['username']; ?>
+                        <img src="../img/dropdown.png" alt="dropdown">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="../drivers/logout.php"><img src="../img/logout.png" alt="logout" width="20">Logout</a>
                     </div>
                 </div>
             </nav>
-        </header>
         </header>
         <div class="form-container">
             <form action="" method="post">

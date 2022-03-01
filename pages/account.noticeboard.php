@@ -24,8 +24,16 @@
     <div class="container">
         <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
         <nav>            
-            <img src="../img/user.png" alt="user-icon">
-            <p>Neba Emmanuel Fuh <img src="../img/dropdown.png" alt=""></p>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    <img src="../img/user.png" alt="user-icon">
+                    <?php echo $_SESSION['username']; ?>
+                    <img src="../img/dropdown.png" alt="dropdown">
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../drivers/logout.php"><img src="../img/logout.png" alt="logout" width="20">Logout</a>
+                </div>
+            </div>
         </nav>
     </div>
     
