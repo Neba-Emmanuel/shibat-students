@@ -5,6 +5,7 @@
     // checks if user not is logged in
     if(!isset($_SESSION['userid'])){
         header("location:admission.login.php");
+        exit;
     }
 ?>
 
