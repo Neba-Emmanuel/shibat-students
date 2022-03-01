@@ -27,7 +27,7 @@
                 <div class="form-head">
                     <!-- <img src="../img/form-head.svg" alt="swisslink logo"> -->
                     <h2>SWISSLINK University</h2>
-                    <h4>Apply for Admission into SwissLink University</h4>
+                    <h4>Login to Admission Account</h4>
                 </div>
                 <p><input type="email" placeholder="Email Address" name="email" required></p>
                 <p><input type="password" placeholder="Password" name="password" required></p>

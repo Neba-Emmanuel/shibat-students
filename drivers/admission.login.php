@@ -12,21 +12,26 @@
 
         $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email = '$email' LIMIT 1");
         if(mysqli_fetch_assoc($sql)>0){
-            echo "Email already exist";
+            header("Location:../pages/admission.signup.php?Email Already Exist!");
             exit;
         }
         elseif ($pwd != $cpwd) {
-            echo "Passwords do not match";
+            header("Location:../pages/admission.signup.php?Password do not match!");
             exit;
         }
         else{
             $query = "INSERT INTO registration(`Name`, `Email`, `DOB`, `Password`) VALUES('$name','$email','$dob','$hpwd')";
             $sql = mysqli_query($conn,$query);
             if($sql){
-                header("Location:../pages/admission.login.php?status=success");
+
+                $_SESSION['username'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['dob'] = $dob;
+                header("Location:../pages/admission.login.php?status=success!");
+                mysql_close($conn);
             }
             else{
-                echo "Error, try again";
+                header("Location:../pages/admission.signup.php?Error try again!");
                 exit;
             }
         }
@@ -40,17 +45,19 @@
         $hpwd = MD5($pwd);
 
         $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email='$email' AND `Password`='$hpwd'");
-        $row  = mysqli_fetch_array($sql);
-        if($row)
-        {
-            $_SESSION["ID"] = $row['ID'];
-            // $_SESSION["Email"]=$row['Email'];
-            // $_SESSION["Name"]=$row['Name'];
-            header("Location: ../pages/admission.program.php"); 
+        $row  = mysqli_fetch_assoc($sql);
+        if($row == TRUE){
+            $_SESSION['userid'] = $row['ID'];
+            $_SESSION["email"]=$row['Email'];
+            $_SESSION["username"]=$row['Name'];
+            header("Location: ../pages/admission.program.php?status=login success"); 
+            mysql_close($conn);
         }
         else
         {
-            echo "Invalid Email ID/Password";
+            header("Location:../pages/admission.login.php?Invalid email/password");
+            exit;
         }
     }
 ?>
+

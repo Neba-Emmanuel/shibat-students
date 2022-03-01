@@ -1,3 +1,14 @@
+<?php 
+    if (!session_id()) session_start(); 
+    include '../include/db_connection.php';
+	
+    // checks if user not is logged in
+    if(!isset($_SESSION['studid'])){
+        header("location:account.login.php");
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
