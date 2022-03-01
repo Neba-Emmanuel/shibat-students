@@ -28,6 +28,7 @@
                 $_SESSION['email'] = $email;
                 $_SESSION['dob'] = $dob;
                 header("Location:../pages/admission.login.php?status=success");
+                mysql_close($conn);
             }
             else{
                 echo "Error, try again";
@@ -48,7 +49,8 @@
         if($row == TRUE){
             $_SESSION['userid'] = $row['ID'];
             $_SESSION["Email"]=$row['Email'];
-            header("Location: ../pages/admission.program.php"); 
+            header("Location: ../pages/admission.program.php?status=login success"); 
+            mysql_close($conn);
         }
         else
         {
