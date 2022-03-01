@@ -23,6 +23,10 @@
             $query = "INSERT INTO registration(`Name`, `Email`, `DOB`, `Password`) VALUES('$name','$email','$dob','$hpwd')";
             $sql = mysqli_query($conn,$query);
             if($sql){
+
+                $_SESSION['username'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['dob'] = $dob;
                 header("Location:../pages/admission.login.php?status=success");
             }
             else{
@@ -40,17 +44,16 @@
         $hpwd = MD5($pwd);
 
         $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email='$email' AND `Password`='$hpwd'");
-        $row  = mysqli_fetch_array($sql);
-        if($row)
-        {
-            $_SESSION["ID"] = $row['ID'];
-            // $_SESSION["Email"]=$row['Email'];
-            // $_SESSION["Name"]=$row['Name'];
+        $row  = mysqli_fetch_assoc($sql);
+        if($row == TRUE){
+            $_SESSION['userid'] = $row['ID'];
+            $_SESSION["Email"]=$row['Email'];
             header("Location: ../pages/admission.program.php"); 
         }
         else
         {
             echo "Invalid Email ID/Password";
+            exit;
         }
     }
 ?>
