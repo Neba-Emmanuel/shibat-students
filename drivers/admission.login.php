@@ -12,11 +12,11 @@
 
         $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email = '$email' LIMIT 1");
         if(mysqli_fetch_assoc($sql)>0){
-            echo "Email already exist";
+            header("Location:../pages/admission.signup.php?Email Already Exist!");
             exit;
         }
         elseif ($pwd != $cpwd) {
-            echo "Passwords do not match";
+            header("Location:../pages/admission.signup.php?Password do not match!");
             exit;
         }
         else{
@@ -27,11 +27,11 @@
                 $_SESSION['username'] = $name;
                 $_SESSION['email'] = $email;
                 $_SESSION['dob'] = $dob;
-                header("Location:../pages/admission.login.php?status=success");
+                header("Location:../pages/admission.login.php?status=success!");
                 mysql_close($conn);
             }
             else{
-                echo "Error, try again";
+                header("Location:../pages/admission.signup.php?Error try again!");
                 exit;
             }
         }
@@ -54,7 +54,7 @@
         }
         else
         {
-            echo "Invalid Email ID/Password";
+            header("Location:../pages/admission.login.php?Invalid email/password");
             exit;
         }
     }
