@@ -25,10 +25,21 @@
     <div class="container">  
         <header>
             <a href="../index.php"><p><img src="../img/nav logo.png" alt="SwissLink logo"></p></a>
-            <nav>
-                <img src="../img/user.png" alt="user-icon">
-                <p><?php echo $_SESSION['username']; ?><img src="../img/dropdown.png" alt=""></p>
+            <nav>                
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        <!-- <p> -->
+                            <img src="../img/user.png" alt="user-icon">
+                            <?php echo $_SESSION['username']; ?>
+                            <img src="../img/dropdown.png" alt="dropdown">
+                        <!-- </p> -->
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="../drivers/logout.php"><img src="../img/logout.png" alt="logout" width="20">Logout</a>
+                    </div>
+                </div>
             </nav>
+        </header>
         </header>
         <div class="form-container">
             <form action="" method="post">
@@ -54,5 +65,26 @@
             <p>&copy copyright swisslink 2022</p>
         </footer>
     </div>
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

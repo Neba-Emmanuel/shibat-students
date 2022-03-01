@@ -48,7 +48,8 @@
         $row  = mysqli_fetch_assoc($sql);
         if($row == TRUE){
             $_SESSION['userid'] = $row['ID'];
-            $_SESSION["Email"]=$row['Email'];
+            $_SESSION["email"]=$row['Email'];
+            $_SESSION["username"]=$row['Name'];
             header("Location: ../pages/admission.program.php?status=login success"); 
             mysql_close($conn);
         }
@@ -59,3 +60,4 @@
         }
     }
 ?>
+
