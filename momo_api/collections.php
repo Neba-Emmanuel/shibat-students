@@ -54,13 +54,13 @@ if(isset($_POST['payment-btn'])){
         # Parameters
         $data = array(
             "amount" => "25000",
-            "currency" => "CFA", //default for sandbox
+            "currency" => "XAF", //default for sandbox
             "externalId" => "123456", //reference number
 
             "payer" => array(
 
                 "partyIdType" => "MSISDN",
-                "partyId"     => "233XXXXXXXXX"  //user phone number, these are test numbers)
+                "partyId"     => "$number"  //user phone number, these are test numbers)
             ),
 
             "payerMessage"=> "Payment Request",
