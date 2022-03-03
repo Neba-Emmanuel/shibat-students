@@ -7,8 +7,8 @@ if(isset($_POST['payment-btn'])){
 
     //put your API Key and Secret in these two variables.
     define('USER_ID', 'e996501c-e721-4ac1-97ff-dc6887b85e8c'); // API user id
-    define('API_KEY', ''); // API kEY
-    define('COLLECTION_SUBSCRIPTION_KEY', ''); // Collection subscription key
+    define('API_KEY', '64aaacbf2dbe4de98ae2839ea6e89243'); // API kEY
+    define('COLLECTION_SUBSCRIPTION_KEY', '296ca19fb21d47d780eb9412a087727e'); // Collection subscription key
 
     //Test here
     echo get_accesstoken();
@@ -83,7 +83,7 @@ if(isset($_POST['payment-btn'])){
             array(
                 'Content-Type: application/json',  //optional
                 'Authorization: Bearer '.$access_token, //optional
-                //'X-Callback-Url: https://anzilasandbox.ngrok.io', //optional, not required for sandbox
+                'X-Callback-Url: https://anzilasandbox.ngrok.io', //optional, not required for sandbox
                 'X-Reference-Id: '.get_uuid(),
                 'X-Target-Environment: sandbox',
                 'Ocp-Apim-Subscription-Key: '.COLLECTION_SUBSCRIPTION_KEY,
