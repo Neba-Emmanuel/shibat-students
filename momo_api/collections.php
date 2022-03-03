@@ -7,10 +7,10 @@ if(isset($_POST['payment-btn'])){
     //put your API Key and Secret in these two variables.
     define('USER_ID', 'e996501c-e721-4ac1-97ff-dc6887b85e8c'); // API user id
     define('API_KEY', '64aaacbf2dbe4de98ae2839ea6e89243'); // API kEY
-    define('COLLECTION_SUBSCRIPTION_KEY', '296ca19fb21d47d780eb9412a087727e'); // Collection subscription key
+    define('COLLECTION_SUBSCRIPTION_KEY', '64aaacbf2dbe4de98ae2839ea6e89243'); // Collection subscription key
 
     //Test here
-    echo get_accesstoken();
+    //echo get_accesstoken();
     echo requestToPay();
 
     //When called this function will request an Access Token
@@ -59,7 +59,7 @@ if(isset($_POST['payment-btn'])){
             "payer" => array(
 
                 "partyIdType" => "MSISDN",
-                "partyId"     => "$number"  //user phone number, these are test numbers)
+                "partyId"     => "".$number  //user phone number, these are test numbers)
             ),
 
             "payerMessage"=> "Payment Request",
