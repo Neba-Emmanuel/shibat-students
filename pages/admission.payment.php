@@ -53,10 +53,10 @@
                 <table>
                     <tr>
                         <td>MTN Mobile Money Number</td>
-                        <td><input type="text" placeholder="+237" disabled class="disabled"><input type="number" placeholder="Mobile Money Number" class="momo-number"></td>
+                        <td><input type="text" placeholder="+237" disabled class="disabled"><input type="number" placeholder="Mobile Money Number" class="momo-number" name="mobile-number"></td>
                     </tr>
                 </table>
-                <p><input type="submit" value="Make Payment" class="payment-btn"></p>
+                <p><input type="submit" value="Make Payment" class="payment-btn" name="payment-btn"></p>
             </div>
         </div>
         <footer>
