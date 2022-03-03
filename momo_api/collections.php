@@ -1,7 +1,6 @@
 <?
 
 if(isset($_POST['payment-btn'])){
-    include_once '../include/db_connection.php';
 
     $number = mysqli_real_escape_string($_POST['mobile-number']);
 
