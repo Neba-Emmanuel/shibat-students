@@ -13,11 +13,11 @@
     // access token
     function get_accesstoken(){
         // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
-        // require_once 'HTTP/Request2.php';
+        require_once 'HTTP/Request2.php';
         $credentials = base64_encode(USER_ID.':'.API_KEY);
 
-        // $request = 'https://sandbox.momodeveloper.mtn.com/collection/token/';
-        // $url = $request->getUrl();
+        $request = 'https://sandbox.momodeveloper.mtn.com/collection/token/';
+        $url = $request->getUrl();
 
         $headers = array(
             // Request headers
@@ -50,7 +50,7 @@
 //request to pay
     function requestToPay(){
         // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
-        // require_once 'HTTP/Request2.php';
+        require_once 'HTTP/Request2.php';
         $access_token = get_accesstoken();
 
         $request = new Http_Request2('https://sandbox.momodeveloper.mtn.com/collection/v1_0/requesttopay');
