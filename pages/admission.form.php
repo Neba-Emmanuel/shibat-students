@@ -28,7 +28,7 @@
             <nav>
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        <img src="../img/user.png" alt="user-icon">
+                        <img src="../img/user.png" alt="user-icon" width="20" height="20">
                         <?php echo $_SESSION['username']; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
