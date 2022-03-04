@@ -306,8 +306,8 @@ p .payment-btn{
 
   table{
     margin-top: 20px;
-    border-collapse: collapse;
-    width: 100%;
+    /* border-collapse: collapse; */
+    /* width: 100%; */
   }
 
   td p span{
@@ -317,9 +317,13 @@ p .payment-btn{
     font-weight: normal;
   }
 
+  .tab h4{
+    padding: 15px 0 15px 0;
+  }
+
  td{
    width: 20%;
-   /* padding-left: 5%; */
+   padding-left: 5%;
  }
 
  td p{
@@ -358,6 +362,12 @@ td label{
   font-weight: bold;
   cursor: pointer;
   transition: transform .2s ease-out;
+}
+
+.add-btn{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0 20px 0;
 }
 
 footer{
