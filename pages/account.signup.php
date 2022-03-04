@@ -29,12 +29,12 @@
                     <h2>SWISSLINK University</h2>
                     <h4>Enter your personal details to create an account</h4>
                 </div>
-                <p><input type="text" placeholder="Matriculation Number"></p>
-                <p><input type="email" placeholder="Institutional Email"></p>
-                <p><input type="text" placeholder="Telephone No."></p>
-                <p><input type="password" placeholder="Password"></p>
-                <p><input type="password" placeholder="Confirm Password"></p>
-                <p class="submit-btn"><input type="submit" value="Create Account"></p>
+                <p><input type="text" placeholder="Matriculation Number" name="matricle-number"></p>
+                <p><input type="email" placeholder="Institutional Email" name="institute-email"></p>
+                <p><input type="text" placeholder="Telephone No." name="tel"></p>
+                <p><input type="password" placeholder="Password" name="password"></p>
+                <p><input type="password" placeholder="Confirm Password" name="confirm-password"></p>
+                <p class="submit-btn"><input type="submit" value="Create Account" name="create-account"></p>
                 <p class="other-links">
                     <a href="account.login.php">I already have an account</a>
                     &nbsp;&nbsp;

@@ -10,7 +10,7 @@
         $cpwd = mysqli_real_escape_string($conn, $_POST['confirm-password']);
         $hpwd = MD5($pwd);
 
-        $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email = '$email' LIMIT 1");
+        $sql = mysqli_query($conn,"SELECT * FROM registration_account WHERE Email = '$email' LIMIT 1");
         if(mysqli_fetch_assoc($sql)>0){
             header("Location:../pages/admission.signup.php?Email Already Exist!");
             exit;
@@ -20,7 +20,7 @@
             exit;
         }
         else{
-            $query = "INSERT INTO registration(`Name`, `Email`, `DOB`, `Password`) VALUES('$name','$email','$dob','$hpwd')";
+            $query = "INSERT INTO registration_account(`Name`, `Email`, `DOB`, `Password`) VALUES('$name','$email','$dob','$hpwd')";
             $sql = mysqli_query($conn,$query);
             if($sql){
 
@@ -44,7 +44,7 @@
         $pwd = mysqli_real_escape_string($conn, $_POST['password']);
         $hpwd = MD5($pwd);
 
-        $sql = mysqli_query($conn,"SELECT * FROM registration WHERE Email='$email' AND `Password`='$hpwd'");
+        $sql = mysqli_query($conn,"SELECT * FROM registration_account WHERE Email='$email' AND `Password`='$hpwd'");
         $row  = mysqli_fetch_assoc($sql);
         if($row == TRUE){
             $_SESSION['userid'] = $row['ID'];
