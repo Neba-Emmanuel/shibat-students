@@ -108,27 +108,28 @@
         <h4>Qualification Requirement</h4>
         <p>Upload all copies of qualification or certificate that are relevant to this application.</p>
         <table border=2 style="text-align: center; border-collapse: collapse; border: 2px solid grey; font-size: 20px;">
-            <tr>
-                <td rowspan="2" style="width: 20%; padding-left: 0;">Institute Attended</td>
-                <td colspan="2" style="width: 20%; padding-left: 0;">Date</td>
-                <td rowspan="2" style="width: 20%; padding-left: 0;">Programme of Study</td>
-                <td rowspan="2" style="width: 20%; padding-left: 0;">Qualification Earned</td>
-                <td rowspan="2" style="width: 20%; padding-left: 0;">Remarks/Honors</td>
+            <tr style="font-weight: 600;">
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Institute Attended</td>
+                <td colspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Date</td>
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Programme of Study</td>
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Qualification Earned</td>
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Remarks/Honors</td>
             </tr>
-            <tr>
+            <tr style="font-weight: 600; text-align: center;">
                 <td>From</td>
                 <td>To</td>
             </tr>
             <tr>
                 <td><input type="text" name="institute-name"></td>
-                <td><input type="text" name="from"></td>
+                <td><input type="text" name="from" style="padding-right: 100px"></td>
                 <td><input type="text" name="to"></td>
                 <td><input type="text" name="program"></td>
                 <td><input type="text" name="qualification"></td>
                 <td><input type="text" name="remark"></td>
             </tr>
             <tr>
-                <td style="text-align: left; display: inline;">Upload Qualification <label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
+                <td style="border: none; padding: 20px;">Upload Qualification </td>
+                <td  style="border: none; padding: 20px;"><label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
             </tr>
         </table>
         <div class="add-btn">
