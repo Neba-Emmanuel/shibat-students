@@ -49,8 +49,8 @@
                     <p>
                         <select name="" id="">
                             <option>Appling for...</option>
-                            <option>HND</option>
-                            <option>Degree</option>
+                            <option><a href="admission.payment.php">HND</a></option>
+                            <option><a href="admission.payment.degree.php">Degree</a></option>
                         </select>
                     </p>
                     <p><img src="../img/mtn.jpg" alt="mtn logo" width="200"></p>
