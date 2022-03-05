@@ -10,8 +10,10 @@ if(isset($_POST['payment-btn'])){
     define('COLLECTION_SUBSCRIPTION_KEY', '64aaacbf2dbe4de98ae2839ea6e89243'); // Collection subscription key
 
     //Test here
-    //echo get_accesstoken();
-    echo requestToPay();
+    // echo get_accesstoken();
+    // echo requestToPay();
+    get_accesstoken();
+    requestToPay();
 
     //When called this function will request an Access Token
     function get_accesstoken(){
@@ -35,7 +37,8 @@ if(isset($_POST['payment-btn'])){
         $response = curl_exec($ch);
         $response = json_decode($response);
 
-    $access_token = $response->access_token;
+        $access_token = $response->access_token;
+        // $access_token = $response;
         if(!$access_token){
             throw new Exception("Invalid access token generated");
             return FALSE;
@@ -64,7 +67,6 @@ if(isset($_POST['payment-btn'])){
 
             "payerMessage"=> "Payment Request",
             "payeeNote"=> "Please confirm payment"
-
 
             );
 

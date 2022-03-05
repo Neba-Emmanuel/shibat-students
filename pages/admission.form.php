@@ -28,7 +28,7 @@
             <nav>
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        <img src="../img/user.png" alt="user-icon">
+                        <img src="../img/user.png" alt="user-icon" width="20" height="20">
                         <?php echo $_SESSION['username']; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
@@ -50,7 +50,7 @@
     <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
@@ -77,11 +77,11 @@
             <tr>
                 <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="admission-pic" class="file"></td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>
                 <td><p>Father's Name</p><input type="text" name="father-name"></td>
                 <td><p>Father's Address</p><input type="text" name="father-address"></td>
@@ -97,7 +97,7 @@
                 <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
                 <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class="tab">
@@ -107,30 +107,34 @@
     <div class="tab">
         <h4>Qualification Requirement</h4>
         <p>Upload all copies of qualification or certificate that are relevant to this application.</p>
-        <table border=1 style="text-align: center;">
-            <tr>
-                <td rowspan="2">Institute Attended</td>
-                <td colspan="2">Date</td>
-                <td rowspan="2">Programme of Study</td>
-                <td rowspan="2">Qualification Earned</td>
-                <td rowspan="2">Remarks/Honors</td>
+        <table border=2 style="text-align: center; border-collapse: collapse; border: 2px solid grey; font-size: 20px;">
+            <tr style="font-weight: 600;">
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Institute Attended</td>
+                <td colspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Date</td>
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Programme of Study</td>
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Qualification Earned</td>
+                <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Remarks/Honors</td>
             </tr>
-            <tr>
+            <tr style="font-weight: 600; text-align: center;">
                 <td>From</td>
                 <td>To</td>
             </tr>
             <tr>
                 <td><input type="text" name="institute-name"></td>
-                <td><input type="text" name="from" placeholder="dd/mm/yyyy"></td>
-                <td><input type="text" name="to" placeholder="dd/mm/yyyy"></td>
+                <td><input type="text" name="from" style="padding-right: 100px"></td>
+                <td><input type="text" name="to"></td>
                 <td><input type="text" name="program"></td>
                 <td><input type="text" name="qualification"></td>
                 <td><input type="text" name="remark"></td>
             </tr>
             <tr>
-                <td style="text-align: left; display: inline;">Upload Qualification <label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
+                <td style="border: none; padding: 20px;">Upload Qualification </td>
+                <td  style="border: none; padding: 20px;"><label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
             </tr>
         </table>
+        <div class="add-btn">
+        <button style="float: left; background: #00985A">&plus; Add Qualification</button>
+        </div>
     </div>
 
     <div style="overflow:auto;">

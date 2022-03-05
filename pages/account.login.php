@@ -29,9 +29,9 @@
                     <h2>SWISSLINK University</h2>
                     <h4>Enter the following fields to login</h4>
                 </div>
-                <p><input type="text" placeholder="Matriculation Number"></p>
-                <p><input type="password" placeholder="Password"></p>
-                <p class="submit-btn"><input type="submit" value="Login"></p>
+                <p><input type="text" placeholder="Matriculation Number" name="matricle-number"></p>
+                <p><input type="password" placeholder="Password" name="password"></p>
+                <p class="submit-btn"><input type="submit" value="Login" name="login"></p>
                 <p class="other-links">
                     <a href="account.signup.php">I don't have an account</a>
                     &nbsp;&nbsp;
