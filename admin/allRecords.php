@@ -118,7 +118,7 @@
                         </thead>
                         <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                  $query = "select * from student_data";
+                  $query = "select * from registration_account";
                   $result = mysqli_query($mysqli,$query);
                   while($addrow = mysqli_fetch_array($result)){
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
@@ -146,7 +146,7 @@ else{
 ?>
             <?php 
 echo "<script language='javascript'>alert('Login to continue');
-window.location.href='/Online-College-Admission-System-PHP-MySQL/admin';
+window.location.href='/shibat-students/admin';
  </script>";
 
 }

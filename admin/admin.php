@@ -2,8 +2,8 @@
 	session_start();
 	if(isset($_SESSION['email']))
 	{
-      include '../include/db_connection.php';
-   //  $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+      include 'variables.php';
+    $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
     $query = "SELECT count(*) FROM registration_account"; 
     // Count of Student Data
     $result = $mysqli->query($query) or die($mysqli->error);
@@ -82,7 +82,7 @@
                      <th>Joined</th>
                   </tr>
                 <?php
-               //  $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+                $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
                 $query = "SELECT * FROM registration_account ORDER BY id DESC LIMIT 5 ";
                 $result = mysqli_query($conn,$query);       
                 while($addrow = mysqli_fetch_array($result)) 
@@ -157,6 +157,6 @@
   else
     {
       echo "<script language='javascript'>alert('Login to continue');
-			window.location.href='/Online-College-Admission-System-PHP-MySQL/admin';
+			window.location.href='/shibat-students/admin';
              </script>";  }
 ?>

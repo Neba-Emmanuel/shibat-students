@@ -3,9 +3,9 @@ session_start();
     $errmsg_array = array();
     $errflag = false;   
     $msg="";
-    include '../include/db_connection.php';
-    // $conn = new PDO("mysql:host=$databaseHost;dbname=$databaseName;", $databaseUsername, $databasePassword);
-    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include 'variables.php';
+    $conn = new PDO("mysql:host=$databaseHost;dbname=$databaseName;", $databaseUsername, $databasePassword);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     //login admin
     if(isset($_POST['login'])){
@@ -21,14 +21,14 @@ session_start();
             $errflag = true;
         }
 
-        // $result = $conn->prepare("SELECT * FROM admins WHERE `Email`=? AND `Password`=?");
-        // $result->bindParam(1, $email);
-        // $result->bindParam(2, $password);
-        // $result->execute();
-        // $rows = $result->fetch(PDO::FETCH_NUM);
-        $sql = mysqli_query($conn, "SELECT * FROM admins WHERE `Email` = '$email' AND `Password` = '$password'");
-        $row  = mysqli_fetch_assoc($sql);
-        if($rows == TRUE) {
+        $result = $conn->prepare("SELECT * FROM admins WHERE `Email`=? AND `Password`=?");
+        $result->bindParam(1, $email);
+        $result->bindParam(2, $password);
+        $result->execute();
+        $rows = $result->fetch(PDO::FETCH_NUM);
+        // $sql = mysqli_query($conn, "SELECT * FROM admins WHERE `Email` = '$email' AND `Password` = '$password'");
+        // $row  = mysqli_fetch_assoc($sql);
+        if($rows >0) {
         $_SESSION['email'] = $email;
         header("Location: ../admin/admin.php");
         }
