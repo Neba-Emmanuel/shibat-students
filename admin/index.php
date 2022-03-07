@@ -1,6 +1,7 @@
 <title>Admin Area | Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/login.css">
+<link rel="icon" href="../icon.ico" type="image/x-icon">
 <div class="modal-dialog login-center"> 
   <div class="loginmodal-container">
     <h1> Admin Login </h1>
