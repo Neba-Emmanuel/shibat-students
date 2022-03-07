@@ -15,6 +15,7 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" href="../icon.ico" type="image/x-icon">
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -217,7 +218,7 @@ else{
 ?>
             <?php 
             echo "<script language='javascript'>alert('Login to continue');
-			window.location.href='/Online-College-Admission-System-PHP-MySQL/admin';
+			window.location.href='/shibat-students/admin';
              </script>";
 }
 ?>
