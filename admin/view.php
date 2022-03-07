@@ -7,7 +7,7 @@ if(isset($_SESSION['email']))
 	include 'variables.php';
 	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
 
-	$query = "SELECT * FROM student_data WHERE id =$id"; 
+	$query = "SELECT * FROM registration_account WHERE id =$id"; 
 	$result = $mysqli->query($query) or die($mysqli->error);
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
