@@ -3,14 +3,15 @@ session_start();
     $errmsg_array = array();
     $errflag = false;   
     $msg="";
-    include 'variables.php';
-    $conn = new PDO("mysql:host=$databaseHost;dbname=$databaseName;", $databaseUsername, $databasePassword);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include '../include/db_connection.php';
+    // $conn = new PDO("mysql:host=$databaseHost;dbname=$databaseName;", $databaseUsername, $databasePassword);
+    // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     //login admin
     if(isset($_POST['login'])){
         $email = $_POST['email'];
-        $password = $_POST['pass'];
+        $pwd = $_POST['pass'];
+        $password = md5($pwd);
 
         if($email == '') {
             $errmsg_arr[] = 'You must enter your Email';
@@ -21,7 +22,7 @@ session_start();
             $errflag = true;
         }
 
-        $result = $conn->prepare("SELECT * FROM admins WHERE email=? AND password=?");
+        $result = $conn->prepare("SELECT * FROM admins WHERE `Email`=? AND `Password`=?");
         $result->bindParam(1, $email);
         $result->bindParam(2, $password);
         $result->execute();
