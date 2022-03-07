@@ -39,7 +39,7 @@
             </nav>
         </header>
     </div>
-    <form id="regForm" action="" method="post">
+    <form id="regForm" action="../drivers/admissionform.handler.php" method="post">
         <!-- Circles which indicates the steps of the form: -->
     <div class="step-container">
         <span class="step"><img src="../img/user-check.png" alt=""> Personal Information</span>
@@ -54,7 +54,7 @@
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
-                <td><p>National ID or Passport No.</p><input type="text" name="NI/P"></td>
+                <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="NI/P" class="file"></td>
             </tr>
             <tr>
                 <td><p>Date of Birth</p><input type="text" name="dob"></td>
@@ -67,7 +67,7 @@
             </tr>
             <tr>
                 <td><p>Telephone</p><input type="text" name="number"></td>
-                <td><p>Special Needs</p><input type="text" name="p-address"></td>
+                <td><p>Special Needs</p><input type="text" name="special-needs"></td>
             </tr>
             <tr>
                 <td><p>Email</p><input type="email" name="email"></td>
@@ -75,13 +75,13 @@
                 <td><label for="file">Upload Picture</label><input type="file" name="admission-pic" class="file"></td>
             </tr>
             <tr>
-                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="admission-pic" class="file"></td>
+                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth-certificate" class="file"></td>
             </tr>
         </table>
     </div>
 
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>
                 <td><p>Father's Name</p><input type="text" name="father-name"></td>
                 <td><p>Father's Address</p><input type="text" name="father-address"></td>
@@ -97,7 +97,7 @@
                 <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
                 <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class="tab">
@@ -107,7 +107,7 @@
     <div class="tab">
         <h4>Qualification Requirement</h4>
         <p>Upload all copies of qualification or certificate that are relevant to this application.</p>
-        <table border=2 style="text-align: center; border-collapse: collapse; border: 2px solid grey; font-size: 20px;">
+        <!-- <table border=2 style="text-align: center; border-collapse: collapse; border: 2px solid grey; font-size: 20px;">
             <tr style="font-weight: 600;">
                 <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Institute Attended</td>
                 <td colspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Date</td>
@@ -131,7 +131,7 @@
                 <td style="border: none; padding: 20px;">Upload Qualification </td>
                 <td  style="border: none; padding: 20px;"><label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
             </tr>
-        </table>
+        </table> -->
         <div class="add-btn">
         <button style="float: left; background: #00985A">&plus; Add Qualification</button>
         </div>
