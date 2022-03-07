@@ -50,7 +50,7 @@
     <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <!-- <table>
+        <table>
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
@@ -77,11 +77,11 @@
             <tr>
                 <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="admission-pic" class="file"></td>
             </tr>
-        </table> -->
+        </table>
     </div>
 
     <div class="tab">
-        <!-- <table>
+        <table>
             <tr>
                 <td><p>Father's Name</p><input type="text" name="father-name"></td>
                 <td><p>Father's Address</p><input type="text" name="father-address"></td>
@@ -97,7 +97,7 @@
                 <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
                 <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
             </tr>
-        </table> -->
+        </table>
     </div>
 
     <div class="tab">
