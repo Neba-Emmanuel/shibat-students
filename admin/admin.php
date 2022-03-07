@@ -79,20 +79,23 @@
                     <th>ID</th>
                      <th>Name</th>
                      <th>Email</th>
+                     <th>Date of Birth</th>
                      <th>Joined</th>
                   </tr>
                 <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
                 $query = "SELECT * FROM registration_account ORDER BY id DESC LIMIT 5 ";
-                $result = mysqli_query($conn,$query);       
+                $result = mysqli_query($mysqli,$query);       
                 while($addrow = mysqli_fetch_array($result)) 
                   {
-                    $newDate = date('d-M-Y',strtotime($addrow[11]));
+                  //   $newDate = date('d-M-Y',strtotime($addrow[11]));
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
                     echo "<td>$addrow[1]</td>";
-                    echo "<td>$addrow[9]</td>";
-                    echo "<td>$newDate</td>";
+                    echo "<td>$addrow[2]</td>";
+                    echo "<td>$addrow[3]</td>";
+                    echo "<td>$addrow[5]</td>";
+                  //   echo "<td>$newDate</td>";
                     echo "</tr>";
 
                   }

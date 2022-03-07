@@ -6,9 +6,9 @@
         include 'variables.php';
                
         $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-        $query = "SELECT count(*) FROM student_data"; 
+        $query = "SELECT count(*) FROM registration_account"; 
         $q2 = "SELECT count(*) FROM courses";
-        $q3 ="SELECT count(*) from education_information_be";
+        $q3 ="SELECT count(*) from admission";
         // Count of Student Data
         $result = $mysqli->query($query) or die($mysqli->error);
 		if($result->num_rows > 0) 
