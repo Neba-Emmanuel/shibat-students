@@ -129,7 +129,7 @@ else{
 	?>
 	<?php	
 	echo "<script language='javascript'>alert('Login to continue');
-	window.location.href='/Online-College-Admission-System-PHP-MySQL/admin';
+	window.location.href='/shibat-students/admin';
 	</script>";
 
 }
