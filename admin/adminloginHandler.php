@@ -10,8 +10,7 @@ session_start();
     //login admin
     if(isset($_POST['login'])){
         $email = $_POST['email'];
-        $pwd = $_POST['pass'];
-        $password = md5($pwd);
+        $password = $_POST['pass'];
 
         if($email == '') {
             $errmsg_arr[] = 'You must enter your Email';
@@ -22,18 +21,20 @@ session_start();
             $errflag = true;
         }
 
-        $result = $conn->prepare("SELECT * FROM admins WHERE `Email`=? AND `Password`=?");
-        $result->bindParam(1, $email);
-        $result->bindParam(2, $password);
-        $result->execute();
-        $rows = $result->fetch(PDO::FETCH_NUM);
-        if($rows > 0) {
+        // $result = $conn->prepare("SELECT * FROM admins WHERE `Email`=? AND `Password`=?");
+        // $result->bindParam(1, $email);
+        // $result->bindParam(2, $password);
+        // $result->execute();
+        // $rows = $result->fetch(PDO::FETCH_NUM);
+        $sql = mysqli_query($conn, "SELECT * FROM admins WHERE `Email` = '$email' AND `Password` = '$password'");
+        $row  = mysqli_fetch_assoc($sql);
+        if($rows == TRUE) {
         $_SESSION['email'] = $email;
         header("Location: ../admin/admin.php");
         }
         else{
 			echo "<script language='javascript'>alert('Username/Password not found');
-			window.location.href='/Online-College-Admission-System-PHP-MySQL/admin/';
+			window.location.href='/shibat-students/admin/';
 			 </script>";
         }
         if($errflag) {

@@ -2,5 +2,5 @@
     $databaseHost = "localhost";
     $databaseUsername = "root";
     $databasePassword = "";
-    $databaseName = "admission2018";
+    $databaseName = "shibat_students";
 ?>

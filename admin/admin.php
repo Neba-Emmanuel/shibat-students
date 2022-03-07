@@ -2,9 +2,9 @@
 	session_start();
 	if(isset($_SESSION['email']))
 	{
-    include 'variables.php';
-    $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-    $query = "SELECT count(*) FROM student_data"; 
+      include '../include/db_connection.php';
+   //  $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+    $query = "SELECT count(*) FROM registration_account"; 
     // Count of Student Data
     $result = $mysqli->query($query) or die($mysqli->error);
     if($result->num_rows > 0) 
@@ -82,9 +82,9 @@
                      <th>Joined</th>
                   </tr>
                 <?php
-                $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                $query = "SELECT * FROM student_data ORDER BY id DESC LIMIT 5 ";
-                $result = mysqli_query($mysqli,$query);       
+               //  $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+                $query = "SELECT * FROM registration_account ORDER BY id DESC LIMIT 5 ";
+                $result = mysqli_query($conn,$query);       
                 while($addrow = mysqli_fetch_array($result)) 
                   {
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
