@@ -102,29 +102,7 @@
 
     <div class="tab">
         <p>Select School and Programme you wish to be admiited</p>
-        <div class="dropdown1">
-        <button onclick="myfunction()" class="dropbtn1">Dropdown</button>
-        <div id="myDropdown1" class="dropdown-content1 tab1">
-            <button class="tablinks" onclick="openCity(event, 'London')">Home</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">About</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Contact</button>
-        </div>
-        </div>
-
-        <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-        </div>
-
-        <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p> 
-        </div>
-
-        <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-        </div>
+        
     </div>
 
     <div class="tab">
@@ -199,33 +177,14 @@
     }
 
     /* Logout drop down*/
-    // function myFunction() {
-    // document.getElementById("myDropdown").classList.toggle("show");
-    // }
-
-    // // Close the dropdown if the user clicks outside of it
-    // window.onclick = function(event) {
-    // if (!event.target.matches('.dropbtn')) {
-    //     var dropdowns = document.getElementsByClassName("dropdown-content");
-    //     var i;
-    //     for (i = 0; i < dropdowns.length; i++) {
-    //     var openDropdown = dropdowns[i];
-    //     if (openDropdown.classList.contains('show')) {
-    //         openDropdown.classList.remove('show');
-    //     }
-    //     }
-    // }
-    // }
-
-    // admission step 3
-    function myfunction() {
-    document.getElementById("myDropdown1").classList.toggle("show");
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
     }
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn1')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content1");
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
@@ -234,20 +193,6 @@
         }
         }
     }
-    }
-
-    function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
     }
     </script>
     <script>
