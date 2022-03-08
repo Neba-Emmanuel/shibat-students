@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+// if(isset($_POST['submit'])){
     include_once '../include/db_connection.php';
 
     $Name = stripslashes($_POST['name']);
@@ -14,7 +14,7 @@ session_start();
     $special_needs = mysqli_real_escape_string($conn, $_POST['special-needs']);
     $address = mysqli_real_escape_string($conn, $_POST['p-address']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pic = mysqli_real_escape_string($conn, $_POST['admission-pic']);
+    // $pic = mysqli_real_escape_string($conn, $_POST['admissionPic']);
     // $birth_certificate = mysqli_real_escape_string($conn, $_POST['birth-certificate']);
 
     // $father_name = mysqli_real_escape_string($conn, $_POST['father-name']);
@@ -28,21 +28,22 @@ session_start();
     // $sponsor_num = mysqli_real_escape_string($conn, $_POST['sponsor-num']);
 
     
-    $filename = $_FILES["admission-pic"]["name"];
-    $tempname = $_FILES["admission-pic"]["tmp_name"];    
+    $filename = $_FILES["admissionPic"]["name"];
+    $tempname = $_FILES["admissionPic"]["tmp_name"];    
         $folder = "upload/".$filename;
   
         // Now let's move the uploaded image into the folder: image
         
-        $query = "INSERT INTO admission(`Name`, `DOB`, `POB`, `Tel`, `Email`, `Gender`, `Nationality`, `Marital_Status`, `Special_Needs`, `Specail_Needs`, `Address`, `Picture` VALUES('$Name', '$dob', '$pob', '$email', '$gender', '$nationality', '$marital_status',, '$special_needs', '$address', '$filename'))";
+        $query = "INSERT INTO admission(`Name`, `DOB`, `POB`, `Tel`, `Email`, `Gender`, `Nationality`, `Marital_Status`, `Special_Needs`, `Address`) VALUES('$Name', '$dob', '$pob', '$tel', '$email', '$gender', '$nationality', '$marital_status', '$special_needs', '$address')";
         $sql = mysqli_query($conn,$query);
         if($sql){
-            move_uploaded_file($tempname, $folder);
+            // move_uploaded_file($tempname, $folder);
             echo"Insertion successful";
-            mysql_close($conn);
+            mysqli_close($conn);
         }
         else{
             echo"Insertion unsuccesful";
             exit;
         }
-    
+
+// }
