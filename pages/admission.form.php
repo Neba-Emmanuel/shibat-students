@@ -39,7 +39,7 @@
             </nav>
         </header>
     </div>
-    <form id="regForm" action="../drivers/admissionform.handler.php" method="post">
+    <form id="regForm" action="../drivers/admissionform.handler.php" method="post" enctype="multipart/form-data">
         <!-- Circles which indicates the steps of the form: -->
     <div class="step-container">
         <span class="step"><img src="../img/user-check.png" alt=""> Personal Information</span>
@@ -50,11 +50,11 @@
     <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
-                <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="NI/P" class="file"></td>
+                <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="id_card" class="file"></td>
             </tr>
             <tr>
                 <td><p>Date of Birth</p><input type="text" name="dob"></td>
@@ -72,12 +72,12 @@
             <tr>
                 <td><p>Email</p><input type="email" name="email"></td>
                 <td><p>Permanent Address</p><input type="text" name="p-address"></td>
-                <td><label for="file">Upload Picture</label><input type="file" name="admission-pic" class="file"></td>
+                <td><label for="file">Upload Picture</label><input type="file" name="admissionPic" class="file"></td>
             </tr>
             <tr>
-                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth-certificate" class="file"></td>
+                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth_certificate" class="file"></td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class="tab">
@@ -102,6 +102,7 @@
 
     <div class="tab">
         <p>Select School and Programme you wish to be admiited</p>
+        
     </div>
 
     <div class="tab">
@@ -140,7 +141,7 @@
     <div style="overflow:auto;">
     <div style="float:right;">
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Save and Continue</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)" name="submit">Save and Continue</button>
     </div>
     </div>
 
@@ -152,6 +153,7 @@
     </footer>
 
     <script>
+        // admission form
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
 
@@ -172,6 +174,25 @@
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
+    }
+
+    /* Logout drop down*/
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+        }
+    }
     }
     </script>
     <script>
