@@ -1,6 +1,6 @@
 <?php
 session_start();
-// if(isset($_POST['submit'])){
+if(isset($_POST['submit'])){
     include_once '../include/db_connection.php';
 
     $Name = stripslashes($_POST['name']);
@@ -54,4 +54,4 @@ session_start();
             exit;
         }
 
-// }
+}

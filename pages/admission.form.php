@@ -50,7 +50,7 @@
     <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <table>
+        <!-- <table>
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
@@ -77,7 +77,7 @@
             <tr>
                 <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth_certificate" class="file"></td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class="tab">
@@ -102,6 +102,29 @@
 
     <div class="tab">
         <p>Select School and Programme you wish to be admiited</p>
+        <div class="dropdown1">
+        <button onclick="myfunction()" class="dropbtn1">Dropdown</button>
+        <div id="myDropdown1" class="dropdown-content1 tab1">
+            <button class="tablinks" onclick="openCity(event, 'London')">Home</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">About</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Contact</button>
+        </div>
+        </div>
+
+        <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p> 
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+        </div>
     </div>
 
     <div class="tab">
@@ -140,7 +163,7 @@
     <div style="overflow:auto;">
     <div style="float:right;">
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Save and Continue</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)" name="submit">Save and Continue</button>
     </div>
     </div>
 
@@ -152,6 +175,7 @@
     </footer>
 
     <script>
+        // admission form
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
 
@@ -174,22 +198,34 @@
     fixStepIndicator(n)
     }
 
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-    }
+    /* Logout drop down*/
+    // function myFunction() {
+    // document.getElementById("myDropdown").classList.toggle("show");
+    // }
 
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    // // Close the dropdown if the user clicks outside of it
+    // window.onclick = function(event) {
+    // if (!event.target.matches('.dropbtn')) {
+    //     var dropdowns = document.getElementsByClassName("dropdown-content");
+    //     var i;
+    //     for (i = 0; i < dropdowns.length; i++) {
+    //     var openDropdown = dropdowns[i];
+    //     if (openDropdown.classList.contains('show')) {
+    //         openDropdown.classList.remove('show');
+    //     }
+    //     }
+    // }
+    // }
+
+    // admission step 3
+    function myfunction() {
+    document.getElementById("myDropdown1").classList.toggle("show");
     }
 
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
+    if (!event.target.matches('.dropbtn1')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content1");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
@@ -198,6 +234,20 @@
         }
         }
     }
+    }
+
+    function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
     }
     </script>
     <script>
