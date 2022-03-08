@@ -43,7 +43,7 @@ session_start();
         // Now let's move the uploaded image into the folder: image
         move_uploaded_file($bc1, $folder);
 
-        $query = "INSERT INTO admission(`Name`, `DOB`, `POB`, `Tel`, `Email`, `Gender`, `Nationality`, `Marital_Status`, `Special_Needs`, `Address`, `Picture`, `National_ID`, `Birth_Certificate`) VALUES('$Name', '$dob', '$pob', '$tel', '$email', '$gender', '$nationality', '$marital_status', '$special_needs', '$address', '$pic', '$id_card', '$bc')";
+        $query = "INSERT INTO admission(`name`, `dob`, `pob`, `tel`, `email`, `gender`, `nationality`, `maritalStatus`, `specialNeeds`, `address`, `img`, `National_ID`, `Birth_Certificate` `fatherName`, `fatherAddress`, `fatherNum`, `motherName`, `motherAddress`, `motherNum`, `sponsorName`, `sponsorAddress`, `sponsorNum`,) VALUES('$Name', '$dob', '$pob', '$tel', '$email', '$gender', '$nationality', '$marital_status', '$special_needs', '$address', '$pic', '$id_card', '$bc', '$father_name', '$father_address', '$father_num', '$mother_name', '$mother_address', '$mother_num', '$sponsor_name', '$sponsor_address', '$sponsor_num')";
         $sql = mysqli_query($conn,$query);
         if($sql){            
             echo"Insertion successful";
