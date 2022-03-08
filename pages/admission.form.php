@@ -39,7 +39,7 @@
             </nav>
         </header>
     </div>
-    <form id="regForm" action="../drivers/admissionform.handler.php" method="post">
+    <form id="regForm" action="../drivers/admissionform.handler.php" method="post" enctype="multipart/form-data">
         <!-- Circles which indicates the steps of the form: -->
     <div class="step-container">
         <span class="step"><img src="../img/user-check.png" alt=""> Personal Information</span>
@@ -54,7 +54,7 @@
             <tr>                
                 <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
-                <!-- <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="NI/P" class="file"></td> -->
+                <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="id_card" class="file"></td>
             </tr>
             <tr>
                 <td><p>Date of Birth</p><input type="text" name="dob"></td>
@@ -75,7 +75,7 @@
                 <td><label for="file">Upload Picture</label><input type="file" name="admissionPic" class="file"></td>
             </tr>
             <tr>
-                <!-- <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth-certificate" class="file"></td> -->
+                <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth_certificate" class="file"></td>
             </tr>
         </table>
     </div>
