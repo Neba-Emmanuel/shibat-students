@@ -49,21 +49,23 @@ session_start();
     if(isset($_POST['addCourse']))
     {
         $coursename = $_POST['cname'];
+        $coursecode = $_POST['ccode'];
+        $creditvalue = $_POST['cvalue'];
         
-        $query = $conn->prepare( "SELECT `coursename` FROM `courses` WHERE `coursename` = ?" );			
-        $query->bindValue( 1, $coursename );
+        $query = $conn->prepare( "SELECT `coursecode` FROM `courses` WHERE `coursecode` = ?" );			
+        $query->bindValue( 1, $coursecode );
         $query->execute();
         if($query->rowCount() > 0 )
         {	
             echo "<script language='javascript'>alert('This Course already exists.');
-			window.location.href='/Online-College-Admission-System-PHP-MySQL/admin/addCourse.php';
+			window.location.href='/shibat-students/admin/addCourse.php';
              </script>";        }
         else{
-            $sql = "INSERT INTO `courses` (`coursename`)VALUES ('$coursename')";
+            $sql = "INSERT INTO `courses` (`coursename`,  `coursecode`, `creditvalue`)VALUES ('$coursename','$coursecode', '$creditvalue')";
                     if ($conn->query($sql))
                     {
                         echo "<script language='javascript'>alert('Course Added Successfully');
-                        window.location.href='/Online-College-Admission-System-PHP-MySQL/admin/addCourse.php';
+                        window.location.href='/shibat-students/admin/addCourse.php';
                          </script>";                        
                     }
                     else

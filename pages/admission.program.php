@@ -47,10 +47,10 @@
                     <p>Please select the program you want to apply for and choose 
                     MTN Mobile Money to complete transaction</p>
                     <p>
-                        <select name="" id="">
+                        <select name="level" onchange="location=this.value;">
                             <option>Appling for...</option>
-                            <option><a href="admission.payment.php">HND</a></option>
-                            <option><a href="admission.payment.degree.php">Degree</a></option>
+                            <option value="admission.payment.php">HND</option>
+                            <option value="admission.payment.degree.php">Degree</option>
                         </select>
                     </p>
                     <p><img src="../img/mtn.jpg" alt="mtn logo" width="200"></p>

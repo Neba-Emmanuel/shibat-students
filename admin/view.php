@@ -7,7 +7,7 @@ if(isset($_SESSION['email']))
 	include 'variables.php';
 	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
 
-	$query = "SELECT * FROM registration_account WHERE id =$id"; 
+	$query = "SELECT * FROM admission WHERE id =$id"; 
 	$result = $mysqli->query($query) or die($mysqli->error);
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
@@ -40,7 +40,7 @@ if(isset($_SESSION['email']))
 
 								<div class="col-sm-6 form-group">
 									<label>Image</label>
-									<img src="<?php echo '../' . $details[13];?>" height="200" width="200">
+									<img src="<?php echo '../' . $details[11];?>" height="200" width="200">
 								</div>
 							</div>
 							<div class="row">
@@ -86,7 +86,7 @@ if(isset($_SESSION['email']))
 								</div>
 								<div class="col-sm-4 form-group">
 									<label>Registration Date</label>
-									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[11]; ?> " readonly>
+									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
 								</div>
 							</div>
 						</div>

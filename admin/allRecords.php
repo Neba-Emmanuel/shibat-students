@@ -113,21 +113,23 @@
                             <tr>
                                 <th>Std. ID</th>
                                 <th>Student Name</th>
-                                <th>Email</th>
+                                <th>Date of Birth</th>
+                                <th>Place of Birth</th>
                                 <th>Joined On</th>
                             </tr>
                         </thead>
                         <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                  $query = "select * from registration_account";
+                  $query = "select * from admission";
                   $result = mysqli_query($mysqli,$query);
                   while($addrow = mysqli_fetch_array($result)){
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
                     echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                    echo "<td>$addrow[9]</td>";
-                    echo "<td>$newDate</td>";
+                    echo "<td>$addrow[2]</td>";
+                    echo "<td>$addrow[3]</td>";
+                    echo "<td>$addrow[33]</td>";
                     echo "</tr>";
                   }
                 

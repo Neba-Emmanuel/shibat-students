@@ -52,8 +52,12 @@
                   <form action="adminLoginHandler.php" method="post">
                   <div class="form-group">
                      <label>Enter Course Name</label>
-							        <input type="text" name='cname' placeholder="Enter Course Name Here.." class="form-control" required>
-						      </div>
+                     <input type="text" name='cname' placeholder="Enter Course Name Here.." class="form-control" required>
+                     <label>Enter Course Code</label>
+                     <input type="text" name='ccode' placeholder="Enter Course Code Here.." class="form-control" required>
+                     <label>Enter Credit Value</label>
+							<input type="text" name='cvalue' placeholder="Enter Credit Value Here.." class="form-control" required>
+						   </div>
                      <input class="btn btn-info" type="submit" name="addCourse" value="Submit">
                      </form>
                      <div class="panel panel-default">
@@ -66,11 +70,13 @@
                <tr>
                  <th>ID</th>
                  <th>Name</th>
+                 <th>Code</th>
+                 <th>Value</th>
                  <th>Action</th>
                </tr>
              <?php
              $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-             $query = "SELECT * FROM courses ORDER BY id";
+             $query = "SELECT * FROM courses ORDER BY CusID";
              $result = mysqli_query($mysqli,$query);       
              while($addrow = mysqli_fetch_array($result)) 
                {
@@ -78,6 +84,8 @@
                  <tr>
                  <td><?php echo $addrow[0];?></td>
                  <td><?php echo $addrow[1];?></td>
+                 <td><?php echo $addrow[2];?></td>
+                 <td><?php echo $addrow[3];?></td>
                  <td> <a href='deleteCourse.php?id=<?php echo $addrow[0]; ?>'> Delete </a> </td>
                  </tr>
              <?php }
@@ -105,7 +113,7 @@ else{
   <?php
 //echo 'not logged in ';
 echo "<script language='javascript'>alert('Login to continue');
-window.location.href='/Online-College-Admission-System-PHP-MySQL/admin';
+window.location.href='/shibat-students/admin';
        </script>";
 }
 ?>
