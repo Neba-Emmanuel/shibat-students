@@ -81,7 +81,7 @@
                      <th>Name</th>
                      <th>Email</th>
                      <th>Date of Birth</th>
-                     <!-- <th>Joined</th> -->
+                     <th>Joined</th>
                   </tr>
                 <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
@@ -94,8 +94,8 @@
                     echo "<td>$addrow[0]</td>";
                     echo "<td>$addrow[1]</td>";
                     echo "<td>$addrow[5]</td>";
-                    echo "<td>$addrow[3]</td>";
-                  //   echo "<td>$addrow[5]</td>";
+                    echo "<td>$addrow[2]</td>";
+                    echo "<td>$addrow[33]</td>";
                   //   echo "<td>$newDate</td>";
                     echo "</tr>";
 

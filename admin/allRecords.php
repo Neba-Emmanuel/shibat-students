@@ -113,7 +113,8 @@
                             <tr>
                                 <th>Std. ID</th>
                                 <th>Student Name</th>
-                                <th>Email</th>
+                                <th>Date of Birth</th>
+                                <th>Place of Birth</th>
                                 <th>Joined On</th>
                             </tr>
                         </thead>
@@ -126,7 +127,8 @@
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
                     echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                    echo "<td>$addrow[5]</td>";
+                    echo "<td>$addrow[2]</td>";
+                    echo "<td>$addrow[3]</td>";
                     echo "<td>$addrow[33]</td>";
                     echo "</tr>";
                   }

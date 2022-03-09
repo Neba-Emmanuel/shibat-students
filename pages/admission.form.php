@@ -103,40 +103,40 @@
     <div class="tab">
         <p style="margin-top: 20px; font-weight: 600;">Select School and Programme you wish to be admiited</p>
         <select name="school">
-            <option value="1">School of Business</option>
-            <option value="2">School of Technology</option>
-            <option value="3">School of Education</option>
+            <option value="School of Business">School of Business</option>
+            <option value="School of Technology">School of Technology</option>
+            <option value="School of Education">School of Education</option>
         </select>
         <select name="programme">
             <optgroup>
-                <option value="1">Accounting</option>
-                <option value="2">Marketing</option>
-                <option value="3">Banking and Finance</option>
-                <option value="4">Human Resourse Management</option>
-                <option value="5">Project Management</option>
-                <option value="6">Logistics and Transportation Management</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Banking and Finance">Banking and Finance</option>
+                <option value="Human Resourse Management">Human Resourse Management</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Logistics and Transportation Management">Logistics and Transportation Management</option>
             </optgroup>
             <optgroup>
-                <option value="7">Software Engineering</option>
-                <option value="8">Computer Maintanace</option>
-                <option value="9">Computer Graphics & Web Design</option>
-                <option value="10">Telecommunication</option>
-                <option value="11">Network & Security</option>
-                <option value="12">Electrical Power Systems</option>
-                <option value="13">Electronics</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Computer Maintanace">Computer Maintanace</option>
+                <option value="Computer Graphics & Web Design">Computer Graphics & Web Design</option>
+                <option value="Telecommunication">Telecommunication</option>
+                <option value="Network & Security">Network & Security</option>
+                <option value="Electrical Power Systems">Electrical Power Systems</option>
+                <option value="Electronics">Electronics</option>
             </optgroup>
             <optgroup>
-                <option value="14">Didactics Curriculum Development Teaching</option>
-                <option value="15">Education Management & Administration</option>
-                <option value="16">Special Education</option>
-                <option value="17">Distance & Continuing Education</option>
+                <option value="Didactics Curriculum Development Teaching">Didactics Curriculum Development Teaching</option>
+                <option value="Education Management & Administration">Education Management & Administration</option>
+                <option value="Special Education">Special Education</option>
+                <option value="Distance & Continuing Education">Distance & Continuing Education</option>
             </optgroup>
         </select>
         <hr>
         <p style="margin-top: 20px; font-weight: 600;">Which certificate are you going in for?</p>
         <select name="level">
-            <option value="hnd">HND</option>
-            <option value="degree">Degree</option>
+            <option value="HND">HND</option>
+            <option value="Degree">Degree</option>
         </select>
     </div>
 
