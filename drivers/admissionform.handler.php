@@ -3,6 +3,7 @@ session_start();
 if(isset($_POST['submit'])){
     include_once '../include/db_connection.php';
 
+    // Personal info
     $Name = stripslashes($_POST['name']);
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
     $dob = mysqli_real_escape_string($conn, $_POST['dob']);
@@ -14,6 +15,7 @@ if(isset($_POST['submit'])){
     $address = mysqli_real_escape_string($conn, $_POST['p-address']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
 
+    // Other info's
     $father_name = mysqli_real_escape_string($conn, $_POST['father-name']);
     $father_address = mysqli_real_escape_string($conn, $_POST['father-address']);
     $father_num = mysqli_real_escape_string($conn, $_POST['father-num']);
@@ -24,6 +26,8 @@ if(isset($_POST['submit'])){
     $sponsor_address = mysqli_real_escape_string($conn, $_POST['sponsor-address']);
     $sponsor_num = mysqli_real_escape_string($conn, $_POST['sponsor-num']);
 
+    // Program choice
+    
     
     $pic = $_FILES["admissionPic"]["name"];
     $tempname = $_FILES["admissionPic"]["tmp_name"];    
@@ -46,11 +50,15 @@ if(isset($_POST['submit'])){
         $query = "INSERT INTO admission(`name`, `dob`, `pob`, `tel`, `email`, `gender`, `nationality`, `maritalStatus`, `specialNeeds`, `address`, `img`, `National_ID`, `Birth_Certificate` `fatherName`, `fatherAddress`, `fatherNum`, `motherName`, `motherAddress`, `motherNum`, `sponsorName`, `sponsorAddress`, `sponsorNum`,) VALUES('$Name', '$dob', '$pob', '$tel', '$email', '$gender', '$nationality', '$marital_status', '$special_needs', '$address', '$pic', '$id_card', '$bc', '$father_name', '$father_address', '$father_num', '$mother_name', '$mother_address', '$mother_num', '$sponsor_name', '$sponsor_address', '$sponsor_num')";
         $sql = mysqli_query($conn,$query);
         if($sql){            
-            echo"Insertion successful";
+            echo "<script language='javascript'>alert('Insertion Successful!');
+			window.location.href='/shibat-students/admin';
+             </script>";
             mysqli_close($conn);
         }
         else{
-            echo"Insertion unsuccesful";
+            echo "<script language='javascript'>alert('Insertion Unsuccessful!');
+			window.location.href='/shibat-students/pages/admission.form.php';
+             </script>";
             exit;
         }
 
