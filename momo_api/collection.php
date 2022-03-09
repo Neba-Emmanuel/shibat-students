@@ -7,13 +7,13 @@
     define('COLLECTION_SUBSCRIPTION_KEY', '64aaacbf2dbe4de98ae2839ea6e89243'); // Collection subscription key
 
     //Test here
-    //echo get_accesstoken();
+    echo get_accesstoken();
     echo requestToPay();
 
     // access token
     function get_accesstoken(){
         // This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
-        require_once 'HTTP/Request2.php';
+        require_once '../HTTP/Request2.php';
         $credentials = base64_encode(USER_ID.':'.API_KEY);
 
         $request = 'https://sandbox.momodeveloper.mtn.com/collection/token/';

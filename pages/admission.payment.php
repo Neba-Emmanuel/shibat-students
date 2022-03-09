@@ -50,7 +50,7 @@
             <div class="mtn-to-shibat">
                 <img src="../img/mtn2shibat.png" alt="mtn2shibat" style="width: 100%; height: auto;">
                 <p></p>
-                <!-- <form action="../momo_api/collections.php" method="post"> -->
+                <form action="../momo_api/collection.php" method="post">
                 <table>
                     <tr>
                         <td>MTN Mobile Money Number</td>
@@ -58,7 +58,7 @@
                     </tr>
                 </table>
                 <p><input type="submit" value="Make Payment" class="payment-btn" name="payment-btn"></p>
-                <!-- </form> -->
+                </form>
             </div>
         </div>
         <footer>
