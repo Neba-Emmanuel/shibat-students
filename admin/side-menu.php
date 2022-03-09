@@ -6,7 +6,7 @@
         include 'variables.php';
                
         $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-        $query = "SELECT count(*) FROM registration_account"; 
+        $query = "SELECT count(*) FROM admission"; 
         $q2 = "SELECT count(*) FROM courses";
         $q3 ="SELECT count(*) from admission";
         // Count of Student Data

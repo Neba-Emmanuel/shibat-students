@@ -4,7 +4,7 @@
 	{
       include 'variables.php';
     $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-    $query = "SELECT count(*) FROM registration_account"; 
+    $query = "SELECT count(*) FROM admission"; 
     // Count of Student Data
     $result = $mysqli->query($query) or die($mysqli->error);
     if($result->num_rows > 0) 
@@ -81,11 +81,11 @@
                      <th>Name</th>
                      <th>Email</th>
                      <th>Date of Birth</th>
-                     <th>Joined</th>
+                     <!-- <th>Joined</th> -->
                   </tr>
                 <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                $query = "SELECT * FROM registration_account ORDER BY id DESC LIMIT 5 ";
+                $query = "SELECT * FROM admission ORDER BY id DESC LIMIT 5 ";
                 $result = mysqli_query($mysqli,$query);       
                 while($addrow = mysqli_fetch_array($result)) 
                   {
@@ -93,9 +93,9 @@
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
                     echo "<td>$addrow[1]</td>";
-                    echo "<td>$addrow[2]</td>";
-                    echo "<td>$addrow[3]</td>";
                     echo "<td>$addrow[5]</td>";
+                    echo "<td>$addrow[3]</td>";
+                  //   echo "<td>$addrow[5]</td>";
                   //   echo "<td>$newDate</td>";
                     echo "</tr>";
 
