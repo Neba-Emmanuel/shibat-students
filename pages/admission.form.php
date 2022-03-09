@@ -50,9 +50,9 @@
     <!-- <h1>Register:</h1> -->
     <!-- One "tab" for each step in the form: -->
     <div class="tab">
-        <!-- <table>
+        <table>
             <tr>                
-                <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name"></td>
+                <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name" class="required"></td>
                 <td><p>Gender</p><input type="text" name="gender"></td>
                 <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="id_card" class="file"></td>
             </tr>
@@ -77,11 +77,11 @@
             <tr>
                 <td><p>Scan copy of Birth Certificate <span>(preferably *.pdf)</span></p><label for="file">Upload</label><input type="file" name="birth_certificate" class="file"></td>
             </tr>
-        </table> -->
+        </table>
     </div>
 
     <div class="tab">
-        <!-- <table>
+        <table>
             <tr>
                 <td><p>Father's Name</p><input type="text" name="father-name"></td>
                 <td><p>Father's Address</p><input type="text" name="father-address"></td>
@@ -90,25 +90,60 @@
             <tr>
                 <td><p>Mother's Name</p><input type="text" name="mother-name"></td>
                 <td><p>Mother's Address</p><input type="text" name="mother-address"></td>
-                <td><p>Father's Tel.</p><input type="text" name="mother-num"></td>
+                <td><p>Mother's Tel.</p><input type="text" name="mother-num"></td>
             </tr>
             <tr>
                 <td><p>Gaurdian/Sponsor's Name</p><input type="text" name="sponsor-name"></td>
                 <td><p>Gaurdian/Sponsor's Address</p><input type="text" name="sponsor-address"></td>
                 <td><p>Gaurdian/Sponsor's Tel.</p><input type="text" name="sponsor-num"></td>
             </tr>
-        </table> -->
+        </table>
     </div>
 
     <div class="tab">
-        <p>Select School and Programme you wish to be admiited</p>
-        
+        <p style="margin-top: 20px; font-weight: 600;">Select School and Programme you wish to be admiited</p>
+        <select name="school">
+            <option value="1">School of Business</option>
+            <option value="2">School of Technology</option>
+            <option value="3">School of Education</option>
+        </select>
+        <select name="programme">
+            <optgroup>
+                <option value="1">Accounting</option>
+                <option value="2">Marketing</option>
+                <option value="3">Banking and Finance</option>
+                <option value="4">Human Resourse Management</option>
+                <option value="5">Project Management</option>
+                <option value="6">Logistics and Transportation Management</option>
+            </optgroup>
+            <optgroup>
+                <option value="7">Software Engineering</option>
+                <option value="8">Computer Maintanace</option>
+                <option value="9">Computer Graphics & Web Design</option>
+                <option value="10">Telecommunication</option>
+                <option value="11">Network & Security</option>
+                <option value="12">Electrical Power Systems</option>
+                <option value="13">Electronics</option>
+            </optgroup>
+            <optgroup>
+                <option value="14">Didactics Curriculum Development Teaching</option>
+                <option value="15">Education Management & Administration</option>
+                <option value="16">Special Education</option>
+                <option value="17">Distance & Continuing Education</option>
+            </optgroup>
+        </select>
+        <hr>
+        <p style="margin-top: 20px; font-weight: 600;">Which certificate are you going in for?</p>
+        <select name="level">
+            <option value="hnd">HND</option>
+            <option value="degree">Degree</option>
+        </select>
     </div>
 
     <div class="tab">
         <h4>Qualification Requirement</h4>
         <p>Upload all copies of qualification or certificate that are relevant to this application.</p>
-        <!-- <table border=2 style="text-align: center; border-collapse: collapse; border: 2px solid grey; font-size: 20px;">
+        <table border=2 style="text-align: center; border-collapse: collapse; border: 2px solid grey; font-size: 20px;">
             <tr style="font-weight: 600;">
                 <td rowspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Institute Attended</td>
                 <td colspan="2" style="width: 20%; padding-left: 0; padding: 10px;">Date</td>
@@ -130,9 +165,9 @@
             </tr>
             <tr>
                 <td style="border: none; padding: 20px;">Upload Qualification </td>
-                <td  style="border: none; padding: 20px;"><label for="file">Upload Qualification</label><input type="file" name="qualification-doc" class="file"></td>
+                <td  style="border: none; padding: 20px;"><label for="file">Upload Qualification</label><input type="file" name="qualification_doc" class="file"></td>
             </tr>
-        </table> -->
+        </table>
         <div class="add-btn">
         <button style="float: left; background: #00985A">&plus; Add Qualification</button>
         </div>
@@ -141,7 +176,7 @@
     <div style="overflow:auto;">
     <div style="float:right;">
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)" name="submit">Save and Continue</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Save and Continue</button>
     </div>
     </div>
 
