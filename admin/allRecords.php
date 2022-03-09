@@ -126,8 +126,8 @@
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
                     echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                    echo "<td>$addrow[9]</td>";
-                    echo "<td>$newDate</td>";
+                    echo "<td>$addrow[5]</td>";
+                    echo "<td>$addrow[33]</td>";
                     echo "</tr>";
                   }
                 
