@@ -18,100 +18,129 @@ if(isset($_SESSION['email']))
 		}   
 	}
 	if($id==$sid){
-		?>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		?><html lang="en">
 
-		<!-- Jquery -->
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-		<link rel="stylesheet" href="/resources/demos/style.css">
-		<title>Basic Profile</title>
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Search Results</title>
+			<!-- Bootstrap core CSS -->
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+			<link href="css/style.css" rel="stylesheet">
+			<link rel="icon" href="../icon.ico" type="image/x-icon">
+			<script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+			<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+			<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
+			<script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+	
+			<!-- Date picker JS-->
+			<script>
+				$(function() {
+					var dateFormat = "dd-mm-yy",
+						from = $("#from")
+						.datepicker({
+							defaultDate: "+1w",
+							changeMonth: true,
+							numberOfMonths: 3,
+							changeMonth: true,
+							changeYear: true
+	
+						})
+						.on("change", function() {
+							to.datepicker("option", "minDate", getDate(this));
+						}),
+						to = $("#to").datepicker({
+							defaultDate: "+1w",
+							changeMonth: true,
+							numberOfMonths: 3,
+							changeMonth: true,
+							changeYear: true
+						})
+						.on("change", function() {
+							from.datepicker("option", "maxDate", getDate(this));
+						});
+	
+					function getDate(element) {
+						var date;
+						try {
+							date = $.datepicker.parseDate(dateFormat, element.value);
+						} catch (error) {
+							date = null;
+						}
+						return date;
+					}
+				});
+			</script>
+	
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#record').DataTable({
+						dom: 'Bfrtip',
+						buttons: [
+							'print'
+						]
+					});
+				});
+			</script>
+		</head>
+	
 		<body>
-			<div class="container">
-				<h1 class="well" style="text-align: center;">Student Detail</h1>
-				<div class="col-lg-12 well">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="row">
-								<div class="col-sm-6 form-group">
-									<label>Fullname</label>
-									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly>
-								</div>
-
-								<div class="col-sm-6 form-group">
-									<label>Image</label>
-									<img src="<?php echo '../' . $details[11];?>" height="200" width="200">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6 form-group">
-									<label>Gender</label>
-									<input type="text" class="form-control" value="<?php echo $details[2]; ?> " readonly>
-								</div>
-								<div class="col-sm-6 form-group">
-									<label>Blood Group</label>
-									<input type="text" class="form-control" value="<?php echo $details[3]; ?> " readonly>
-								</div>
-							</div>
-							<div class="form-group">
-								<label>Address</label>
-								<textarea name="address" rows="3" class="form-control" readonly> <?php echo $details[4]; ?> </textarea>
-							</div>
-							<div class="row">
-								<div class="col-sm-3 form-group">
-									<label>Date of Birth</label>
-									<input type="text" class="form-control" value="<?php echo $details[12]; ?> " readonly>
-								</div>
-								<div class="col-sm-3 form-group">
-									<label>City</label>
-									<input type="text" class="form-control" value="<?php echo $details[5]; ?> " readonly>
-								</div>
-								<div class="col-sm-3 form-group">
-									<label>State</label>
-									<input type="text" class="form-control" value="<?php echo $details[6]; ?> " readonly>
-								</div>
-								<div class="col-sm-3 form-group">
-									<label>Zip</label>
-									<input type="text" class="form-control" value="<?php echo $details[7]; ?> " readonly>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-4 form-group">
-									<label>Phone Number</label>
-									<input type="text" class="form-control" value="<?php echo $details[8]; ?> " readonly>
-								</div>
-								<div class="col-sm-4 form-group">
-									<label>Email Address</label>
-									<input type="text" class="form-control" value="<?php echo $details[9]; ?> " readonly>
-								</div>
-								<div class="col-sm-4 form-group">
-									<label>Registration Date</label>
-									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
-								</div>
-							</div>
-						</div>
+			<section id="breadcrumb">
+				<div class="container">
+					<ol class="breadcrumb">
+						<li class="active">Records</li>
+					</ol>
+				</div>
+			</section>
+			<div class="col-md-9">
+				<!-- Website Overview -->
+				<div class="panel panel-default">
+					<div class="panel-heading main-color-bg">
+						<h3 class="panel-title">Admissions Record</h3>
+					</div>
+					<div class="panel-body">
+						<br/>
+						<table id="record" class="table table-striped table-hover table-bordered">
+							<thead>
+								<tr>
+									<th>Std. ID</th>
+									<th>Student Name</th>
+									<th>Date of Birth</th>
+									<th>Place of Birth</th>
+									<th>Joined On</th>
+								</tr>
+							</thead>
+							<?php
+					$mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+					  $query = "select * from admission";
+					  $result = mysqli_query($mysqli,$query);
+					  while($addrow = mysqli_fetch_array($result)){
+						$newDate = date('d-M-Y',strtotime($addrow[11]));
+						echo "<tr>";
+						echo "<td>$addrow[0]</td>";
+						echo "<td>$addrow[1]</td>";
+						echo "<td>$addrow[2]</td>";
+						echo "<td>$addrow[3]</td>";
+						echo "<td>$addrow[33]</td>";
+						echo "</tr>";
+					  }
+					
+				?>
+						</table>
+						</form>
 					</div>
 				</div>
 			</div>
-<!-- Education Details -->			
-<!--			<div class="container">
-				<h1 class="well" style="text-align: center;">Educational Detail</h1>
-				<div class="col-lg-12 well">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="row">
-								<div class="col-sm-12 form-group">
-									<label>SSC</label>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>-->
-
-		</body>
-		</html>
+			</div>
+			</div>
+			</section>
 		<?php
 	}
 	else{
