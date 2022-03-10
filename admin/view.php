@@ -273,6 +273,10 @@ if(isset($_SESSION['email']))
 						</div>
 					</div>
 				</div>
+				<div class="decision" style=" width: auto; height: 200px; display: flex; justify-content: center; align-items: center;">
+					<a href="#" style="background: #00985A; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; text-decoration: none; border-radius: 5px;">Admit</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#" style="background: #BD0006; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; text-decoration: none; border-radius: 5px;">Decline</a>
+				</div>
 			</div>
 			</div>
 			</div>
