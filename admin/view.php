@@ -24,7 +24,7 @@ if(isset($_SESSION['email']))
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<title>Search Results</title>
+			<title>Basic Profile</title>
 			<!-- Bootstrap core CSS -->
 			<link href="css/bootstrap.min.css" rel="stylesheet">
 			<link href="css/style.css" rel="stylesheet">
@@ -99,7 +99,7 @@ if(isset($_SESSION['email']))
 					</ol>
 				</div>
 			</section>
-			<div class="col-md-9">
+			<div class="col-md-12">
 				<!-- Website Overview -->
 				<div class="panel panel-default">
 					<div class="panel-heading main-color-bg">
@@ -107,33 +107,68 @@ if(isset($_SESSION['email']))
 					</div>
 					<div class="panel-body">
 						<br/>
-						<table id="record" class="table table-striped table-hover table-bordered">
-							<thead>
-								<tr>
-									<th>Std. ID</th>
-									<th>Student Name</th>
-									<th>Date of Birth</th>
-									<th>Place of Birth</th>
-									<th>Joined On</th>
-								</tr>
-							</thead>
-							<?php
-					$mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-					  $query = "select * from admission";
-					  $result = mysqli_query($mysqli,$query);
-					  while($addrow = mysqli_fetch_array($result)){
-						$newDate = date('d-M-Y',strtotime($addrow[11]));
-						echo "<tr>";
-						echo "<td>$addrow[0]</td>";
-						echo "<td>$addrow[1]</td>";
-						echo "<td>$addrow[2]</td>";
-						echo "<td>$addrow[3]</td>";
-						echo "<td>$addrow[33]</td>";
-						echo "</tr>";
-					  }
-					
-				?>
-						</table>
+						<div class="row">
+								<div class="col-sm-6 form-group">
+									<!-- <label>Image</label> -->
+									<img src="<?php echo '../upload/' . $details[11];?>" height="200" width="200">
+								</div>
+								<div class="col-sm-6 form-group">
+									<label>Fullname</label>
+									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly><br>
+									<label>Date of Birth</label>
+									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly><br>
+									<label>Place of Birth</label>
+									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly>
+								</div>
+
+								
+							</div>
+							<div class="row">
+								<div class="col-sm-6 form-group">
+									<label>Gender</label>
+									<input type="text" class="form-control" value="<?php echo $details[2]; ?> " readonly>
+								</div>
+								<div class="col-sm-6 form-group">
+									<label>Blood Group</label>
+									<input type="text" class="form-control" value="<?php echo $details[3]; ?> " readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Address</label>
+								<textarea name="address" rows="3" class="form-control" readonly> <?php echo $details[4]; ?> </textarea>
+							</div>
+							<div class="row">
+								<div class="col-sm-3 form-group">
+									<label>Date of Birth</label>
+									<input type="text" class="form-control" value="<?php echo $details[12]; ?> " readonly>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label>City</label>
+									<input type="text" class="form-control" value="<?php echo $details[5]; ?> " readonly>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label>State</label>
+									<input type="text" class="form-control" value="<?php echo $details[6]; ?> " readonly>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label>Zip</label>
+									<input type="text" class="form-control" value="<?php echo $details[7]; ?> " readonly>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 form-group">
+									<label>Phone Number</label>
+									<input type="text" class="form-control" value="<?php echo $details[8]; ?> " readonly>
+								</div>
+								<div class="col-sm-4 form-group">
+									<label>Email Address</label>
+									<input type="text" class="form-control" value="<?php echo $details[9]; ?> " readonly>
+								</div>
+								<div class="col-sm-4 form-group">
+									<label>Registration Date</label>
+									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
