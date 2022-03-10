@@ -95,7 +95,7 @@ if(isset($_SESSION['email']))
 			<section id="breadcrumb">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li class="active">Records</li>
+						<li class="active">Admissions Record</li>
 					</ol>
 				</div>
 			</section>
@@ -103,73 +103,174 @@ if(isset($_SESSION['email']))
 				<!-- Website Overview -->
 				<div class="panel panel-default">
 					<div class="panel-heading main-color-bg">
-						<h3 class="panel-title">Admissions Record</h3>
+						<h3 class="panel-title">Personal Information</h3>
 					</div>
 					<div class="panel-body">
 						<br/>
 						<div class="row">
 								<div class="col-sm-6 form-group">
-									<!-- <label>Image</label> -->
 									<img src="<?php echo '../upload/' . $details[11];?>" height="200" width="200">
 								</div>
 								<div class="col-sm-6 form-group">
 									<label>Fullname</label>
 									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly><br>
 									<label>Date of Birth</label>
-									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly><br>
+									<input type="text" class="form-control" value="<?php echo $details[2]; ?>" readonly><br>
 									<label>Place of Birth</label>
-									<input type="text" class="form-control" value="<?php echo $details[1]; ?>" readonly>
+									<input type="text" class="form-control" value="<?php echo $details[3]; ?>" readonly>
 								</div>
 
 								
 							</div>
 							<div class="row">
-								<div class="col-sm-6 form-group">
+								<div class="col-sm-4 form-group">
 									<label>Gender</label>
-									<input type="text" class="form-control" value="<?php echo $details[2]; ?> " readonly>
+									<input type="text" class="form-control" value="<?php echo $details[6]; ?> " readonly>
 								</div>
-								<div class="col-sm-6 form-group">
-									<label>Blood Group</label>
-									<input type="text" class="form-control" value="<?php echo $details[3]; ?> " readonly>
+								<div class="col-sm-4 form-group">
+									<label>Nationality</label>
+									<input type="text" class="form-control" value="<?php echo $details[7]; ?> " readonly>
 								</div>
-							</div>
-							<div class="form-group">
-								<label>Address</label>
-								<textarea name="address" rows="3" class="form-control" readonly> <?php echo $details[4]; ?> </textarea>
+								<div class="col-sm-4 form-group">
+									<label>Special Needs</label>
+									<input type="text" class="form-control" value="<?php echo $details[9]; ?> " readonly>
+								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-3 form-group">
-									<label>Date of Birth</label>
-									<input type="text" class="form-control" value="<?php echo $details[12]; ?> " readonly>
+									<label>Phone No.</label>
+									<input type="text" class="form-control" value="<?php echo $details[4]; ?> " readonly>
 								</div>
 								<div class="col-sm-3 form-group">
-									<label>City</label>
+									<label>Email</label>
 									<input type="text" class="form-control" value="<?php echo $details[5]; ?> " readonly>
 								</div>
 								<div class="col-sm-3 form-group">
-									<label>State</label>
-									<input type="text" class="form-control" value="<?php echo $details[6]; ?> " readonly>
+									<label>Address</label>
+									<input type="text" class="form-control" value="<?php echo $details[10]; ?> " readonly>
 								</div>
 								<div class="col-sm-3 form-group">
-									<label>Zip</label>
-									<input type="text" class="form-control" value="<?php echo $details[7]; ?> " readonly>
+									<label>Marital Status</label>
+									<input type="text" class="form-control" value="<?php echo $details[8]; ?> " readonly>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-4 form-group">
-									<label>Phone Number</label>
-									<input type="text" class="form-control" value="<?php echo $details[8]; ?> " readonly>
+									<label>National ID / Passport</label>
+									<h4><a href="<?php echo"../upload/".$details[12]; ?>" target="_blank">Preview</a></h4>
 								</div>
 								<div class="col-sm-4 form-group">
-									<label>Email Address</label>
-									<input type="text" class="form-control" value="<?php echo $details[9]; ?> " readonly>
+									<label>Birth Certificate</label>
+									<h4><a href="<?php echo"../upload/".$details[13]; ?>" target="_blank">Preview</a></h4>
 								</div>
 								<div class="col-sm-4 form-group">
-									<label>Registration Date</label>
+									<label>Admission Date</label>
 									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
 								</div>
 							</div>
-						</form>
+						</div>
+					</div>
+				<div class="panel panel-default">
+					<div class="panel-heading main-color-bg">
+						<h3 class="panel-title">Other Information</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label>Father's Name</label>
+								<input type="text" class="form-control" value="<?php echo $details[14]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Father's Address</label>
+								<input type="text" class="form-control" value="<?php echo $details[15]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Father's No.</label>
+								<input type="text" class="form-control" value="<?php echo $details[16]; ?> " readonly>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label>Mother's Name</label>
+								<input type="text" class="form-control" value="<?php echo $details[17]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Mother's Address</label>
+								<input type="text" class="form-control" value="<?php echo $details[18]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Mother's No.</label>
+								<input type="text" class="form-control" value="<?php echo $details[19]; ?> " readonly>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label>Gaurdian's Name</label>
+								<input type="text" class="form-control" value="<?php echo $details[20]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Gaurdian's Address</label>
+								<input type="text" class="form-control" value="<?php echo $details[21]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Gaurdian's No.</label>
+								<input type="text" class="form-control" value="<?php echo $details[22]; ?> " readonly>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+					<div class="panel-heading main-color-bg">
+						<h3 class="panel-title">Program Choice</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label>School of Study</label>
+								<input type="text" class="form-control" value="<?php echo $details[23]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Field of Study</label>
+								<input type="text" class="form-control" value="<?php echo $details[24]; ?> " readonly>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>Certification</label>
+								<input type="text" class="form-control" value="<?php echo $details[25]; ?> " readonly>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading main-color-bg">
+						<h3 class="panel-title">Academic Qualification</h3>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-2 form-group">
+								<label>Institute Addended</label>
+								<input type="text" class="form-control" value="<?php echo $details[26]; ?> " readonly>
+							</div>
+							<div class="col-sm-2 form-group">
+								<label>Period</label>
+								<input type="text" class="form-control" value="<?php echo $details[27]." to ".$details[28]; ?> " readonly>
+							</div>
+							<div class="col-sm-2 form-group">
+								<label>Program Studied</label>
+								<input type="text" class="form-control" value="<?php echo $details[29]; ?> " readonly>
+							</div>
+							<div class="col-sm-2 form-group">
+								<label>Certificate Earned</label>
+								<input type="text" class="form-control" value="<?php echo $details[30]; ?> " readonly>
+							</div>
+							<div class="col-sm-2 form-group">
+								<label>Remark</label>
+								<input type="text" class="form-control" value="<?php echo $details[31]; ?> " readonly>
+							</div>
+							<div class="col-sm-2 form-group">
+								<label>Certificate Obtained</label>
+								<h4><a href="<?php echo"../upload/".$details[32]; ?>" target="_blank">Preview</a></h4>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
