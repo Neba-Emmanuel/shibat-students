@@ -17,7 +17,7 @@
         $credentials = base64_encode(USER_ID.':'.API_KEY);
 
         $request = 'https://sandbox.momodeveloper.mtn.com/collection/token/';
-        $url = $request->getUrl();
+        // $url = $request->getUrl();
 
         $headers = array(
             // Request headers
