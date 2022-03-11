@@ -61,7 +61,7 @@ session_start();
 			window.location.href='/shibat-students/admin/addAdmin.php';
              </script>";        }
         else{
-            $sql = "INSERT INTO `courses` (`Email`,  `role`)VALUES ('$aemail','$role')";
+            $sql = "INSERT INTO `admins` (`Email`,  `role`)VALUES ('$aemail','$role')";
                     if ($conn->query($sql))
                     {
                         echo "<script language='javascript'>alert('Admin Added Successfully');
