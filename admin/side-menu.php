@@ -7,7 +7,7 @@
                
         $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
         $query = "SELECT count(*) FROM admission"; 
-        $q2 = "SELECT count(*) FROM courses";
+        $q2 = "SELECT count(*) FROM admins";
         $q3 ="SELECT count(*) from admission";
         // Count of Student Data
         $result = $mysqli->query($query) or die($mysqli->error);
@@ -71,7 +71,7 @@
         <a href="records.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Admitted Student Records <span class="badge"></span></a>
         <a href="be_records.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Announcement <span class="badge"><?php echo $val3;?></span></a>
 <!--     <a href="test-questions.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Test <span class="badge">203</span></a> -->
-         <a href="addCourse.php" class="list-group-item"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Course <span class="badge"><?php echo $val2;?> </span></a>
+         <a href="addAdmin.php" class="list-group-item"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Admin <span class="badge"><?php echo $val2;?> </span></a>
          <a href="logout.php" class="list-group-item"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout <span class="badge"</span></a>
     </div>
 </div>

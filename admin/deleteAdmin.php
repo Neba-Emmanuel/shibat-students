@@ -4,11 +4,11 @@ if (isset($_SESSION['email'])) {
     include 'adminLoginHandler.php';
     
     $id = $_GET['id'];
-    $result = $conn->prepare("DELETE FROM COURSES WHERE CusID = ?");
+    $result = $conn->prepare("DELETE FROM admins WHERE ID = ?");
     $result->bindParam(1, $id);
     $result->execute();
-    echo "<script language='javascript'>alert('Course Deleted Successfuly');
-                      window.location.href='/shibat-students/admin/addCourse.php';
+    echo "<script language='javascript'>alert('Admin Deleted Successfuly');
+                      window.location.href='/shibat-students/admin/addAdmin.php';
                        </script>";
     
     

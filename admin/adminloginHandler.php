@@ -46,26 +46,26 @@ session_start();
          
     }
     // insert course
-    if(isset($_POST['addCourse']))
+    if(isset($_POST['addAdmin']))
     {
-        $coursename = $_POST['cname'];
-        $coursecode = $_POST['ccode'];
-        $creditvalue = $_POST['cvalue'];
+        $aemail = $_POST['email'];
+        $role = $_POST['role'];
+       
         
-        $query = $conn->prepare( "SELECT `coursecode` FROM `courses` WHERE `coursecode` = ?" );			
-        $query->bindValue( 1, $coursecode );
+        $query = $conn->prepare( "SELECT `Email` FROM `admins` WHERE `Email` = ?" );			
+        $query->bindValue( 1, $aemail );
         $query->execute();
         if($query->rowCount() > 0 )
         {	
-            echo "<script language='javascript'>alert('This Course already exists.');
-			window.location.href='/shibat-students/admin/addCourse.php';
+            echo "<script language='javascript'>alert('This Email already exists.');
+			window.location.href='/shibat-students/admin/addAdmin.php';
              </script>";        }
         else{
-            $sql = "INSERT INTO `courses` (`coursename`,  `coursecode`, `creditvalue`)VALUES ('$coursename','$coursecode', '$creditvalue')";
+            $sql = "INSERT INTO `admins` (`Email`,  `role`)VALUES ('$aemail','$role')";
                     if ($conn->query($sql))
                     {
-                        echo "<script language='javascript'>alert('Course Added Successfully');
-                        window.location.href='/shibat-students/admin/addCourse.php';
+                        echo "<script language='javascript'>alert('Admin Added Successfully');
+                        window.location.href='/shibat-students/admin/addAdmin.php';
                          </script>";                        
                     }
                     else

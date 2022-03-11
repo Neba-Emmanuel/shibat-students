@@ -79,8 +79,9 @@
                   <tr>
                     <th>ID</th>
                      <th>Name</th>
-                     <th>Email</th>
-                     <th>Date of Birth</th>
+                     <th>School of Study</th>
+                     <th>Field of Study</th>
+                     <th>Level</th>
                      <th>Joined</th>
                   </tr>
                 <?php
@@ -93,8 +94,9 @@
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
                     echo "<td>$addrow[1]</td>";
-                    echo "<td>$addrow[5]</td>";
-                    echo "<td>$addrow[2]</td>";
+                    echo "<td>$addrow[23]</td>";
+                    echo "<td>$addrow[24]</td>";
+                    echo "<td>$addrow[25]</td>";
                     echo "<td>$addrow[33]</td>";
                   //   echo "<td>$newDate</td>";
                     echo "</tr>";
