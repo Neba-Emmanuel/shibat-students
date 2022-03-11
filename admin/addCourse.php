@@ -84,7 +84,7 @@
                  <td><?php echo $addrow[1];?></td>
                  <td><?php echo $addrow[3];?></td>
                  <td><?php echo $addrow[4];?></td>
-                 <td> <a href='deleteCourse.php?id=<?php echo $addrow[0]; ?>'> Delete </a> </td>
+                 <td> <a href='deleteAdmin.php?id=<?php echo $addrow[0]; ?>'> Delete </a> </td>
                  </tr>
              <?php }
                ?>
