@@ -7,14 +7,14 @@ use setasign\Fpdi\Fpdi;
 // use setasign\Fpdi\Tfpdf\Fpdi;
 
 // setup the autoload function
-require_once('vendor/autoload.php');
+require_once('Fpdi/autoload.php');
 
 // initiate FPDI
 $pdf = new Fpdi();
 // add a page
 $pdf->AddPage();
 // set the source file
-$pdf->setSourceFile("Fantastic-Speaker.pdf");
+$pdf->setSourceFile("../upload/admission letter.pdf");
 // import page 1
 $tplId = $pdf->importPage(1);
 // use the imported page and place it at point 10,10 with a width of 100 mm
