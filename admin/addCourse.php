@@ -25,7 +25,7 @@
       <div class="container">
          <div class="row">
             <div class="col-md-10">
-               <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Add Courses </h1>
+               <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Add Admin </h1>
             </div>
          </div>
       </div>
@@ -35,7 +35,7 @@
    <section id="breadcrumb">
       <div class="container">
          <ol class="breadcrumb">
-            <li class="active">Courses</li>
+            <li class="active">Admins</li>
          </ol>
       </div>
    </section>
@@ -44,39 +44,37 @@
       <!-- Website Overview -->
       <div class="panel panel-default">
          <div class="panel-heading main-color-bg">
-            <h3 class="panel-title">Add Course</h3>
+            <h3 class="panel-title">Add Admin</h3>
          </div>
          <div class="panel-body">
             <div class="row">
                <div class="col-md-10">
                   <form action="adminLoginHandler.php" method="post">
                   <div class="form-group">
-                     <label>Enter Course Name</label>
-                     <input type="text" name='cname' placeholder="Enter Course Name Here.." class="form-control" required>
-                     <label>Enter Course Code</label>
-                     <input type="text" name='ccode' placeholder="Enter Course Code Here.." class="form-control" required>
-                     <label>Enter Credit Value</label>
-							<input type="text" name='cvalue' placeholder="Enter Credit Value Here.." class="form-control" required>
+                     <label>Email</label>
+                     <input type="email" name='email' placeholder="john.doe@swisslinkadmin.com" class="form-control" required>
+                     <label>Role</label>
+                     <input type="text" name='role' placeholder="Enter role" class="form-control" required>
 						   </div>
-                     <input class="btn btn-info" type="submit" name="addCourse" value="Submit">
+                     <input class="btn btn-info" type="submit" name="addAdmin" value="Submit">
                      </form>
                      <div class="panel panel-default">
             <div class="panel-heading">
-               <h3 class="panel-title">Available Courses</h3>
+               <h3 class="panel-title">Admins</h3>
             </div>
             <div class="panel-body">
 
             <table class="table table-striped table-hover table-bordered">
                <tr>
                  <th>ID</th>
-                 <th>Name</th>
-                 <th>Code</th>
-                 <th>Value</th>
+                 <th>Email</th>
+                 <th>Role</th>
+                 <th>Time of Creation</th>
                  <th>Action</th>
                </tr>
              <?php
              $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-             $query = "SELECT * FROM courses ORDER BY CusID";
+             $query = "SELECT * FROM admins ORDER BY ID";
              $result = mysqli_query($mysqli,$query);       
              while($addrow = mysqli_fetch_array($result)) 
                {
@@ -84,8 +82,8 @@
                  <tr>
                  <td><?php echo $addrow[0];?></td>
                  <td><?php echo $addrow[1];?></td>
-                 <td><?php echo $addrow[2];?></td>
                  <td><?php echo $addrow[3];?></td>
+                 <td><?php echo $addrow[4];?></td>
                  <td> <a href='deleteCourse.php?id=<?php echo $addrow[0]; ?>'> Delete </a> </td>
                  </tr>
              <?php }
