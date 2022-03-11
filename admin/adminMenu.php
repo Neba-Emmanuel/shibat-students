@@ -36,7 +36,7 @@
           <li><a href="records.php">Records</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Welcome, <?php echo $details[1];?> </a></li>
+          <li><a href="#">Welcome, <?php echo $details[3];?> </a></li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
       </div><!--/.nav-collapse -->
