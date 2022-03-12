@@ -50,7 +50,7 @@
             <div class="mtn-to-shibat">
                 <img src="../img/mtn2shibat.png" alt="mtn2shibat" style="width: 100%; height: auto;">
                 <p></p>
-                <form action="../momo_api/collection.php" method="post">
+                <form action="../drivers/collection.php" method="post">
                 <table>
                     <tr>
                         <td>MTN Mobile Money Number</td>

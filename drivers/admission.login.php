@@ -12,11 +12,15 @@
 
         $sql = mysqli_query($conn,"SELECT * FROM registration_account WHERE Email = '$email' LIMIT 1");
         if(mysqli_fetch_assoc($sql)>0){
-            header("Location:../pages/admission.signup.php?Email Already Exist!");
+            echo "<script language='javascript'>alert('Email Already Exist!');
+			window.location.href='../pages/admission.signup.php';
+			 </script>";
             exit;
         }
         elseif ($pwd != $cpwd) {
-            header("Location:../pages/admission.signup.php?Password do not match!");
+            echo "<script language='javascript'>alert('Password do not match!');
+			window.location.href='../pages/admission.signup.php';
+			 </script>";
             exit;
         }
         else{
@@ -31,7 +35,9 @@
                 mysql_close($conn);
             }
             else{
-                header("Location:../pages/admission.signup.php?Error try again!");
+                echo "<script language='javascript'>alert('Error try again!');
+                window.location.href='../pages/admission.signup.php';
+                </script>";
                 exit;
             }
         }
@@ -50,12 +56,14 @@
             $_SESSION['userid'] = $row['ID'];
             $_SESSION["email"]=$row['Email'];
             $_SESSION["username"]=$row['Name'];
-            header("Location: ../pages/admission.program.php?status=login success"); 
+            header("Location: ../pages/admission.program.php?status=success!"); 
             mysql_close($conn);
         }
         else
         {
-            header("Location:../pages/admission.login.php?Invalid email/password");
+            echo "<script language='javascript'>alert('Invalid email/password!');
+                window.location.href='../pages/admission.login.php';
+                </script>";
             exit;
         }
     }

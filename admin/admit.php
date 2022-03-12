@@ -1,25 +1,22 @@
 <?php
-// use setasign\Fpdi\Fpdi;
-// or for usage with TCPDF:
-use setasign\Fpdi\Tcpdf\Fpdi;
 
-// or for usage with tFPDF:
-// use setasign\Fpdi\Tfpdf\Fpdi;
+require_once __DIR__ . '/vendor/autoload.php';
 
-// setup the autoload function
-// require_once('Fpdi/autoload.php');
-// require_once('fpdf/fpdf.php');
-require_once('Fpdi/fpdi.php');
+$mpdf = new \Mpdf\Mpdf();
+$mpdf -> AddPage();
 
-// initiate FPDI
-$pdf = new Fpdi();
-// add a page
-$pdf->AddPage();
-// set the source file
-$pdf->setSourceFile("../upload/admission letter.pdf");
-// import page 1
-$tplId = $pdf->importPage(1);
-// use the imported page and place it at point 10,10 with a width of 100 mm
-$pdf->useTemplate($tplId, 10, 10, 100);
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
-$pdf->Output();        
+$pagecount = $mpdf->SetSourceFile('../upload/admission letter.pdf');
+$tplId = $mpdf->importPage($pagecount);
+$mpdf->useTemplate($tplId);
+
+// $mpdf -> SetFont('Arial','','12');
+
+// $mpdf -> Image('../img/header.png', '15', '10');
+
+// $mpdf -> Cell(20,10,'Your Ref: ………………………………',0,0);
+// $mpdf -> Cell(20,10,'Date:',0,30);
+$mpdf -> Cell(25,20,'Our Ref: SL/OA/2021-2022',0,0,'right');
+// $mpdf->WriteHTML('<h1>Hello world!</h1>');
+$mpdf->Output();
