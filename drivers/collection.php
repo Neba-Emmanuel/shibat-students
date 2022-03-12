@@ -1,8 +1,10 @@
 <?php
 require_once("vendor\autoload.php");
 require_once("vendor\patricpoba\mtn-momo-api-php\src\MtnCollection.php");
+require_once("vendor\patricpoba\mtn-momo-api-php\src\Http\ApiResponse.php");
 use PatricPoba\MtnMomo\MtnConfig;
 use PatricPoba\MtnMomo\MtnCollection;
+use PatricPoba\MtnMomo\ApiResponse;
  
 $config = new MtnConfig([ 
     // mandatory credentials
@@ -20,14 +22,14 @@ $config = new MtnConfig([
 $collection = new MtnCollection($config); 
 
 $params = [
-    "mobileNumber"      => '651460649', 
+    "mobileNumber"      => '233540000000', 
     "amount"            => '100', 
     "externalId"        => '774747234',
     "payerMessage"      => 'some note',
     "payeeNote"         => '1212'
 ];
 
-$transactionId = $collection->requestToPay($params);
+$transactionId = $collection->createTransaction($params);
 
 $transaction = $collection->getTransaction($transactionId);
 ?>
