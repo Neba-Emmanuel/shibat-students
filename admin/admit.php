@@ -1,13 +1,15 @@
 <?php
-use setasign\Fpdi\Fpdi;
+// use setasign\Fpdi\Fpdi;
 // or for usage with TCPDF:
-// use setasign\Fpdi\Tcpdf\Fpdi;
+use setasign\Fpdi\Tcpdf\Fpdi;
 
 // or for usage with tFPDF:
 // use setasign\Fpdi\Tfpdf\Fpdi;
 
 // setup the autoload function
-require_once('Fpdi/autoload.php');
+// require_once('Fpdi/autoload.php');
+// require_once('fpdf/fpdf.php');
+require_once('Fpdi/fpdi.php');
 
 // initiate FPDI
 $pdf = new Fpdi();
