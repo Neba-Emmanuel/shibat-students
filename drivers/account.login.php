@@ -12,11 +12,15 @@ if(isset($_POST['create-account'])){
 
     $sql = mysqli_query($conn,"SELECT * FROM student_account WHERE Matricle_Number = '$mat_num' AND Email = '$email' LIMIT 1");
     if(mysqli_fetch_assoc($sql)>0){
-        header("Location:../pages/account.signup.php?Account Already Exist!");
+        echo "<script language='javascript'>alert('Account Already Exist!');
+			window.location.href='../pages/account.signup.php';
+			 </script>";
         exit;
     }
     elseif ($pwd != $cpwd) {
-        header("Location:../pages/account.signup.php?Password do not match!");
+        echo "<script language='javascript'>alert('Password do not match!');
+			window.location.href='../pages/account.signup.php';
+			 </script>";
         exit;
     }
     else{
@@ -27,7 +31,9 @@ if(isset($_POST['create-account'])){
             mysql_close($conn);
         }
         else{
-            header("Location:../pages/admission.signup.php?Error try again!");
+            echo "<script language='javascript'>alert('Error try again!');
+			window.location.href='../pages/account.signup.php';
+			 </script>";
             exit;
         }
     }
@@ -45,12 +51,14 @@ if(isset($_POST['login'])){
         $_SESSION['userid'] = $row['ID'];
         $_SESSION["email"]=$row['Institute_Email'];
         $_SESSION["tel"]=$row['Phone_No.'];
-        header("Location: ../pages/account.profile.php?status=login success"); 
+        header("Location: ../pages/account.profile.php?status=success!"); 
         mysql_close($conn);
     }
     else
     {
-        header("Location:../pages/account.login.php?Invalid email/password");
+        echo "<script language='javascript'>alert('Invalid email/password!');
+			window.location.href='../pages/account.login.php';
+			 </script>";
         exit;
     }
 }
