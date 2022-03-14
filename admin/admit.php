@@ -1,22 +1,19 @@
 <?php
-
-require_once __DIR__ . '/vendor/autoload.php';
-
-$mpdf = new \Mpdf\Mpdf();
-$mpdf -> AddPage();
-
-$mpdf->SetImportUse(); // only with mPDF <8.0
-
-$pagecount = $mpdf->SetSourceFile('../upload/admission letter.pdf');
-$tplId = $mpdf->importPage($pagecount);
-$mpdf->useTemplate($tplId);
-
-// $mpdf -> SetFont('Arial','','12');
-
-// $mpdf -> Image('../img/header.png', '15', '10');
-
-// $mpdf -> Cell(20,10,'Your Ref: ………………………………',0,0);
-// $mpdf -> Cell(20,10,'Date:',0,30);
-$mpdf -> Cell(25,20,'Our Ref: SL/OA/2021-2022',0,0,'right');
-// $mpdf->WriteHTML('<h1>Hello world!</h1>');
-$mpdf->Output();
+session_start();
+function StudentCode(){
+    $rs  = mysqli_query($con,"SELECT CONCAT('CUTM',LPAD(RIGHT(ifnull(max(s_id),'CUTM00000'),5) + 1,5,'0')) FROM admission");
+    return mysqli_fetch_array($rs)[0];
+  }
+  
+  function StudentPsw()
+  {
+      $alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+      $pass = array();
+      $alphaLength = strlen($alphabet) - 1;
+      for($i=0;$i<8;$i++)
+      {
+          $n=rand(0,$alphaLength);
+          $pass[]=$alphabet[$n];
+      }
+      return implode($pass);
+  }
