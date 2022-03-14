@@ -21,7 +21,7 @@ ul{
     list-style-type: none;
 }
 
-.container{
+/* .container{
     display: flex;
     background: #0487D9;
     justify-content: space-between; 
@@ -68,7 +68,7 @@ ul{
 form p a{
     color: #FFF;
     font-size: 16px;
-}
+} */
 
 footer{
     display: flex;
