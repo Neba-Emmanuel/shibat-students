@@ -273,7 +273,7 @@ if(isset($_SESSION['email']))
 						</div>
 					</div>
 				</div>
-				<form action="decision.php">
+				<form action="decision.php" method="post">
 				<div class="decision" style=" width: auto; height: 200px; display: flex; justify-content: center; align-items: center;">
 					<input type="hidden" name="id" value="<?php echo $id; ?>">
 					<input type="submit" name="admit" value="Admit" style="background: #00985A; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; border: none; border-radius: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;
