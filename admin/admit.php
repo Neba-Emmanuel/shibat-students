@@ -37,7 +37,9 @@ account</b> at <b>UNICS PLC, Kumba</b> - Acoount No: <b>37131300357006</b></p>')
 $mpdf -> WriteHTML('<p>Your personal school email account (In partnership with Google Education) will follow this format.</p>');
 $mpdf -> WriteHTML('<p><b>Username: </b></p>');
 $mpdf -> WriteHTML('<p><b>Password: <b/></p>');
-$mpdf -> WriteHTML('<p>We welcome you to Swisslink Professional University and hope that you will help us make your stay
-here a fruitful and pleasant. We hope you revolutionaries the intellectual world at your disposer.</p>');
+$mpdf -> Ln(15);
+$mpdf -> WriteHTML('<p>Yours Sincerly,</p>');
+$mpdf -> WriteHTML('<p><b>SwissLink Pofessional University</b></p>');
+$mpdf -> Image('../img/footer.png', '15', '265.5');
 // $mpdf->WriteHTML('<p>Date:</p>');
 $mpdf->Output();
