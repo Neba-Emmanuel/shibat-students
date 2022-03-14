@@ -5,7 +5,8 @@ if(isset($_SESSION['email']))
 {
 	$id=$_GET['id'];
 	include 'variables.php';
-	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);		
+	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);	
+	// echo(mysqli_error($conn));	
 
 	$query = "SELECT * FROM admission WHERE ID =$id"; 
 	$result = $mysqli->query($query) or die($mysqli->error);

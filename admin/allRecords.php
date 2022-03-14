@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Search Results</title>
+        <title>Admission records</title>
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10">
-                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Search Records </h1>
+                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Admission Records </h1>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
             <!-- Website Overview -->
             <div class="panel panel-default">
                 <div class="panel-heading main-color-bg">
-                    <h3 class="panel-title">Admissions Record</h3>
+                    <h3 class="panel-title">Admission Records</h3>
                 </div>
                 <div class="panel-body">
                     <br/>
@@ -121,7 +121,7 @@
                         </thead>
                         <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                  $query = "select * from admission";
+                  $query = "SELECT * FROM admission";
                   $result = mysqli_query($mysqli,$query);
                   while($addrow = mysqli_fetch_array($result)){
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
