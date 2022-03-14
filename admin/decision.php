@@ -5,7 +5,7 @@ $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$database
 if(isset($_POST['admit'])){
     $id = $_POST['id'];
 
-    $sql = "UPDATE admission SET status = 'admit' WHERE ID = '$id'";
+    $sql = "UPDATE admission SET status = 'admitted' WHERE ID = '$id'";
     $result =mysqli_query($conn, $sql);
     echo "<script language='javascript'>alert('Student Admitted!');
     window.location.href='view.php';
