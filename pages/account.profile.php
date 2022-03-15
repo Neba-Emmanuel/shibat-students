@@ -3,10 +3,10 @@
     include '../include/db_connection.php';
 	
     // checks if user not is logged in
-    if(!isset($_SESSION['studid'])){
-        header("location:account.login.php");
-        exit;
-    }
+    // if(!isset($_SESSION['studid'])){
+    //     header("location:account.login.php");
+    //     exit;
+    // }
 ?>
 
 <!DOCTYPE html>

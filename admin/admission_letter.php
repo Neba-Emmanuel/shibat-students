@@ -2,6 +2,12 @@
 session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
+include 'variables.php';
+$mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+$query = "select * from admission";
+$result = mysqli_query($mysqli,$query);
+while($row = mysqli_fetch_array($result)){
+
 $mpdf = new \Mpdf\Mpdf();
 $mpdf -> AddPage();
 
@@ -43,3 +49,4 @@ $mpdf -> WriteHTML('<p><b>SwissLink Pofessional University</b></p>');
 $mpdf -> Image('../img/footer.png', '15', '265.5');
 // $mpdf->WriteHTML('<p>Date:</p>');
 $mpdf->Output();
+}
