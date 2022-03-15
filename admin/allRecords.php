@@ -121,7 +121,7 @@
                         </thead>
                         <?php
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                  $query = "select * from admission";
+                  $query = "SELECT * FROM admission";
                   $result = mysqli_query($mysqli,$query);
                   while($addrow = mysqli_fetch_array($result)){
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
