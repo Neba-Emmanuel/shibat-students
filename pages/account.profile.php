@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Profile</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+    <link href="../admincss/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <style>
