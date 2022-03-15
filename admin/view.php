@@ -2,12 +2,12 @@
 session_start();
 $sid=0;
 if(isset($_SESSION['email']))
-{
-	$id=$_GET['id'];
+{	
 	include 'variables.php';
 	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+	$id=$_GET['id'];	
 
-	$query = "SELECT * FROM admission WHERE id =$id"; 
+	$query = "SELECT * FROM admission WHERE ID =$id"; 
 	$result = $mysqli->query($query) or die($mysqli->error);
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
@@ -275,7 +275,7 @@ if(isset($_SESSION['email']))
 				</div>
 				<form action="decision.php" method="post">
 				<div class="decision" style=" width: auto; height: 200px; display: flex; justify-content: center; align-items: center;">
-					<input type="hidden" name="id" value="<?php echo $id; ?>">
+					<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
 					<input type="submit" name="admit" value="Admit" style="background: #00985A; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; border: none; border-radius: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="reject" value="Decline" style="background: #BD0006; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; border: none; border-radius: 5px;">
 				</div>
