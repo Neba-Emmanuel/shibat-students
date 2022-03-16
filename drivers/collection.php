@@ -24,12 +24,12 @@ $collection = new MtnCollection($config);
 $params = [
     "mobileNumber"      => '233540000000', 
     "amount"            => '100', 
-    "externalId"        => '774747234',
+    "externalId"        => '46733123453',
     "payerMessage"      => 'some note',
     "payeeNote"         => '1212'
 ];
 
-$transactionId = $collection->createTransaction($params);
+$transactionId = $collection->requestToPay($params);
 
 $transaction = $collection->getTransaction($transactionId);
 ?>

@@ -39,7 +39,7 @@
         <div class="mySlides fade">
         <img src="img/bg.png" style="width:100%">
         </div> -->
-            <h1>Admissions</h1>
+            <h1 style="filter: none;">Admissions</h1>
             <p>Get all info about admission requirements and our programs here</p>
         </div>
         <div class="admission-info">

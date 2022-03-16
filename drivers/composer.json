@@ -1,5 +1,6 @@
 {
     "require": {
-        "patricpoba/mtn-momo-api-php": "^0.2.2"
+        "patricpoba/mtn-momo-api-php": "^0.2.2",
+        "fannypack/momo": "^1.01"
     }
 }

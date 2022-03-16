@@ -387,6 +387,16 @@ input[type="radio"]{
   width: 50px;
 }
 
+.main{
+  height: 70%;
+    background-color: #07E668;
+    margin: 10px 160px 40px 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* footer section */
 footer{
     display: flex;

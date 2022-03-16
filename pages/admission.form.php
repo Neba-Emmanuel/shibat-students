@@ -57,7 +57,7 @@
                 <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="id_card" class="file"></td>
             </tr>
             <tr>
-                <td><p>Date of Birth</p><input type="text" name="dob"></td>
+                <td><p>Date of Birth</p><input type="date" name="dob"></td>
                 <td><p>Nationality</p><input type="text" name="nationality"></td>
                 <td rowspan="3"><div></div><p><span>Picture must be on a red or white background</span></p></td>
             </tr>
@@ -156,12 +156,12 @@
                 <td>To</td>
             </tr>
             <tr>
-                <td><input type="text" name="institute-name"></td>
-                <td><input type="text" name="from" style="padding-right: 100px"></td>
-                <td><input type="text" name="to"></td>
-                <td><input type="text" name="program"></td>
-                <td><input type="text" name="qualification"></td>
-                <td><input type="text" name="remark"></td>
+                <td><input type="text" name="institute-name" style="border: none;"></td>
+                <td><input type="date" name="from" style="padding-right: 100px; border: none;"></td>
+                <td><input type="date" name="to" style="border: none;"></td>
+                <td><input type="text" name="program" style="border: none;"></td>
+                <td><input type="text" name="qualification" style="border: none;"></td>
+                <td><input type="text" name="remark" style="border: none;"></td>
             </tr>
             <tr>
                 <td style="border: none; padding: 20px;">Upload Qualification </td>

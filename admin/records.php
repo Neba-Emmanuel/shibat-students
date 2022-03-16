@@ -104,7 +104,7 @@
             <!-- Website Overview -->
             <div class="panel panel-default">
                 <div class="panel-heading main-color-bg">
-                    <h3 class="panel-title">Admissions Record</h3>
+                    <h3 class="panel-title">Admitted Students</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -140,7 +140,7 @@
 
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label> </label>
+                                    <label></label>
                                     <input style="background: #BD0006 !important; color: white !important;" type="submit" name="searchQuery" class="form-control" value="Search">
                                 </div>
                             </div>
@@ -174,33 +174,35 @@
                             //echo $fromNew . ' ' . $toNew.' '. $cname;
                             // This code is strictly for debugging, do not put final changes in here
                             // if final changes are commited to the code, death will be upon us
-                            $result = mysqli_query($mysqli,$Equery);
-                            while($addrow = mysqli_fetch_array($result)){
-                              $newDate = date('d-M-Y',strtotime($addrow[4]));
-                              echo "<tr>";
-                              echo "<td>$addrow[0]</td>";
-                              echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                              echo "<td>$addrow[2]</td>";
-                              echo "<td>$addrow[3]</td>";
-                              echo "<td>$newDate</td>";
-                              echo "</tr>";
-                            }
-                }
+
+                            //uncomment from here
+                //             $result = mysqli_query($mysqli,$Equery);
+                //             while($addrow = mysqli_fetch_array($result)){
+                //               $newDate = date('d-M-Y',strtotime($addrow[4]));
+                //               echo "<tr>";
+                //               echo "<td>$addrow[0]</td>";
+                //               echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                //               echo "<td>$addrow[2]</td>";
+                //               echo "<td>$addrow[3]</td>";
+                //               echo "<td>$newDate</td>";
+                //               echo "</tr>";
+                //             }
+                // }
 
                 
-                else{
-                  $query = "select student_data.id,student_data.FULLNAME,student_data.EMAIL,selected_courses.coursename,student_data.register_date FROM student_data JOIN selected_courses ON student_data.ID=selected_courses.ID";
-                  $result = mysqli_query($mysqli,$query);
-                  while($addrow = mysqli_fetch_array($result)){
-                    $newDate = date('Y-m-d',strtotime($addrow[4]));
-                    echo "<tr>";
-                    echo "<td>$addrow[0]</td>";
-                    echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                    echo "<td>$addrow[2]</td>";
-                    echo "<td>$addrow[3]</td>";
-                    echo "<td>$newDate</td>";
-                    echo "</tr>";
-                  }
+                // else{
+                //   $query = "select student_data.id,student_data.FULLNAME,student_data.EMAIL,selected_courses.coursename,student_data.register_date FROM student_data JOIN selected_courses ON student_data.ID=selected_courses.ID";
+                //   $result = mysqli_query($mysqli,$query);
+                //   while($addrow = mysqli_fetch_array($result)){
+                //     $newDate = date('Y-m-d',strtotime($addrow[4]));
+                //     echo "<tr>";
+                //     echo "<td>$addrow[0]</td>";
+                //     echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                //     echo "<td>$addrow[2]</td>";
+                //     echo "<td>$addrow[3]</td>";
+                //     echo "<td>$newDate</td>";
+                //     echo "</tr>";
+                //   }
                 }
             ?>
                     </table>
