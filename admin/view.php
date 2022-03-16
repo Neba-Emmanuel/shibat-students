@@ -6,7 +6,7 @@ if(isset($_SESSION['email']))
 	
 	include 'variables.php';
 	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);	
-	$id=1;
+	$id=2;
 	echo(mysqli_error($mysqli));	
 
 	$query = "SELECT * FROM admission WHERE ID =$id"; 

@@ -31,7 +31,7 @@
                     <h4>Apply for Admission into SwissLink University</h4>
                 </div>
                 <p><input type="text" placeholder="Your Name (As on Birth Certificate)" name="username" required></p>
-                <p><input type="text" placeholder="Date of Birth" name="dob" required></p>
+                <p><input type="date" placeholder="Date of Birth" name="dob" required></p>
                 <p><input type="email" placeholder="Email Address" name="email" required></p>
                 <p><input type="password" placeholder="Password" name="password" required></p>
                 <p><input type="password" placeholder="Confirm Password" name="confirm-password" required></p>
