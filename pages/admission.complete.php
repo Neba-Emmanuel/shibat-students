@@ -40,10 +40,12 @@
         </header>
     </div>
     <div class="main">
-        <h3>Success!</h3>
+        <h2>Success!</h3>
         <hr>
-        <p>Admission form has successfully been submited</p>
-        <p>Please feel free to browse our website http://swisslinkedu.com/ to learn more about our wonderful institution</p>
+        <h3>Admission form has successfully been submited</h3><br>
+        <h3>Please feel free to browse our website http://swisslinkedu.com/ to learn more about our wonderful institution</h3><br>
+        <a href="../admin/payment.reciept.php" style="background: #0487D9; width: 180px; height: 50px; text-align: center; padding-top: 12px; color: white; border-radius: 5px;">Download Receipt</a><br>
+        <a href="../index.php" style="background: #0487D9; width: 180px; height: 50px; text-align: center; padding-top: 12px; color: white; border-radius: 5px;">Back to Home Page</a>
     </div>
     <footer>
         <p>Powered by Emmis Technologies</p>
