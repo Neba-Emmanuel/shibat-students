@@ -67,8 +67,9 @@ nav ul li a:hover{
     align-items: center;
     height: 560px;
     width: 418px;
+    color: #FFF;
     background-color: #0487D9;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* admission login layout */
@@ -90,7 +91,7 @@ nav ul li a:hover{
     height: 400px;
     width: 418px;
     background-color: #0487D9;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* Forgot password layout */
@@ -112,7 +113,7 @@ nav ul li a:hover{
     height: 330px;
     width: 418px;
     background-color: #0487D9;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .form-head{
@@ -136,12 +137,12 @@ form p input{
     background: none;
     border: none;
     border-bottom: 1px solid #0487D9;
-    /* color: #FFF; */
+    color: #FFF;
     font-weight: bold;
 }
 
 input::placeholder{
-    color: rgba(0, 0, 0, 0.555);
+    color: #FFF;
     font-weight: bold;
 }
 
