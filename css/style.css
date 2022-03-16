@@ -96,7 +96,9 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #0487D9C1;
+    background: url("img/bg.png");
+    /* background: rgba(0, 0, 0,0.5); */
+    background-position-y: center;
     grid-area: hero;
 }
 

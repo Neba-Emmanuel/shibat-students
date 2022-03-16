@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10">
-                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Search Records </h1>
+                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Announcements </h1>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
         <section id="breadcrumb">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li class="active">Records</li>
+                    <li class="active">Announcement</li>
                 </ol>
             </div>
         </section>
@@ -104,7 +104,7 @@
             <!-- Website Overview -->
             <div class="panel panel-default">
                 <div class="panel-heading main-color-bg">
-                    <h3 class="panel-title">Admissions Record</h3>
+                    <h3 class="panel-title">Announcement</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -125,7 +125,7 @@
                               </div>
                             </div> -->
                     <br/>
-                    <table id="record" class="table table-striped table-hover table-bordered">
+                    <!-- <table id="record" class="table table-striped table-hover table-bordered">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -170,7 +170,7 @@
 
                 }
             ?>
-                    </table>
+                    </table> -->
                     </form>
                 </div>
             </div>

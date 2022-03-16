@@ -6,9 +6,9 @@ if(isset($_POST['admit'])){
     $id = $_POST['id'];
 
     $sql = "UPDATE admission SET status = 'admitted' WHERE ID = '$id'";
-    $result =mysqli_query($conn, $sql);
+    $result =mysqli_query($mysqli, $sql);
     echo "<script language='javascript'>alert('Student Admitted!');
-    window.location.href='view.php';
+    window.location.href='view.php';    
      </script>";
 }
 
@@ -16,9 +16,9 @@ if(isset($_POST['reject'])){
     $id = $_POST['id'];
 
     $sql = "DELETE FROM admission WHERE ID = '$id'";
-    $result =mysqli_query($conn, $sql);
+    $result =mysqli_query($mysqli, $sql);
     echo "<script language='javascript'>alert('Student Rejected!');
-    window.location.href='view.php';
+    window.location.href='allRecords.php';
      </script>";
 }
 // function StudentCode(){
