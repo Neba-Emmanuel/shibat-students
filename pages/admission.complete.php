@@ -1,12 +1,12 @@
 <?php 
-    // if (!session_id()) session_start(); 
-    // include '../include/db_connection.php';
+    if (!session_id()) session_start(); 
+    include '../include/db_connection.php';
 	
-    // // checks if user not is logged in
-    // if(!isset($_SESSION['userid'])){
-    //     header("location:admission.login.php");
-    //     exit;
-    // }
+    // checks if user not is logged in
+    if(!isset($_SESSION['userid'])){
+        header("location:admission.login.php");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
