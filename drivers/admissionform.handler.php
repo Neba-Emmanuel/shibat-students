@@ -67,6 +67,7 @@ session_start();
         $sql = mysqli_query($conn,$query);
         if($sql){            
             echo "<script language='javascript'>alert('Insertion Successful!');
+            window.location.href='/shibat-students/pages/admission.complete.php';
              </script>";
         }
         else{

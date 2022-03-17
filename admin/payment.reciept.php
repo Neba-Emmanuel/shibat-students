@@ -1,13 +1,13 @@
 <?php
 session_start();
 // checks if user not is logged in
-$studid = $_SESSION['userid'];
 if(!isset($_SESSION['userid'])){
     header("location:../pages/admission.login.php");
     exit;
 }
+$studid = $_SESSION['userid'];
 include_once '../include/db_connection.php';
-$sql = mysqli_query($conn,"SELECT * FROM admission WHERE ID = '$studid'");
+$sql = mysqli_query($conn,"SELECT * FROM admission WHERE ID = 4");
 while($row = mysqli_fetch_assoc($sql)){
    
 require_once __DIR__ . '/vendor/autoload.php';
