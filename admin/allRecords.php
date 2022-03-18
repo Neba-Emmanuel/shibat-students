@@ -116,7 +116,7 @@
                                 <th>School of Study</th>
                                 <th>Field of Study</th>
                                 <th>Level</th>
-                                <th>Joined On</th>
+                                <th>Applied On</th>
                             </tr>
                         </thead>
                         <?php
