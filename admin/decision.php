@@ -14,9 +14,19 @@ if(isset($_POST['admit'])){
 
 if(isset($_POST['reject'])){
     $id = $_POST['id'];
-    echo "<script language='javascript'>confirm('Are you sure of this action!')</script>";
-    $sql = "DELETE FROM admission WHERE ID = '$id'";
-    $result =mysqli_query($mysqli, $sql);
+    echo "<script language='javascript'>
+        var result = confirm(\"Are you sure to delete?\");
+        if(result){";
+            
+            $sql = "DELETE FROM admission WHERE ID = '$id'";
+            $result =mysqli_query($mysqli, $sql);
+            
+        echo "<script language='javascript'>
+        alert('Student Rejected!');
+        window.location.href='allRecords.php';
+        }
+    </script>";
+    
     echo "<script language='javascript'>alert('Student Rejected!');
     window.location.href='allRecords.php';
      </script>";
