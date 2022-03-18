@@ -52,25 +52,38 @@
     <div class="tab">
         <table>
             <tr>                
-                <td><p>Name <span>(as on birth certificate)</span></p><input type="text" name="name" class="required"></td>
-                <td><p>Gender</p><input type="text" name="gender"></td>
+                <td><p>Name <span>*(as on birth certificate)</span></p><input type="text" name="name" class="required"></td>
+                <td><p>Gender</p>
+                <select name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select></td>
                 <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="id_card" class="file"></td>
             </tr>
             <tr>
-                <td><p>Date of Birth</p><input type="date" name="dob"></td>
-                <td><p>Nationality</p><input type="text" name="nationality"></td>
+                <td><p>Date of Birth <span>*</span></p><input type="date" name="dob"></td>
+                <td><p>Nationality</p>
+                <select name="nationality">
+                    <option value="Cameroonian" default>Cameroonian</option>
+                    <option value="Foreigner">Foreigner</option>
+                </select></td>
                 <td rowspan="3"><div></div><p><span>Picture must be on a red or white background</span></p></td>
             </tr>
             <tr>
                 <td><p>Place of Birth</p><input type="text" name="pob"></td>
-                <td><p>Marital Status</p><input type="text" name="marital-status"></td>                
+                <td><p>Marital Status</p><select name="marital-status">
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                </select></td>                
             </tr>
             <tr>
                 <td><p>Telephone</p><input type="text" name="number"></td>
-                <td><p>Special Needs</p><input type="text" name="special-needs"></td>
+                <td><p>Special Needs</p><select name="special-needs">
+                    <option value="None">None</option>
+                </select></td>
             </tr>
             <tr>
-                <td><p>Email</p><input type="email" name="email"></td>
+                <td><p>Email <span>*</span></p><input type="email" name="email"></td>
                 <td><p>Permanent Address</p><input type="text" name="p-address"></td>
                 <td><label for="file">Upload Picture</label><input type="file" name="admissionPic" class="file"></td>
             </tr>
@@ -102,12 +115,12 @@
 
     <div class="tab">
         <p style="margin-top: 20px; font-weight: 600;">Select School and Programme you wish to be admiited</p>
-        <select name="school">
+        <select name="school" style="margin: 20px 0 20px 0;">
             <option value="School of Business">School of Business</option>
             <option value="School of Technology">School of Technology</option>
             <option value="School of Education">School of Education</option>
         </select>
-        <select name="programme">
+        <select name="programme" style="margin: 20px 0 20px 0;">
             <optgroup>
                 <option value="Accounting">Accounting</option>
                 <option value="Marketing">Marketing</option>
@@ -134,7 +147,7 @@
         </select>
         <hr>
         <p style="margin-top: 20px; font-weight: 600;">Which certificate are you going in for?</p>
-        <select name="level">
+        <select name="level" style="margin: 20px 0 20px 0;">
             <option value="HND">HND</option>
             <option value="Degree">Degree</option>
         </select>

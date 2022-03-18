@@ -116,7 +116,7 @@
                                 <th>School of Study</th>
                                 <th>Field of Study</th>
                                 <th>Level</th>
-                                <th>Joined On</th>
+                                <th>Applied On</th>
                             </tr>
                         </thead>
                         <?php
@@ -127,7 +127,8 @@
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
-                    echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                    echo "<td><a href='view.php?id=$addrow[0]'>" .$addrow[1] . "</a></td>";
+                    $_SESSION["studid"] = $addrow['0'];
                     echo "<td>$addrow[23]</td>";
                     echo "<td>$addrow[24]</td>";
                     echo "<td>$addrow[25]</td>";

@@ -8,15 +8,25 @@ if(isset($_POST['admit'])){
     $sql = "UPDATE admission SET status = 'admitted' WHERE ID = '$id'";
     $result =mysqli_query($mysqli, $sql);
     echo "<script language='javascript'>alert('Student Admitted!');
-    window.location.href='view.php';    
+    window.location.href='be_records.php';    
      </script>";
 }
 
 if(isset($_POST['reject'])){
     $id = $_POST['id'];
-
-    $sql = "DELETE FROM admission WHERE ID = '$id'";
-    $result =mysqli_query($mysqli, $sql);
+    echo "<script language='javascript'>
+        var result = confirm(\"Are you sure to delete?\");
+        if(result){";
+            
+            $sql = "DELETE FROM admission WHERE ID = '$id'";
+            $result =mysqli_query($mysqli, $sql);
+            
+        echo "<script language='javascript'>
+        alert('Student Rejected!');
+        window.location.href='allRecords.php';
+        }
+    </script>";
+    
     echo "<script language='javascript'>alert('Student Rejected!');
     window.location.href='allRecords.php';
      </script>";

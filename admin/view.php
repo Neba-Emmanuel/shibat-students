@@ -6,10 +6,10 @@ if(isset($_SESSION['email']))
 	
 	include 'variables.php';
 	$mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);	
-	$id=2;
+	$id=$_GET['id'];
 	echo(mysqli_error($mysqli));	
 
-	$query = "SELECT * FROM admission WHERE ID =$id"; 
+	$query = "SELECT * FROM admission WHERE ID ='$id'"; 
 	$result = $mysqli->query($query) or die($mysqli->error);
 	if($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
@@ -277,9 +277,9 @@ if(isset($_SESSION['email']))
 				</div>
 				<form action="decision.php" method="post">
 				<div class="decision" style=" width: auto; height: 200px; display: flex; justify-content: center; align-items: center;">
-					<input type="hidden" name="id" value="<?php echo $id; ?>">
+					<input type="hidden" name="id" value="<?php echo $details['0'] ?>">
 					<input type="submit" name="admit" value="Admit" style="background: #00985A; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; border: none; border-radius: 5px;">&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="reject" value="Decline" style="background: #BD0006; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; border: none; border-radius: 5px;">
+					<input type="submit" name="reject" value="Reject" style="background: #BD0006; color: white; width: 180px; text-align: center; padding: 10px 0 10px 0; font-size: 24px; border: none; border-radius: 5px;">
 				</div>
 				</form>
 			</div>

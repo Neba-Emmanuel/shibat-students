@@ -5,9 +5,8 @@ if(!isset($_SESSION['userid'])){
     header("location:../pages/admission.login.php");
     exit;
 }
-$studid = $_SESSION['userid'];
 include_once '../include/db_connection.php';
-$sql = mysqli_query($conn,"SELECT * FROM admission WHERE ID = 4");
+$sql = mysqli_query($conn,"SELECT * FROM admission WHERE `name` = '{$_SESSION['username']}'");
 while($row = mysqli_fetch_assoc($sql)){
    
 require_once __DIR__ . '/vendor/autoload.php';
