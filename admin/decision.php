@@ -8,7 +8,7 @@ if(isset($_POST['admit'])){
     $sql = "UPDATE admission SET status = 'admitted' WHERE ID = '$id'";
     $result =mysqli_query($mysqli, $sql);
     echo "<script language='javascript'>alert('Student Admitted!');
-    window.location.href='view.php';    
+    window.location.href='be_records.php';    
      </script>";
 }
 
