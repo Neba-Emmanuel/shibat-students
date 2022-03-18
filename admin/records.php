@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Search Results</title>
+        <title>Admitted Students</title>
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10">
-                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Search Records </h1>
+                        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Admitted Records </h1>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                                     <select class='form-control' id='exampleSelect1' name='cname'>
 								                     <?php
 								                          $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-								                          $query = "SELECT * FROM courses";
+								                          $query = "SELECT * FROM admission WHERE `status` = 'admitted'";
 								                          $result = mysqli_query($mysqli,$query);
 								                          while($addrow = mysqli_fetch_array($result)){
 								                            echo "<option>$addrow[1]</option>";
@@ -152,9 +152,11 @@
                             <tr>
                                 <th>Std. ID</th>
                                 <th>Student Name</th>
-                                <th>Email</th>
-                                <th>Course</th>
-                                <th>Joined On</th>
+                                <th>Gender</th>
+                                <th>School of Study</th>
+                                <th>Field of Study</th>
+                                <th>Level</th>
+                                <!-- <th>Joined On</th> -->
                             </tr>
                         </thead>
                         <?php
@@ -167,8 +169,7 @@
                   $to = $_POST['to'];
                   $fromNew = date('Y-m-d',strtotime($from));
                   $toNew = date('Y-m-d',strtotime($to));
-                  $Equery = "select student_data.id,student_data.FULLNAME,student_data.EMAIL,selected_courses.coursename,student_data.register_date FROM student_data JOIN selected_courses ON student_data.ID=selected_courses.ID
-                            WHERE student_data.register_date BETWEEN '$fromNew' AND '$toNew'";
+                  $Equery = "SELECT * FROM admission WHERE `status` = 'admitted' AND admission_time BETWEEN '$fromNew' AND '$toNew'";
                             
                             //DEBUGGING
                             //echo $fromNew . ' ' . $toNew.' '. $cname;
@@ -176,33 +177,38 @@
                             // if final changes are commited to the code, death will be upon us
 
                             //uncomment from here
-                //             $result = mysqli_query($mysqli,$Equery);
-                //             while($addrow = mysqli_fetch_array($result)){
-                //               $newDate = date('d-M-Y',strtotime($addrow[4]));
-                //               echo "<tr>";
-                //               echo "<td>$addrow[0]</td>";
-                //               echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                //               echo "<td>$addrow[2]</td>";
-                //               echo "<td>$addrow[3]</td>";
-                //               echo "<td>$newDate</td>";
-                //               echo "</tr>";
-                //             }
-                // }
+                            $result = mysqli_query($mysqli,$Equery);
+                            while($addrow = mysqli_fetch_array($result)){
+                              $newDate = date('d-M-Y',strtotime($addrow[4]));
+                              echo "<tr>";
+                              echo "<td>$addrow[0]</td>";
+                              echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                              echo "<td>$addrow[2]</td>";
+                              echo "<td>$addrow[23]</td>";
+                              echo "<td>$addrow[24]</td>";
+                              echo "<td>$addrow[25]</td>";
+                            //   echo "<td>$newDate</td>";
+                              echo "</tr>";
+                            }
+                }
 
                 
-                // else{
-                //   $query = "select student_data.id,student_data.FULLNAME,student_data.EMAIL,selected_courses.coursename,student_data.register_date FROM student_data JOIN selected_courses ON student_data.ID=selected_courses.ID";
-                //   $result = mysqli_query($mysqli,$query);
-                //   while($addrow = mysqli_fetch_array($result)){
-                //     $newDate = date('Y-m-d',strtotime($addrow[4]));
-                //     echo "<tr>";
-                //     echo "<td>$addrow[0]</td>";
-                //     echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
-                //     echo "<td>$addrow[2]</td>";
-                //     echo "<td>$addrow[3]</td>";
-                //     echo "<td>$newDate</td>";
-                //     echo "</tr>";
-                //   }
+                else{
+                  $query = "SELECT * FROM admission WHERE `status` = 'admitted'";
+                  $result = mysqli_query($mysqli,$query);
+                  while($addrow = mysqli_fetch_array($result)){
+                    $newDate = date('Y-m-d',strtotime($addrow[4]));
+                    echo(mysqli_error($mysqli));
+                    echo "<tr>";
+                    echo "<td>$addrow[0]</td>";
+                    echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                    echo "<td>$addrow[2]</td>";
+                    echo "<td>$addrow[23]</td>";
+                    echo "<td>$addrow[24]</td>";
+                    echo "<td>$addrow[25]</td>";
+                    // echo "<td>$newDate</td>";
+                    echo "</tr>";
+                  }
                 }
             ?>
                     </table>
