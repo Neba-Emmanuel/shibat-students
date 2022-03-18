@@ -7,7 +7,7 @@ if(!isset($_SESSION['userid'])){
 }
 $studid = $_SESSION['userid'];
 include_once '../include/db_connection.php';
-$sql = mysqli_query($conn,"SELECT * FROM admission WHERE ID = 4");
+$sql = mysqli_query($conn,"SELECT * FROM admission WHERE ID = '{$_SESSION['userid']}'");
 while($row = mysqli_fetch_assoc($sql)){
    
 require_once __DIR__ . '/vendor/autoload.php';
