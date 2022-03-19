@@ -182,7 +182,7 @@
                               $newDate = date('d-M-Y',strtotime($addrow[4]));
                               echo "<tr>";
                               echo "<td>$addrow[0]</td>";
-                              echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                              echo "<td><a href='admitview.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
                               echo "<td>$addrow[2]</td>";
                               echo "<td>$addrow[23]</td>";
                               echo "<td>$addrow[24]</td>";
@@ -201,7 +201,7 @@
                     echo(mysqli_error($mysqli));
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
-                    echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                    echo "<td><a href='admitview.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
                     echo "<td>$addrow[2]</td>";
                     echo "<td>$addrow[23]</td>";
                     echo "<td>$addrow[24]</td>";
