@@ -7,8 +7,27 @@ if(isset($_POST['admit'])){
 
     $sql = "UPDATE admission SET status = 'admitted' WHERE ID = '$id'";
     $result =mysqli_query($mysqli, $sql);
+    $query = mysqli_query($mysqli,"SELECT * FROM admission WHERE ID = '$id'");
+        $row  = mysqli_fetch_assoc($query);
+        if($row == TRUE){
+            $school = substr($row['school'],10,1);
+            $name = $row['name'];
+        }
+
+        // Student Matricle
+        $year = substr("".date('Y'),-2);
+        $counter = 100;
+        $matricle = "SL".$year.$school;
+
+        // Student Email
+        $pieces = explode(' ', $name);
+        $last_name = array_pop($pieces);
+        $first_name = explode(' ', trim($name));
+        $email = strtolower($first_name[0].".".$last_name."@swisslinkedu.com");
+
+    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$counter'+1), instituteEmail = '$email' WHERE ID = '$id'");   
     echo "<script language='javascript'>alert('Student Admitted!');
-    window.location.href='be_records.php';    
+        window.location.href='records.php';
      </script>";
 }
 

@@ -109,68 +109,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <form action="records.php" method="post">
-                            <!--            <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="exampleSelect1">Select Course</label>
-                                    <select class='form-control' id='exampleSelect1' name='cname'>
-								                     <?php
-								                          $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-								                          $query = "SELECT * FROM courses";
-								                          $result = mysqli_query($mysqli,$query);
-								                          while($addrow = mysqli_fetch_array($result)){
-								                            echo "<option>$addrow[1]</option>";
-								                          }
-								                     ?>
-                    						</select>
-                              </div>
-                            </div> -->
-                    <br/>
-                    <!-- <table id="record" class="table table-striped table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>PCM</th>
-                                <th>ACPC No.</th>
-                                <th>ACPC Merit</th>
-                                <th>JEE Rank</th>
-                                <th>P1</th>
-                                <th>P2</th>
-                                <th>P3</th>
-                                <th>P4</th>
-                                <th>Contact</th>
-                            </tr>
-                        </thead>
-                        <?php
-                $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                  $query = "select student_data.FULLNAME,education_information_be.hsc_pcm,education_information_be.acpc_no,education_information_be.acpc_merit,education_information_be.jee_main_rank,
-                  education_information_be.p1,
-                  education_information_be.p2,
-                  education_information_be.p3,
-                  education_information_be.p4,
-                  student_data.pnumber,
-                  student_data.id
-                  from education_information_be
-                  join student_data ON
-                  student_data.id = education_information_be.ID";
-                  $result = mysqli_query($mysqli,$query);
-                  while($addrow = mysqli_fetch_array($result)){
-                    $newDate = date('Y-m-d',strtotime($addrow[4]));
-                    echo "<tr>";
-                    echo "<td><a href='view.php?id=$addrow[10]' target='_blank'>" .$addrow[0] . "</a></td>";                    
-                    echo "<td>$addrow[1]</td>";
-                    echo "<td>$addrow[2]</td>";
-                    echo "<td>$addrow[3]</td>";
-                    echo "<td>$addrow[4]</td>";
-                    echo "<td>$addrow[5]</td>";
-                    echo "<td>$addrow[6]</td>";
-                    echo "<td>$addrow[7]</td>";
-                    echo "<td>$addrow[8]</td>";
-                    echo "<td>$addrow[9]</td>";
-                    echo "</tr>";
-
-                }
-            ?>
-                    </table> -->
+                            
                     </form>
                 </div>
             </div>

@@ -176,13 +176,13 @@
                             // This code is strictly for debugging, do not put final changes in here
                             // if final changes are commited to the code, death will be upon us
 
-                            //uncomment from here
+                            
                             $result = mysqli_query($mysqli,$Equery);
                             while($addrow = mysqli_fetch_array($result)){
                               $newDate = date('d-M-Y',strtotime($addrow[4]));
                               echo "<tr>";
                               echo "<td>$addrow[0]</td>";
-                              echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                              echo "<td><a href='admitview.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
                               echo "<td>$addrow[2]</td>";
                               echo "<td>$addrow[23]</td>";
                               echo "<td>$addrow[24]</td>";
@@ -201,7 +201,7 @@
                     echo(mysqli_error($mysqli));
                     echo "<tr>";
                     echo "<td>$addrow[0]</td>";
-                    echo "<td><a href='view.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                    echo "<td><a href='admitview.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
                     echo "<td>$addrow[2]</td>";
                     echo "<td>$addrow[23]</td>";
                     echo "<td>$addrow[24]</td>";

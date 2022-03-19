@@ -2,9 +2,10 @@
 session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
+// $id = $_GET['ID'];
 include 'variables.php';
 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-$query = "select * from admission";
+$query = "SELECT * FROM admission";
 $result = mysqli_query($mysqli,$query);
 while($row = mysqli_fetch_array($result)){
 
@@ -12,15 +13,17 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf -> AddPage();
 
 // $mpdf -> SetFont('Arial','','12');
-$school = "School of Technology";
-$program = "Software Engineering";
-$matricle = "SL20T160";
+$name = $row[1];
+$school = $row[23];
+$program = $row[24];
+$matricle = $row[34];
+$email = $row[37];
 
 $mpdf -> Image('../img/header.png', '15', '10');
 
 $mpdf -> Cell(80,10,'Your Ref:.................',0,0,'L',1);
 $mpdf -> Cell(80,10,'Date:'.date("d/m/Y"),0,1,'R',1);
-$mpdf -> Cell(60,5,'Dear:',0,0,'L');
+$mpdf -> Cell(60,5,'Dear: '.$name,0,0,'L');
 $mpdf -> Cell(118,5,'Our Ref: SL/OA/2021-2022',0,1,'R',1);
 $mpdf -> SetFont('','B','12');
 $mpdf -> Cell(0,15,'OFFER OF ADMISSION',0,1,'C');
@@ -41,7 +44,7 @@ than 200, 000 FRS. Internship placement is dependent on the completion of this a
 The total amount can be paid using your <b>Student account</b>, at the <b>Secretariat or to the <b>Institution\'s bank
 account</b> at <b>UNICS PLC, Kumba</b> - Acoount No: <b>37131300357006</b></p>');
 $mpdf -> WriteHTML('<p>Your personal school email account (In partnership with Google Education) will follow this format.</p>');
-$mpdf -> WriteHTML('<p><b>Username: </b></p>');
+$mpdf -> WriteHTML('<p><b>Username: </b>'.$email.'</p>');
 $mpdf -> WriteHTML('<p><b>Password: <b/></p>');
 $mpdf -> Ln(15);
 $mpdf -> WriteHTML('<p>Yours Sincerly,</p>');
