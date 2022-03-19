@@ -176,7 +176,7 @@
                             // This code is strictly for debugging, do not put final changes in here
                             // if final changes are commited to the code, death will be upon us
 
-                            //uncomment from here
+                            
                             $result = mysqli_query($mysqli,$Equery);
                             while($addrow = mysqli_fetch_array($result)){
                               $newDate = date('d-M-Y',strtotime($addrow[4]));
