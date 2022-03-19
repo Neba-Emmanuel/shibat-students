@@ -6,9 +6,9 @@
         include 'variables.php';
                
         $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-        $query = "SELECT count(*) FROM admission"; 
+        $query = "SELECT count(*) FROM admission WHERE `status` = 'pending'"; 
         $q2 = "SELECT count(*) FROM admins";
-        $q3 ="SELECT count(*) from admission";
+        $q3 ="SELECT count(*) from admission WHERE `status` = 'admitted'";
         // Count of Student Data
         $result = $mysqli->query($query) or die($mysqli->error);
 		if($result->num_rows > 0) 
@@ -54,7 +54,7 @@
 			{
 				foreach($row3 as $val3) 
 				{
-                    // <?php echo $val3;
+                   
                 }
             }   
         }
@@ -68,10 +68,10 @@
         <a href="admin.php" class="list-group-item active main-color-bg">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Sidemenu</a>
         <a href="allrecords.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Admission Student Records <span class="badge"><?php echo $val;?></span></a>
-        <a href="records.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Admitted Student Records <span class="badge"></span></a>
+        <a href="records.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Admitted Student Records <span class="badge"><?php echo $val3;?></span></a>
         <a href="be_records.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Announcement <span class="badge"></span></a>
 <!--     <a href="test-questions.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Test <span class="badge">203</span></a> -->
          <a href="addAdmin.php" class="list-group-item"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Admin <span class="badge"><?php echo $val2;?> </span></a>
-         <a href="logout.php" class="list-group-item"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout <span class="badge"</span></a>
+         <a href="logout.php" class="list-group-item"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout <span class="badge"></span></a>
     </div>
 </div>
