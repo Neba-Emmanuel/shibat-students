@@ -7,8 +7,16 @@ if(isset($_POST['admit'])){
 
     $sql = "UPDATE admission SET status = 'admitted' WHERE ID = '$id'";
     $result =mysqli_query($mysqli, $sql);
+    $query = mysqli_query($mysqli,"SELECT * FROM admission WHERE ID = '$id'");
+        $row  = mysqli_fetch_assoc($query);
+        if($row == TRUE){
+            $school = substr($row['school'],10,1);
+        }
+        $year = substr("".date('Y'),-2);
+        $matricle = "SL".$year.$school."160";
+    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = '$matricle' WHERE ID = '$id'");    
     echo "<script language='javascript'>alert('Student Admitted!');
-    window.location.href='be_records.php';    
+    window.location.href='records.php';    
      </script>";
 }
 

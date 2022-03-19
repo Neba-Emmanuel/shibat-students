@@ -11,7 +11,7 @@ while($row = mysqli_fetch_assoc($sql)){
    
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf(['format' => 'A7-L']);
+$mpdf = new \Mpdf\Mpdf(['format' => 'A6-L']);
 $mpdf -> AddPage();
 
 // $mpdf -> Image('../img/account-logo.png', '15', '10');
