@@ -2,10 +2,10 @@
 session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
-$id = $_GET['ID'];
+// $id = $_GET['ID'];
 include 'variables.php';
 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-$query = "SELECT * FROM admission WHERE ID = '$id'";
+$query = "SELECT * FROM admission";
 $result = mysqli_query($mysqli,$query);
 while($row = mysqli_fetch_array($result)){
 
@@ -23,7 +23,7 @@ $mpdf -> Image('../img/header.png', '15', '10');
 
 $mpdf -> Cell(80,10,'Your Ref:.................',0,0,'L',1);
 $mpdf -> Cell(80,10,'Date:'.date("d/m/Y"),0,1,'R',1);
-$mpdf -> Cell(60,5,'Dear:',0,0,'L');
+$mpdf -> Cell(60,5,'Dear: '.$name,0,0,'L');
 $mpdf -> Cell(118,5,'Our Ref: SL/OA/2021-2022',0,1,'R',1);
 $mpdf -> SetFont('','B','12');
 $mpdf -> Cell(0,15,'OFFER OF ADMISSION',0,1,'C');
