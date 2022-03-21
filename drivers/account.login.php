@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_POST['create-account'])){
     include_once '../include/db_connection.php';
 
@@ -55,7 +55,7 @@ if(isset($_POST['login'])){
     $sql = mysqli_query($conn,"SELECT * FROM student_account WHERE Matricle_Number='$mat_num' AND `Password`='$hpwd'");
     $row  = mysqli_fetch_assoc($sql);
     if($row == TRUE){
-        $_SESSION['userid'] = $row['ID'];
+        $_SESSION['studid'] = $row['ID'];
         $_SESSION["email"]=$row['Institute_Email'];
         $_SESSION["tel"]=$row['Phone_No.'];
         header("Location: ../pages/account.profile.php?status=success!"); 
