@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['create-account'])){
     include_once '../include/db_connection.php';
 
