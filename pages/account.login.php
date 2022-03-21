@@ -23,7 +23,7 @@
             </nav>
         </header>
         <div class="admission-form-container">
-            <form action="" method="post">
+            <form action="account.profile.php" method="post">
                 <div class="form-head">
                     <!-- <img src="../img/form-head.svg" alt="swisslink logo"> -->
                     <h2>SWISSLINK University</h2>
