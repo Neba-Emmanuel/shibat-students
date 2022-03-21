@@ -15,17 +15,30 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap-wysihtml5/bootstrap-wysihtml5.min.css">
+        <link rel="stylesheet" href="bootstrap-wysihtml5/bootstrap-wysihtml5.css">
         <link rel="icon" href="../icon.ico" type="image/x-icon">
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+        <script src="bootstrap-wysihtml5/bootstrap-wysihtml5.all.min.js"></script>
+        <script src="bootstrap-wysihtml5/bootstrap-wysihtml5.all.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://jhollingworth.github.io/bootstrap-wysihtml5/lib/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="http://jhollingworth.github.io/bootstrap-wysihtml5/lib/css/prettify.css"/>
+        <link type="text/css" rel="stylesheet" href="http://jhollingworth.github.io/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
         <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+        <script src="http://jhollingworth.github.io/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
+       <script src="http://jhollingworth.github.io/bootstrap-wysihtml5/lib/js/jquery-1.7.2.min.js"></script>
+       <script src="http://jhollingworth.github.io/bootstrap-wysihtml5/lib/js/prettify.js"></script>
+       <script src="http://jhollingworth.github.io/bootstrap-wysihtml5/lib/js/bootstrap.min.js"></script>
+       <script src="http://jhollingworth.github.io/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+       <script>
 
         <!-- Date picker JS-->
         <script>
@@ -109,7 +122,10 @@
                 <div class="panel-body">
                     <div class="row">
                         <form action="records.php" method="post">
-                            
+                            <textarea id="some-textarea" placeholder="Enter text ..."></textarea>
+                            <script type="text/javascript">
+                                $('#some-textarea').wysihtml5();
+                            </script>
                     </form>
                 </div>
             </div>
