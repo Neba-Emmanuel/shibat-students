@@ -9,20 +9,20 @@ if(isset($_POST['create-account'])){
     $cpwd = mysqli_real_escape_string($conn, $_POST['confirm-password']);
     $hpwd = MD5($pwd);
 
-    $result = mysqli_query($conn,"SELECT * FROM admission WHERE EXISTS(Matricle = '$mat_num' AND instituteEmail = '$email')");
-    // $sql = mysqli_query($conn,"SELECT * FROM student_account WHERE Matricle_Number = '$mat_num' AND Institute_Email = '$email' LIMIT 1");
-    if(mysqli_fetch_assoc($result)){
-        echo "<script language='javascript'>alert('Matricle No./Institutional Email <br> Doesn't Exist!');
+    $result = mysqli_query($conn,"SELECT Matricle, instituteEmail FROM admission WHERE Matricle = '$mat_num' AND instituteEmail = '$email'");
+    $sql = mysqli_query($conn,"SELECT * FROM student_account WHERE Matricle_Number = '$mat_num' AND Institute_Email = '$email' LIMIT 1");
+    if(mysqli_num_rows($result) != 1){
+        echo "<script language='javascript'>alert('Account does not exist!');
+            window.location.href='../pages/account.signup.php';
+			 </script>";
+        exit;
+    }
+    elseif (mysqli_fetch_assoc($sql)>0) {        
+        echo "<script language='javascript'>alert('Account Already Exist!');
 			window.location.href='../pages/account.signup.php';
 			 </script>";
         exit;
     }
-    // if (mysqli_fetch_assoc($sql)>0) {        
-    //     echo "<script language='javascript'>alert('Account Already Exist!');
-	// 		window.location.href='../pages/account.signup.php';
-	// 		 </script>";
-    //     exit;
-    // }
     elseif ($pwd != $cpwd) {
         echo "<script language='javascript'>alert('Password do not match!');
 			window.location.href='../pages/account.signup.php';
@@ -37,8 +37,10 @@ if(isset($_POST['create-account'])){
             mysql_close($conn);
         }
         else{
-            echo mysqli_error($conn);
-            exit;
+            echo "<script language='javascript'>alert('Error try again!');
+			window.location.href='../pages/account.signup.php';
+			 </script>";
+        exit;
         }
     }
 }
