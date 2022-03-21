@@ -116,7 +116,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <form action="records.php" method="post" style="margin: 0 10px 0 10px;">
+                        <form action="postannouncement.php" method="post" style="margin: 0 10px 0 10px;">
                             <div class="form-group">
                                 <input type="hidden" name="author" value="<?php $_SESSION['accname']; ?>">
                                 <label>Title</label>
