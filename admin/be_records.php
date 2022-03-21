@@ -11,13 +11,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Search Results</title>
-        <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <title>Announcements</title>
+        <!-- Bootstrap core CSS -->        
         <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"></link>
         <link rel="stylesheet" type="text/css" href="lib/css/prettify.css"></link>
         <link rel="stylesheet" type="text/css" href="src/bootstrap-wysihtml5.css"></link>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="../icon.ico" type="image/x-icon">
         <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
