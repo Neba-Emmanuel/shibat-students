@@ -116,11 +116,17 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <form action="records.php" method="post">
-                            <textarea id="some-textarea" placeholder="Enter text ..."></textarea>
-                            <script type="text/javascript">
+                        <form action="records.php" method="post" style="margin: 0 10px 0 10px;">
+                            <div class="form-group">
+                                <input type="hidden" name="author" value="<?php $_SESSION['accname']; ?>">
+                                <label>Title</label>
+                                <input type="text" name='title' placeholder="Title" class="form-control" style="margin-bottom: 10px">
+                                <textarea id="some-textarea" placeholder="Enter info ..." name="body" class="form-control" style="width: 825px; height: 200px; margin-bottom: 10px;"></textarea>
+                                <script type="text/javascript">
                                 $('#some-textarea').wysihtml5();
-                            </script>
+                                </script>
+                                <input class="btn btn-info" type="submit" name="info" value="Post">
+                            </div>
                         </form>
                 </div>
             </div>

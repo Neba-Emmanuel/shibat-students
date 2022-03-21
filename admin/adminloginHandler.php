@@ -29,6 +29,7 @@ session_start();
         // $sql = mysqli_query($conn, "SELECT * FROM admins WHERE `Email` = '$email' AND `Password` = '$password'");
         // $row  = mysqli_fetch_assoc($sql);
         if($rows >0) {
+        $_SESSION['accname'] = $row['role'];
         $_SESSION['email'] = $email;
         header("Location: ../admin/admin.php");
         }
