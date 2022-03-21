@@ -11,8 +11,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Search Results</title>
-        <!-- Bootstrap core CSS -->
+        <title>Announcements</title>
+        <!-- Bootstrap core CSS -->        
+        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="lib/css/prettify.css"></link>
+        <link rel="stylesheet" type="text/css" href="src/bootstrap-wysihtml5.css"></link>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link rel="icon" href="../icon.ico" type="image/x-icon">
@@ -26,6 +29,11 @@
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
         <script type="text/javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+        <script src="lib/js/wysihtml5-0.3.0.js"></script>
+        <script src="lib/js/jquery-1.7.2.min.js"></script>
+        <script src="lib/js/prettify.js"></script>
+        <script src="lib/js/bootstrap.min.js"></script>
+        <script src="src/bootstrap-wysihtml5.js"></script>
 
         <!-- Date picker JS-->
         <script>
@@ -108,9 +116,18 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <form action="records.php" method="post">
-                            
-                    </form>
+                        <form action="postannouncement.php" method="post" style="margin: 0 10px 0 10px;">
+                            <div class="form-group">
+                                <input type="hidden" name="author" value="<?php $_SESSION['accname']; ?>">
+                                <label>Title</label>
+                                <input type="text" name='title' placeholder="Title" class="form-control" style="margin-bottom: 10px">
+                                <textarea id="some-textarea" placeholder="Enter info ..." name="body" class="form-control" style="width: 825px; height: 200px; margin-bottom: 10px;"></textarea>
+                                <script type="text/javascript">
+                                $('#some-textarea').wysihtml5();
+                                </script>
+                                <input class="btn btn-info" type="submit" name="info" value="Post">
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>

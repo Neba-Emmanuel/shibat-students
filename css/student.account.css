@@ -21,7 +21,7 @@ ul{
     list-style-type: none;
 }
 
-/* .container{
+.container{
     display: flex;
     background: #0487D9;
     justify-content: space-between; 
@@ -34,7 +34,7 @@ ul{
     align-items: center;
  }
 
- .side-bar{
+ /* .side-bar{
     width: 20%;
     height: 80%;
     background: #0487D9;
