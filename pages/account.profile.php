@@ -21,7 +21,11 @@
 <body>
     <style>
         <?php include_once "../css/student.account.css";
-        include_once "../admin/css/bootstrap.min.css";?>
+        include_once "../admin/css/bootstrap.min.css";
+		include_once "../admin/css/apply.css";
+		include_once "../css/profile.css";
+		
+		?>
     </style>
     <div class="container">
         <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
