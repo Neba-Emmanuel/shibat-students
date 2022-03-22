@@ -4,6 +4,19 @@
     {
       $email = $_SESSION['email'];
       include 'variables.php';
+      $mysqli = new mysqli($databaseHost,$databaseUsername,$databasePassword,$databaseName);
+        $query = "SELECT * FROM admins WHERE email = '{$_SESSION['email']}'"; 
+        $result = $mysqli->query($query) or die($mysqli->error);
+		if($result->num_rows > 0) 
+		{
+			while($row = $result->fetch_assoc()) 
+			{
+				foreach($row as $val) 
+				{
+                    $details[] = $val;
+        }
+      }   
+		}
     ?>
     <html lang="en">
 
@@ -118,12 +131,12 @@
                     <div class="row">
                         <form action="postannouncement.php" method="post" style="margin: 0 10px 0 10px;">
                             <div class="form-group">
-                                <input type="hidden" name="author" value="<?php $_SESSION['accname']; ?>">
+                                <input type="hidden" name="author" value="<?php echo $details[3];?>">
                                 <label>Title</label>
                                 <input type="text" name='title' placeholder="Title" class="form-control" style="margin-bottom: 10px">
-                                <textarea id="some-textarea" placeholder="Enter info ..." name="body" class="form-control" style="width: 825px; height: 200px; margin-bottom: 10px;"></textarea>
+                                <textarea id="textarea" placeholder="Enter info ..." name="body" class="form-control" style="width: 825px; height: 200px; margin-bottom: 10px;"></textarea>
                                 <script type="text/javascript">
-                                $('#some-textarea').wysihtml5();
+                                $('#textarea').wysihtml5();
                                 </script>
                                 <input class="btn btn-info" type="submit" name="info" value="Post">
                             </div>
