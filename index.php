@@ -73,10 +73,23 @@
         <div class="right-gutter"></div>
     </div>
     <script>
-        if('serviceWorker' in navigator) {
-        navigator.serviceWorker
-                .register('sw.js')
-                .then(function() { console.log("Service Worker Registered"); });
+        // Check if browser supports service workers
+        if (navigator.serviceWorker) {
+            console.log("Service Worker Supported");
+            
+            // Start registration process on page load
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                                      
+                    // The register function takes as argument
+                    // the file path to the worker's file
+                    .register("sw.js")
+              
+                    // Gives us registration object
+                    .then(reg => console.log("Service Worker Registered"))
+                    .catch(swErr => console.log(
+                      `Service Worker Error: ${swErr}}`));
+            });
         }
     </script>
 </body>

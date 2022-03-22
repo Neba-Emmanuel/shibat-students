@@ -1,28 +1,49 @@
-importScripts('/cache-polyfill.js');
+/* service_worker.js */
 
+const offlineCache = 'index.php';
+// Adding the offline page
+// when installing the service worker
+self.addEventListener('install', e => {
+	// Wait until promise is finished
+	// Until it get rid of the service worker
+	e.waitUntil(
+		caches.open(offlineCache)
+		.then(cache => {
+			cache.add(offlineCache)
+				// When everything is set
+				.then(() => self.skipWaiting())
+		})
+	);
+})
 
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('airhorner').then(function(cache) {
-     return cache.addAll([
-       '/',
-       '/index.php',
-       '/pages/account.signup.php',
-       '/pages/admission.signup.php',
-       '/css/style.css',
-       '/css/signin.login.css',
-       '/css/student.account.css'
-     ]);
-   })
- );
+// Call Activate Event
+self.addEventListener('activate', e => {
+	console.log('Service Worker - Activated')
+	e.waitUntil(
+		caches.keys().then(cacheNames => {
+			return Promise.all(
+				cacheNames.map(
+					cache => {
+						if (cache !== offlineCache) {
+							console.log(
+							'Service Worker: Clearing Old Cache');
+							return caches.delete(cache);
+						}
+					}
+				)
+			)
+		})
+	);
+
 });
 
-self.addEventListener('fetch', function(event) {
-    console.log(event.request.url);
-   
-    event.respondWith(
-      caches.match(event.request).then(function(response) {
-        return response || fetch(event.request);
-      })
-    );
-   });
+// Call Fetch Event
+self.addEventListener('fetch', e => {
+	console.log('Service Worker: Fetching');
+	e.respondWith(
+		// If there is no internet
+		fetch(e.request).catch((error) =>
+			caches.match(offlineCache)
+		)
+	);
+});
