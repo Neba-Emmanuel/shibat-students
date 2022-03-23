@@ -7,15 +7,6 @@ self.addEventListener('install', e => {
 	// Wait until promise is finished
 	// Until it get rid of the service worker
 	e.waitUntil(
-            // caches.open('airhorner').then(function(cache) {
-            //   return cache.addAll([
-            //     'index.php',
-            //     'pages/admission.signup.php',
-            //     'pages/account.signup.php',
-            //     'css/style.css',
-            //     'css/signin/login.css'
-            //   ]);
-            // })
 		caches.open(offlineCache)
 		.then(cache => {
 			cache.add(offlineCache)
