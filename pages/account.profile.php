@@ -32,10 +32,10 @@
             </nav>
        </div>
        <div class="side-bar">
-            <p><a href="#" class="link active">PROFILE</a></p>
-            <p><a href="account.payment.php">PAYMENT</a></p>
-            <p><a href="account.noticeboard.php">NOTICE BOARD</a></p>
-            <p><a href="account.timetable.php">TIME TABLE</a></p>
+            <p><a href="#" class="link active"><img src="../img/user.png" alt="user-icon">&nbsp;PROFILE</a></p>
+            <p><a href="account.payment.php" class="link"><img src="../img/payment.png" alt="payment-icon">&nbsp;PAYMENT</a></p>
+            <p><a href="account.noticeboard.php" class="link"><img src="../img/notice-board.png" alt="notice-icon">&nbsp;NOTICE BOARD</a></p>
+            <p><a href="account.timetable.php" class="link"><img src="../img/time-table.png" alt="calender-icon">&nbsp;TIME TABLE</a></p>
        </div>
        <div class="main-content">
 
