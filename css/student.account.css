@@ -8,9 +8,6 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100vh;
     width: 100%;
-    background: url('../img/account-logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 a{
@@ -22,61 +19,49 @@ ul{
 }
 
 .container{
-    display: flex;
-    background: #0487D9;
-    justify-content: space-between; 
-    padding: 0 5% 0 5%;
-    color: #FFF;   
-}
- nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
- }
-
- /* .side-bar{
-    width: 20%;
-    height: 80%;
-    background: #0487D9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
-
- .side-bar p{
-    font-size: 24px;    
-    padding-top: 20%;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 2.7fr 0.4fr;
+    grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar footer footer footer";
+    grid-gap: 0.2rem;
 }
 
-.side-bar p a{
-    color: #FFF;
-    font-weight: bold;
-    padding: 20px;
-}
-
-.side-bar p a:hover{
-    color: #0487D9;
-    background: #FFF;
+.nav{
+    background-color: aqua;
+    grid-area: nav;
 }
 
 .main-content{
-    background: greenyellow;
-    width: auto;
-    height: 80%;
+    background: url('../img/account-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: main;
 }
 
-form p a{
-    color: #FFF;
-    font-size: 16px;
+.side-bar{
+    background-color: brown;
+    grid-area: sidebar;
+}
+
+/* #content1{
+   background-color: blue; 
+   grid-area: content1;
+}
+
+#content2{
+    background-color: green; 
+    grid-area: content2;
+}
+
+#content3{
+    background-color: gold; 
+    grid-area: content3;
 } */
 
-footer{
-    display: flex;
-    height: 100px;
-    background-color: #0487D9;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footer{
+    background-color: chocolate;
+    grid-area: footer;
 }
 
 footer p{

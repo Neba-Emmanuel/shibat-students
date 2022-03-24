@@ -25,18 +25,19 @@
 		?>
     </style>
     <div class="container">
-        <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
-        <nav>            
-            <img src="../img/user.png" alt="user-icon">
-            <p>Neba Emmanuel Fuh <img src="../img/dropdown.png" alt=""></p>
-        </nav>
-        
-    </div>
-    <footer>
-        <p>Powered by Emmis Technologies</p>
-        <p>&copy copyright swisslink 2022</p>
-    </footer>
+       <div class="nav">
 
+       </div>
+       <div class="side-bar">
+
+       </div>
+       <div class="main-content">
+
+       </div>
+       <div class="footer">
+           
+       </div>
+    </div>
     <!-- <script src="../js/script.js"></script>
 	<script src="../admin/js/bootstrap.min.js"></script> -->
 </body>
