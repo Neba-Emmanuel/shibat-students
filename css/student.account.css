@@ -8,9 +8,6 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100vh;
     width: 100%;
-    background: url('../img/account-logo.png');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 a{
@@ -21,62 +18,148 @@ ul{
     list-style-type: none;
 }
 
+/* dropdown */
+.dropbtn {
+    background-color: #0487D9;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  } */
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 240px;
+    overflow: auto;
+    font-size: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    font-size: 24px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
 .container{
-    display: flex;
-    background: #0487D9;
-    justify-content: space-between; 
-    padding: 0 5% 0 5%;
-    color: #FFF;   
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-rows: 0.6fr 2.7fr 0.4fr;
+    grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar footer footer footer";
+    /* grid-gap: 0.2rem; */
 }
- nav{
+
+.nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
- }
-
- /* .side-bar{
-    width: 20%;
-    height: 80%;
-    background: #0487D9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
-
- .side-bar p{
-    font-size: 24px;    
-    padding-top: 20%;
-}
-
-.side-bar p a{
+    background-color: #0487D9;
     color: #FFF;
-    font-weight: bold;
-    padding: 20px;
-}
-
-.side-bar p a:hover{
-    color: #0487D9;
-    background: #FFF;
+    grid-area: nav;
 }
 
 .main-content{
-    background: greenyellow;
-    width: auto;
-    height: 80%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2.7fr;
+    grid-template-areas: "pic details";
+    background: url('../img/account-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    grid-area: main;
 }
 
-form p a{
+.profile-pic{
+    padding: 30px;
+    grid-area: pic;
+}
+
+.details{
+    padding: 30px;
+    grid-area: details;
+}
+
+table{
+    font-size: 24px;
+    color: #667;
+    font-weight: 600;
+}
+
+table td{
+    padding-right: 150px;
+}
+
+.info{
+    color: #0487D9;
+}
+
+.side-bar{
+    display: flex;
+    flex-direction: column;    
+    font-size: 32px;
+    padding: 30px 0 0 0;
+    background-color: #0487D9;
+    color: white;
+    grid-area: sidebar;
+}
+
+.side-bar p a{
+    display: block;
+    width: auto;
     color: #FFF;
-    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.active, .side-bar a:hover {
+    background-color: rgb(124, 124, 124);
+    color: white;
+  }
+/* #content1{
+   background-color: blue; 
+   grid-area: content1;
+}
+
+#content2{
+    background-color: green; 
+    grid-area: content2;
+}
+
+#content3{
+    background-color: gold; 
+    grid-area: content3;
 } */
 
-footer{
+.footer{
     display: flex;
-    height: 100px;
-    background-color: #0487D9;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #0487D9;
+    color: #FFF;
+    grid-area: footer;
 }
 
 footer p{
