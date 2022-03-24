@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Profile</title>
+    <title>Account | Payment</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
     <!-- <link href="../admin/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
