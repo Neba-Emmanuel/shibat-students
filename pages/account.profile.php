@@ -30,11 +30,7 @@
             <img src="../img/user.png" alt="user-icon">
             <p>Neba Emmanuel Fuh <img src="../img/dropdown.png" alt=""></p>
         </nav>
-        <div class="side-bar">
-        <p><a href="#" class="active">PROFILE</a></p>
-        <p><a href="account.payment.php">PAYMENT</a></p>
-        <p><a href="account.noticeboard.php">NOTICE BOARD</a></p>
-        <p><a href="account.timetable.php">TIME TABLE</a></p>
+        
     </div>
     <footer>
         <p>Powered by Emmis Technologies</p>
