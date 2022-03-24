@@ -28,9 +28,10 @@
        <div class="nav">
             <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
             <nav>            
-            <button onclick="myFunction()" class="dropbtn">
+            <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
                         <img src="../img/default.png" alt="user-icon" width="20" height="20">
-                        <?php echo $_SESSION['studname'];?>
+                        <?php echo $_SESSION['studname']; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
@@ -43,11 +44,11 @@
        <div class="side-bar">
             <p><a href="account.profile.php" class="link"><img src="../img/user.png" alt="user-icon">&nbsp;PROFILE</a></p>
             <p><a href="account.payment.php" class="link"><img src="../img/payment.png" alt="payment-icon">&nbsp;PAYMENT</a></p>
-            <p><a href="#" class="link active"><img src="../img/notice-board.png" alt="notice-icon">&nbsp;NOTICE BOARD</a></p>
+            <p><a href="#" class="link  active"><img src="../img/notice-board.png" alt="notice-icon">&nbsp;NOTICE BOARD</a></p>
             <p><a href="account.timetable.php" class="link"><img src="../img/time-table.png" alt="calender-icon">&nbsp;TIME TABLE</a></p>
        </div>
        <div class="main-content">
-
+            
        </div>
        <div class="footer">
             <p>Powered by Emmis Technologies</p>
@@ -56,5 +57,26 @@
     </div>
     <!-- <script src="../js/script.js"></script>
 	<script src="../admin/js/bootstrap.min.js"></script> -->
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
