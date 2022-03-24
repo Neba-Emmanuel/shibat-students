@@ -14,12 +14,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
+    <title>Account Profile</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+    <!-- <link href="../admin/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
     <style>
-        <?php include_once "../css/student.account.css" ?>
+        <?php include_once "../css/student.account.css";
+		
+		?>
     </style>
     <div class="container">
        <div class="nav">
@@ -29,8 +32,8 @@
             </nav>
        </div>
        <div class="side-bar">
-            <p><a href="account.profile.php" class="link"><img src="../img/user.png" alt="user-icon">&nbsp;PROFILE</a></p>
-            <p><a href="account.payment.php" class="link active"><img src="../img/payment.png" alt="payment-icon">&nbsp;PAYMENT</a></p>
+            <p><a href="#" class="link active"><img src="../img/user.png" alt="user-icon">&nbsp;PROFILE</a></p>
+            <p><a href="account.payment.php" class="link"><img src="../img/payment.png" alt="payment-icon">&nbsp;PAYMENT</a></p>
             <p><a href="account.noticeboard.php" class="link"><img src="../img/notice-board.png" alt="notice-icon">&nbsp;NOTICE BOARD</a></p>
             <p><a href="account.timetable.php" class="link"><img src="../img/time-table.png" alt="calender-icon">&nbsp;TIME TABLE</a></p>
        </div>
@@ -38,14 +41,11 @@
 
        </div>
        <div class="footer">
-
+            <p>Powered by Emmis Technologies</p>
+            <p>&copy copyright swisslink 2022</p>
        </div>
     </div>
     <!-- <script src="../js/script.js"></script>
 	<script src="../admin/js/bootstrap.min.js"></script> -->
-    <footer>
-        <p>Powered by Emmis Technologies</p>
-        <p>&copy copyright swisslink 2022</p>
-    </footer>
 </body>
 </html>
