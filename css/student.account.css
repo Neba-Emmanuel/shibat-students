@@ -21,14 +21,18 @@ ul{
 .container{
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr;
     grid-template-rows: 0.6fr 2.7fr 0.4fr;
     grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar footer footer footer";
-    grid-gap: 0.2rem;
+    /* grid-gap: 0.2rem; */
 }
 
 .nav{
-    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0487D9;
+    color: #FFF;
     grid-area: nav;
 }
 
@@ -36,14 +40,32 @@ ul{
     background: url('../img/account-logo.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 40%;
     grid-area: main;
 }
 
 .side-bar{
-    background-color: brown;
+    display: flex;
+    flex-direction: column;    
+    font-size: 32px;
+    padding: 30px 0 0 0;
+    background-color: #0487D9;
+    color: white;
     grid-area: sidebar;
 }
 
+.side-bar p a{
+    display: block;
+    width: auto;
+    color: #FFF;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.active, .side-bar a:hover {
+    background-color: #666;
+    color: white;
+  }
 /* #content1{
    background-color: blue; 
    grid-area: content1;
@@ -60,7 +82,7 @@ ul{
 } */
 
 .footer{
-    background-color: chocolate;
+    background-color: #0487D9;
     grid-area: footer;
 }
 

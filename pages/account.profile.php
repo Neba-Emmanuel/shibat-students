@@ -26,16 +26,22 @@
     </style>
     <div class="container">
        <div class="nav">
-
+            <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
+            <nav>            
+                <p><img src="../img/user.png" alt="user-icon">Neba Emmanuel Fuh <img src="../img/dropdown.png" alt=""></p>
+            </nav>
        </div>
        <div class="side-bar">
-
+            <p><a href="#" class="link active">PROFILE</a></p>
+            <p><a href="account.payment.php">PAYMENT</a></p>
+            <p><a href="account.noticeboard.php">NOTICE BOARD</a></p>
+            <p><a href="account.timetable.php">TIME TABLE</a></p>
        </div>
        <div class="main-content">
 
        </div>
        <div class="footer">
-           
+
        </div>
     </div>
     <!-- <script src="../js/script.js"></script>
