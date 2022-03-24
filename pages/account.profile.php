@@ -41,7 +41,8 @@
 
        </div>
        <div class="footer">
-
+            <p>Powered by Emmis Technologies</p>
+            <p>&copy copyright swisslink 2022</p>
        </div>
     </div>
     <!-- <script src="../js/script.js"></script>

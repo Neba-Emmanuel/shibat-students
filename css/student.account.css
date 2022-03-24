@@ -82,7 +82,12 @@ ul{
 } */
 
 .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0487D9;
+    color: #FFF;
     grid-area: footer;
 }
 
