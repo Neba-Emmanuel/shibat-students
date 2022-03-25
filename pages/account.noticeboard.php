@@ -50,29 +50,13 @@
        <div class="main-content">
        <div class="container">
  	<?php 
- 	// $sql = "SELECT * FROM `announcement`  ORDER BY `time` DESC";
-    //  global $mydb;
-	// 	$mydb->setQuery($sql);
-	// 	$blog = $mydb->loadResultList();
-	// foreach ($blog as $result) {
         
         $query = "SELECT * FROM announcement ORDER BY `time` DESC"; 
         $result = mysqli_query($conn,$query);
         if(mysqli_num_rows($result) > 0){
             while ($row = mysqli_fetch_assoc($result)) {
                 # code...
-         
-        // $result = $conn->query($query) or die($conn->error);
-        // if($result->num_rows > 0) {
-        //     while($row = $result->fetch_assoc()) {
-        //         foreach($row as $val) {
-        //             $details[] = $val;
-        //         }
-        //         $sid=$details[0];
-        //     }   
-        // }
-
- // // `BLOGS`, `BLOG_WHAT`, `BLOG_WHEN`, `BLOG_WHERE`, `DATEPOSTED`
+        
 	?>
      <div class="mg-available-rooms col-lg-12">
                 <div class="mg-avl-rooms">
