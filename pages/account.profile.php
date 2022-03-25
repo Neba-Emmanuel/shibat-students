@@ -41,11 +41,12 @@
             <nav>            
             <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        <img src="../img/user.png" alt="user-icon" width="20" height="20">
+                        <img src="../img/default.png" alt="user-icon" width="20" height="20">
                         <?php echo $details[1]; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
+                        <p><a href="../admin/admission_letter.php">Admission Letter</a></p>
                         <a href="../drivers/logout.php"><img src="../img/logout.png" alt="logout" width="20">Logout</a>
                     </div>
                 </div>

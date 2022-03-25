@@ -45,7 +45,7 @@ The total amount can be paid using your <b>Student account</b>, at the <b>Secret
 account</b> at <b>UNICS PLC, Kumba</b> - Acoount No: <b>37131300357006</b></p>');
 $mpdf -> WriteHTML('<p>Your personal school email account (In partnership with Google Education) will follow this format.</p>');
 $mpdf -> WriteHTML('<p><b>Username: </b>'.$email.'</p>');
-$mpdf -> WriteHTML('<p><b>Password: <b/></p>');
+$mpdf -> WriteHTML('<p><b>Password: <b/>******** (Contact Admin)</p>');
 $mpdf -> Ln(15);
 $mpdf -> WriteHTML('<p>Yours Sincerly,</p>');
 $mpdf -> WriteHTML('<p><b>SwissLink Pofessional University</b></p>');
