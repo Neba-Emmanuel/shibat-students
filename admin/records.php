@@ -150,13 +150,13 @@
                     <table id="record" class="table table-striped table-hover table-bordered">
                         <thead>
                             <tr>
-                                <th>Std. ID</th>
+                                <th>Matricle No.</th>
                                 <th>Student Name</th>
                                 <th>Gender</th>
                                 <th>School of Study</th>
                                 <th>Field of Study</th>
                                 <th>Level</th>
-                                <!-- <th>Joined On</th> -->
+                                <th>Admitted On</th>
                             </tr>
                         </thead>
                         <?php
@@ -181,13 +181,14 @@
                             while($addrow = mysqli_fetch_array($result)){
                               $newDate = date('d-M-Y',strtotime($addrow[4]));
                               echo "<tr>";
-                              echo "<td>$addrow[0]</td>";
+                              $addrow[0];
+                              echo "<td>$addrow[34]</td>";
                               echo "<td><a href='admitview.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
                               echo "<td>$addrow[2]</td>";
                               echo "<td>$addrow[23]</td>";
                               echo "<td>$addrow[24]</td>";
                               echo "<td>$addrow[25]</td>";
-                            //   echo "<td>$newDate</td>";
+                              echo "<td>$addrow[38]</td>";
                               echo "</tr>";
                             }
                 }
@@ -200,13 +201,14 @@
                     $newDate = date('Y-m-d',strtotime($addrow[4]));
                     echo(mysqli_error($mysqli));
                     echo "<tr>";
-                    echo "<td>$addrow[0]</td>";
-                    echo "<td><a href='admitview.php?id=$addrow[0]' target='_blank'>" .$addrow[1] . "</a></td>";
+                    $addrow[0];
+                    echo "<td>$addrow[34]</td>";
+                    echo "<td><a href='admitview.php?id=$addrow[0]'>" .$addrow[1] . "</a></td>";
                     echo "<td>$addrow[2]</td>";
                     echo "<td>$addrow[23]</td>";
                     echo "<td>$addrow[24]</td>";
                     echo "<td>$addrow[25]</td>";
-                    // echo "<td>$newDate</td>";
+                    echo "<td>$addrow[38]</td>";
                     echo "</tr>";
                   }
                 }
