@@ -42,7 +42,7 @@
             <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
                         <img src="../img/default.png" alt="user-icon" width="20" height="20">
-                        <?php echo $details[1]; ?>
+                        <?php echo $details[1]; $_SESSION['studname'] = $details['1']; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
