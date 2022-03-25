@@ -35,7 +35,7 @@
 		
 		?>
     </style>
-    <div class="container">
+    <div class="container1">
        <div class="nav">
             <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
             <nav>            
@@ -116,7 +116,7 @@
                     </tr>
                 </table>
                 <div class="edit" style="display: flex; justify-content: flex-end;">
-                    <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-raduis: 5px; cursor:pointer;">Edit Profile</a></p>
+                    <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Edit Profile</a></p>
                 </div>
             </div>           
        </div>

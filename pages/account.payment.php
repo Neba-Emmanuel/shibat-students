@@ -24,7 +24,7 @@
 		
 		?>
     </style>
-    <div class="container">
+    <div class="container1">
        <div class="nav">
             <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
             <nav>            
