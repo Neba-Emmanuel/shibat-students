@@ -116,7 +116,7 @@
                     </tr>
                 </table>
                 <div class="edit" style="display: flex; justify-content: flex-end;">
-                    <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-raduis: 5px; cursor:pointer;">Edit Profile</a></p>
+                    <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Edit Profile</a></p>
                 </div>
             </div>           
        </div>
