@@ -18,6 +18,49 @@ ul{
     list-style-type: none;
 }
 
+/* dropdown */
+.dropbtn {
+    background-color: #0487D9;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  } */
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    font-size: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    font-size: 24px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
 .container{
     display: grid;
     height: 100vh;
@@ -37,11 +80,39 @@ ul{
 }
 
 .main-content{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2.7fr;
+    grid-template-areas: "pic details";
     background: url('../img/account-logo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40%;
     grid-area: main;
+}
+
+.profile-pic{
+    padding: 30px;
+    grid-area: pic;
+}
+
+.details{
+    padding: 30px;
+    grid-area: details;
+}
+
+table{
+    font-size: 24px;
+    color: #667;
+    font-weight: 600;
+}
+
+table td{
+    padding-right: 150px;
+}
+
+.info{
+    color: #0487D9;
 }
 
 .side-bar{
@@ -63,7 +134,7 @@ ul{
 }
 
 .active, .side-bar a:hover {
-    background-color: #666;
+    background-color: rgb(124, 124, 124);
     color: white;
   }
 /* #content1{
