@@ -20,6 +20,7 @@ if(isset($_POST['admit'])){
         $year = substr("".date('Y'),-2);
         $counter = 100;
         $matricle = "SL".$year.$school;
+        $sql = "select CONCAT(\'SL20T\',LPAD(RIGHT(ifnull(max(\'ID\'),\'SL20T000\'),3) + 1,3,\'100\'))";
 
         // Student Email
         $pieces = explode(' ', $name);
