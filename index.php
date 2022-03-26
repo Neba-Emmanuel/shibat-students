@@ -69,6 +69,62 @@
         </div>
         <div class="our-programs">
             <h1>Our Programs - Distance Learning/On-Campus</h1>
+            <p class="school">Business Programs</p>
+            <div class="departments">
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Accountancy</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Marketing</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Banking & Finance</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>International Trade</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Microfinance</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Banking & Finance</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Marketing - Trade - Sale</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Insurance</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Human resource Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Project Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Quality Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Management of NGO's</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Assistant Mananger</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Information system Mananger</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Local Government Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Event Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Port Shipping Management</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Executive Secretarial Studies</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Logistics and Transportation Management</span></p>
+            </div>
+            <p class="school">Technology Programs</p>
+            <div class="departments">
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Computer Engineering</span></p>                
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Computer Maintanace</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Data Management</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Software Engineering</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Marketing - Trade - Sale</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Computer Science & Network</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>E-Commerce & Digital Marketing</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Computer Graphics & Web Design</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Networks and Telecommunication</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Telecommunication</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Network & Security</span></p>
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Electrical & Electronics Engineering</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Electronics</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Electrotechnics</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Electrical Power Systems</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Maintenance of Industrial Systems</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Maintenance of Biomedical Equipment</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Control Instrumentation and Regulation</span></p>
+            </div>
+            <p class="school">Education Programs</p>
+            <div class="departments">
+                <p><img src="img/Red Cirle Bullet.png" alt="bullet"><span>Education</span></p>                
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Didactics, Curriculum Development Teaching</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Education Management & Administration</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Special Education</span></p>
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>Distance & Continuing Education</span></p>                
+            </div>
+            <p class="school">MSc./MBA Progams</p>
+            <div class="departments">
+                <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>We offer tailored/customized programs, please contact our administration for details</span></p>                
+            </div>
         </div>
         <div class="right-gutter"></div>
     </div>

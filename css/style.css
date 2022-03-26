@@ -162,8 +162,8 @@ nav ul li a:hover{
 }
 
 .admission-info a{
-    width: 270px;
-    height: 93px;
+    width: 250px;
+    height: 73px;
     background-color: #0487D9C1;
     border-radius: 6px;
     color: #FFF;
@@ -174,10 +174,51 @@ nav ul li a:hover{
 
 /* ---------------------------------- Our Programs ------------------------------------- */
 
+.our-programs h1{
+    display: flex;
+    width: auto;
+    height: 73px;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    background: #CE3E3E;
+    color: #FFF;
+}
+
 .our-programs{
     grid-area: programs;
 }
 
+.school{
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(46, 45, 45);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.departments{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    background: rgb(206, 206, 206);
+}
+
+.departments p{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.departments p img{
+    margin: 0 25px -7px 0;
+}
+
+
+.specialty{
+    margin-left: 50px;
+    color: rgb(68, 68, 68);
+}
 
 .right-gutter{
     grid-area: right-gutter;
