@@ -135,7 +135,9 @@ table td{
 }
 
 .active, .side-bar a:hover {
-    background-color: rgb(124, 124, 124);
+    /* background-color: rgb(124, 124, 124); */
+    border-bottom: 5px solid white;
+    /* border-left: 2px solid white; */
     color: white;
   }
 
