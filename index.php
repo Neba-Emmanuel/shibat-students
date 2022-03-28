@@ -127,7 +127,7 @@
             </div>
         </div>
         <div class="footer">
-            
+            <p><a href="#"><img src="img/footer logo.png" alt="swisslink logo"></a></p>
         </div>
         <div class="right-gutter"></div>
     </div>
