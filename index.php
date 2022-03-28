@@ -126,6 +126,9 @@
                 <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>We offer tailored/customized programs, please contact our administration for details</span></p>                
             </div>
         </div>
+        <div class="footer">
+            
+        </div>
         <div class="right-gutter"></div>
     </div>
     <script>

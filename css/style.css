@@ -22,11 +22,12 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 134px 525px 1698px 3600px;
+    grid-template-rows: 134px 525px 1698px 2500px 525px;
     grid-template-areas: "nav nav nav nav nav nav nav nav"
     "hero hero hero hero hero hero hero hero"
     "left-gutter admission admission admission admission admission admission right-gutter"
-    "left-gutter programs programs programs programs programs programs right-gutter";
+    "left-gutter programs programs programs programs programs programs right-gutter"
+    "footer footer footer footer footer footer footer footer";
 }
 
 .left-gutter{
@@ -224,6 +225,10 @@ nav ul li a:hover{
     grid-area: right-gutter;
 }
 
+.footer{
+    grid-area: footer;
+    background: #0487D9;
+}
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
