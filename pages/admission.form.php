@@ -61,7 +61,7 @@
                 <td><p>National ID or Passport</p><label for="file">Upload</label><input type="file" name="id_card" class="file"></td>
             </tr>
             <tr>
-                <td><p>Date of Birth <span>*</span></p><input type="date" name="dob"></td>
+                <td><p>Date of Birth <span>*</span></p><input type="date" name="dob" class="required"></td>
                 <td><p>Nationality</p>
                 <select name="nationality">
                     <option value="Cameroonian" default>Cameroonian</option>
@@ -83,7 +83,7 @@
                 </select></td>
             </tr>
             <tr>
-                <td><p>Email <span>*</span></p><input type="email" name="email"></td>
+                <td><p>Email <span>*</span></p><input type="email" name="email" class="required"></td>
                 <td><p>Permanent Address</p><input type="text" name="p-address"></td>
                 <td><label for="file">Upload Picture</label><input type="file" name="admissionPic" class="file"></td>
             </tr>
