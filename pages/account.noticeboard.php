@@ -63,7 +63,7 @@
                     <div class="mg-avl-room">
                         <div class="row">
                             <div class="col-sm-2 s-content" >
-                                <span class="fa fa-calendar-o" style="font-size: 55px">
+                                <span style="font-size: 55px"><img src="../img/calenda.png" alt="calenda">
                                 </span>  
          						  <h5 class="mg-sec-left-title"><?php echo date_format(date_create($row['time']),'M d, Y'); ?></h5>
                             </div>
@@ -79,7 +79,7 @@
                                     </div>
                                 
                                     <div class="col-sm-12 f-author">
-                                        <p><span class="fa fa-user"></span> Author :  <?php echo  $row['author']; ?> on  <?php echo  date_format(date_create($row['time']),"d M Y h:i a"); ?></p>
+                                        <p><span><img src="../img/user_black.png" alt="user"></span> Author :  <?php echo  $row['author']; ?> on  <?php echo  date_format(date_create($row['time']),"d M Y h:i a"); ?></p>
                                     </div>
                                 </div> 
                             </div>

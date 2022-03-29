@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHIBAT Students - Admissions</title>    
     <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -125,6 +126,9 @@
             <div class="departments">
                 <p class="specialty"><img src="img/Blue Cirle Bullet.png" alt="bullet"><span>We offer tailored/customized programs, please contact our administration for details</span></p>                
             </div>
+        </div>
+        <div class="footer">
+            <p><a href="#"><img src="img/footer logo.png" alt="swisslink logo"></a></p>
         </div>
         <div class="right-gutter"></div>
     </div>

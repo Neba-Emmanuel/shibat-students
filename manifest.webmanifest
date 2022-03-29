@@ -1,0 +1,20 @@
+{
+    "name": "SwissLink University Students",
+    "short_name": "SHIBAT Students",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "A student management system to manage students in SwissLink Higher Institute of Business and Technology",
+    "icons": [
+        {
+            "src": "img/logo1.png",
+            "sizes": "66x66",
+            "type": "image/png"
+        },
+        {
+            "src": "img/footer logo1.png",
+            "sizes": "195x195",
+            "type": "image/png"
+        }
+    ]
+}
