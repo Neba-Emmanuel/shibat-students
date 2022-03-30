@@ -85,6 +85,8 @@
                      <th>Joined</th>
                   </tr>
                 <?php
+                $count = 0;
+                $count++;
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
                 $query = "SELECT * FROM admission ORDER BY id DESC LIMIT 5 ";
                 $result = mysqli_query($mysqli,$query);       
@@ -92,7 +94,8 @@
                   {
                   //   $newDate = date('d-M-Y',strtotime($addrow[11]));
                     echo "<tr>";
-                    echo "<td>$addrow[0]</td>";
+                    $addrow[0];
+                    echo "<td>";echo $count++;echo "</td>";
                     echo "<td>$addrow[1]</td>";
                     echo "<td>$addrow[23]</td>";
                     echo "<td>$addrow[24]</td>";
