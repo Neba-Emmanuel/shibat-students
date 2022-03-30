@@ -120,13 +120,16 @@
                             </tr>
                         </thead>
                         <?php
+                        $count = 0;
+                        $count++;
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
                   $query = "SELECT * FROM admission WHERE `status` = 'pending'";
                   $result = mysqli_query($mysqli,$query);
                   while($addrow = mysqli_fetch_array($result)){
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
                     echo "<tr>";
-                    echo "<td>$addrow[0]</td>";
+                    $addrow[0];
+                    echo "<td>";echo $count++;echo "</td>";
                     echo "<td><a href='view.php?id=$addrow[0]'>" .$addrow[1] . "</a></td>";
                     $_SESSION["studid"] = $addrow['0'];
                     echo "<td>$addrow[23]</td>";
