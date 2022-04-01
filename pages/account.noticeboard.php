@@ -28,7 +28,7 @@
        <div class="nav">
             <a href="../index.php"><img src="../img/profile.png" alt="swisslink logo" width="180" height="140"></a>
             <nav>            
-            <div class="dropdown">
+            <div class="dropdown" style="margin-left: 550px;">
                     <button onclick="myFunction()" class="dropbtn">
                         <img src="../img/default.png" alt="user-icon" width="20" height="20">
                         <?php echo $_SESSION['studname']; ?>
