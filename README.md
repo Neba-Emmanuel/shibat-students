@@ -20,7 +20,7 @@ It was recommended that SHIBAT should put in place very serious measures as to a
 </p>
 
 <p>
-<b>Keywords: </b>Registration System, Payment System, Web Based SMS, Automated System
+<b>Keywords: </b>Registration System, Payment System, Web Based SMS, Automated System.
 </p>
 
 ### Made with love By Neba Emmanuel
