@@ -139,9 +139,9 @@
             <div class="social">
                 <h2>Social links</h2>
                 <p><img src="img/evelope.png" alt="envelope" width="30"> <a href="mailto:info@swisslinkedu.com"> info@swisslinkedu.com</a></p>
-                <p><img src="img/facebook.png" alt="facebook" width="20"><a href="#">Facebook</a></p>
-                <p><img src="img/twitter.png" alt="twitter" width="30"><a href="#">Twitter</a></p>
-                <p><img src="img/linkedin.png" alt="linkedin" width="30"><a href="#">Linkedin</a></p>
+                <p><img src="img/facebook.png" alt="facebook" width="20"><a href="#" style="margin-left: 25px;">Facebook</a></p>
+                <p><img src="img/twitter.png" alt="twitter" width="30"><a href="#" style="margin-left: 16px;">Twitter</a></p>
+                <p><img src="img/linkedin.png" alt="linkedin" width="30"><a href="#" style="margin-left: 16px;">Linkedin</a></p>
             </div>
         </div>
         <div class="right-gutter"></div>
