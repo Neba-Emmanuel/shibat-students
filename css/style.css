@@ -261,6 +261,20 @@ nav ul li a:hover{
     margin-left: 10px;
 }
 
+.footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0487D9;
+    color: #FFF;
+    grid-area: footer;
+}
+
+footer p{
+    color: #FFF;
+}
+
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
