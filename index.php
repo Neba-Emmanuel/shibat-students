@@ -131,7 +131,17 @@
             <p><img src="img/footer logo.png" alt="swisslink logo"></p>
             <div class="addresses">
                 <h3>Addresses</h3>
-                
+                <p><img src="img/location.png" alt="location">Buea Road - Kumba, Cameroon</p>
+                <p><img src="img/location.png" alt="location">Bonaberi-Douala, Cameroon</p>
+                <p><img src="img/phone.png" alt="phone">CMR:(+237) 679894892 / 678159320</p>
+                <p><img src="img/phone.png" alt="phone">Swiss: (+41) 76 54 78 001</p>
+            </div>
+            <div class="social">
+                <h3>Social links</h3>
+                <p><img src="img/evelope.png" alt="envelope"><a href="mailto:info@swisslinkedu.com"> info@swisslinkedu.com</a></p>
+                <p><img src="img/facebook.png" alt="facebook"><a href="#">Facebook</a></p>
+                <p><img src="img/twitter.png" alt="twitter"><a href="#">Twitter</a></p>
+                <p><img src="img/linkedin.png" alt="linkedin"><a href="#">Linkedin</a></p>
             </div>
         </div>
         <div class="right-gutter"></div>
