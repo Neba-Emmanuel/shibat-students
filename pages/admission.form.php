@@ -175,7 +175,7 @@
             </tr>
             <tr>
                 <td><input type="text" name="institute-name" style="border: none;"></td>
-                <td><input type="date" name="from" style="padding-right: 100px; border: none;"></td>
+                <td><input type="date" name="from" style="border: none;"></td>
                 <td><input type="date" name="to" style="border: none;"></td>
                 <td><input type="text" name="program" style="border: none;"></td>
                 <td><input type="text" name="qualification" style="border: none;"></td>
