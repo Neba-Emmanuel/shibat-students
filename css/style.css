@@ -233,7 +233,23 @@ nav ul li a:hover{
     background: #0487D9;
 }
 
+.addresses{
+    color:#FFF;
+    font-size: 20px;
+}
 
+.addresses p{
+    margin: 10px 0 15px 0;
+}
+
+.addresses img{
+    margin-bottom: -6px;
+}
+
+.social{
+    color:#FFF;
+    font-size: 20px;
+}
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */

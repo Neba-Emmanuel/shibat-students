@@ -130,14 +130,14 @@
         <div class="footer">
             <p><img src="img/footer logo.png" alt="swisslink logo"></p>
             <div class="addresses">
-                <h3>Addresses</h3>
-                <p><img src="img/location.png" alt="location">Buea Road - Kumba, Cameroon</p>
-                <p><img src="img/location.png" alt="location">Bonaberi-Douala, Cameroon</p>
-                <p><img src="img/phone.png" alt="phone">CMR:(+237) 679894892 / 678159320</p>
-                <p><img src="img/phone.png" alt="phone">Swiss: (+41) 76 54 78 001</p>
+                <h2>Addresses</h2>
+                <p><img src="img/location.png" alt="location"><span> Buea Road - Kumba, Cameroon</span></p>
+                <p><img src="img/location.png" alt="location"><span> Bonaberi-Douala, Cameroon</span></p>
+                <p><img src="img/phone.png" alt="phone"><span> CMR:(+237) 679894892 / 678159320</span></p>
+                <p><img src="img/phone.png" alt="phone"><span> Swiss: (+41) 76 54 78 001</span></p>
             </div>
             <div class="social">
-                <h3>Social links</h3>
+                <h2>Social links</h2>
                 <p><img src="img/evelope.png" alt="envelope"><a href="mailto:info@swisslinkedu.com"> info@swisslinkedu.com</a></p>
                 <p><img src="img/facebook.png" alt="facebook"><a href="#">Facebook</a></p>
                 <p><img src="img/twitter.png" alt="twitter"><a href="#">Twitter</a></p>
