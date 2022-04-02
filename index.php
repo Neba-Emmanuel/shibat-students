@@ -129,6 +129,10 @@
         </div>
         <div class="footer">
             <p><img src="img/footer logo.png" alt="swisslink logo"></p>
+            <div class="addresses">
+                <h3>Addresses</h3>
+                
+            </div>
         </div>
         <div class="right-gutter"></div>
     </div>
