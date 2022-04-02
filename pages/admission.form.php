@@ -114,7 +114,12 @@
     </div>
 
     <div class="tab">
-        <p style="margin-top: 20px; font-weight: 600;">Select School and Programme you wish to be admiited</p>
+    <p style="margin-top: 20px; font-weight: 600;">Select Campus location</p>
+        <select name="school" style="margin: 20px 0 20px 0;">
+            <option value="Kumba">Kumba</option>
+            <option value="Douala">Douala</option>
+        </select>
+        <p style="margin-top: 15px; font-weight: 600;">Select School and Programme you wish to be admiited</p>
         <select name="school" style="margin: 20px 0 20px 0;">
             <option value="School of Business">School of Business</option>
             <option value="School of Technology">School of Technology</option>
@@ -170,7 +175,7 @@
             </tr>
             <tr>
                 <td><input type="text" name="institute-name" style="border: none;"></td>
-                <td><input type="date" name="from" style="padding-right: 100px; border: none;"></td>
+                <td><input type="date" name="from" style="border: none;"></td>
                 <td><input type="date" name="to" style="border: none;"></td>
                 <td><input type="text" name="program" style="border: none;"></td>
                 <td><input type="text" name="qualification" style="border: none;"></td>

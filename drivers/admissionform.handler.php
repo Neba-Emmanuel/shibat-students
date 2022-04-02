@@ -66,13 +66,13 @@ session_start();
         $query = "INSERT INTO admission(`name`, `dob`, `pob`, `tel`, `email`, `gender`, `nationality`, `maritalStatus`, `specialNeeds`, `address`, `img`, `idCard`, `birthCert`, `fatherName`, `fatherAddress`, `fatherNum`, `motherName`, `motherAddress`, `motherNum`, `sponsorName`, `sponsorAddress`, `sponsorNum`, `school`, `programme`, `level`, `instituteAttended`, `dfrom`, `dto`, `programmestudied`, `certificate_earned`, `remark`, `uploadq`) VALUES('$Name', '$dob', '$pob', '$tel', '$email', '$gender', '$nationality', '$marital_status', '$special_needs', '$address', '$pic', '$id_card', '$bc', '$father_name', '$father_address', '$father_num', '$mother_name', '$mother_address', '$mother_num', '$sponsor_name', '$sponsor_address', '$sponsor_num', '$school', '$programme', '$level', '$institutename', '$from','$to', '$program', '$qualification', '$remark', '$qualificationupload')";
         $sql = mysqli_query($conn,$query);
         if($sql){            
-            echo "<script language='javascript'>alert('Insertion Successful!');
+            echo "<script language='javascript'>alert('Form successfully submitted!');
             window.location.href='/shibat-students/pages/admission.complete.php';
              </script>";
         }
         else{
             // echo(mysqli_error($conn));
-            echo "<script language='javascript'>alert('Insertion Unsuccessful!');
+            echo "<script language='javascript'>alert('Submission was unsucessful!');
 			window.location.href='/shibat-students/pages/admission.form.php';
              </script>";
             

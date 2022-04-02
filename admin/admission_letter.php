@@ -2,10 +2,11 @@
 session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
-// $id = $_GET['ID'];
+// $id = $_GET['id'];
+$email = $_SESSION["email"];
 include 'variables.php';
 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-$query = "SELECT * FROM admission";
+$query = "SELECT * FROM admission WHERE instituteEmail = '$email'";
 $result = mysqli_query($mysqli,$query);
 while($row = mysqli_fetch_array($result)){
 
