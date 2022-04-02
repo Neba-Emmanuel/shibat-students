@@ -250,6 +250,17 @@ nav ul li a:hover{
     color:#FFF;
     font-size: 20px;
 }
+
+.social p{
+    margin: 10px 0 5px 0;
+}
+
+.social a{
+    color:#FFF;
+    font-size: 20px;
+    /* margin-left: 10px; */
+}
+
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
