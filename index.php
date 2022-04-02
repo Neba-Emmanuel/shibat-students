@@ -144,7 +144,7 @@
                 <p><img src="img/linkedin.png" alt="linkedin" width="30"><a href="#" style="margin-left: 16px;">Linkedin</a></p>
             </div>
         </div>
-        <footer>
+        <footer class="foot">
         <p>Powered by Emmis Technologies</p>
         <p>&copy copyright swisslink 2022</p>
         </footer>

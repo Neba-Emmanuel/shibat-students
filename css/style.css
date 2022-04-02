@@ -22,12 +22,13 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 134px 525px 1698px 2500px 425px;
+    grid-template-rows: 134px 525px 1698px 2500px 425px 100px;
     grid-template-areas: "nav nav nav nav nav nav nav nav"
     "hero hero hero hero hero hero hero hero"
     "left-gutter admission admission admission admission admission admission right-gutter"
     "left-gutter programs programs programs programs programs programs right-gutter"
-    "footer footer footer footer footer footer footer footer";
+    "footer footer footer footer footer footer footer footer"
+    "foot foot foot foot foot foot foot foot";
 }
 
 .left-gutter{
@@ -230,7 +231,7 @@ nav ul li a:hover{
     justify-content: space-around;
     align-items: center;
     grid-area: footer;
-    background: #0487D9;
+    background: #0487D9C1;
 }
 
 .addresses{
@@ -261,14 +262,14 @@ nav ul li a:hover{
     margin-left: 10px;
 }
 
-.footer1{
+.foot{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #0487D9;
     color: #FFF;
-    grid-area: footer;
+    grid-area: foot;
 }
 
 footer p{
