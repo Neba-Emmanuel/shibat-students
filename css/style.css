@@ -22,12 +22,13 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 134px 525px 1698px 2500px 525px;
+    grid-template-rows: 134px 525px 1698px 2500px 425px 100px;
     grid-template-areas: "nav nav nav nav nav nav nav nav"
     "hero hero hero hero hero hero hero hero"
     "left-gutter admission admission admission admission admission admission right-gutter"
     "left-gutter programs programs programs programs programs programs right-gutter"
-    "footer footer footer footer footer footer footer footer";
+    "footer footer footer footer footer footer footer footer"
+    "foot foot foot foot foot foot foot foot";
 }
 
 .left-gutter{
@@ -226,9 +227,55 @@ nav ul li a:hover{
 }
 
 .footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     grid-area: footer;
-    background: #0487D9;
+    background: #0487D9C1;
 }
+
+.addresses{
+    color:#FFF;
+    font-size: 20px;
+}
+
+.addresses p{
+    margin: 10px 0 15px 0;
+}
+
+.addresses img{
+    margin-bottom: -6px;
+}
+
+.social{
+    color:#FFF;
+    font-size: 20px;
+}
+
+.social p{
+    margin: 10px 0 5px 0;
+}
+
+.social a{
+    color:#FFF;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0487D9;
+    color: #FFF;
+    grid-area: foot;
+}
+
+footer p{
+    color: #FFF;
+}
+
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
