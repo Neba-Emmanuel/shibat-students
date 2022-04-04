@@ -6,7 +6,7 @@ if(isset($_POST['admit'])){
     $id = $_POST['id'];
 
     // Admission Date
-    $date = date("d/m/Y");
+    $date = date("d M, y");
     $sql = "UPDATE admission SET `status` = 'admitted', admissionDate = '$date' WHERE ID = '$id'";
     $result =mysqli_query($mysqli, $sql);
     $query = mysqli_query($mysqli,"SELECT * FROM admission WHERE ID = '$id'");
@@ -14,12 +14,13 @@ if(isset($_POST['admit'])){
         if($row == TRUE){
             $school = substr($row['school'],10,1);
             $name = $row['name'];
+            $campus = substr($row['campus_location'],0,1 );
         }
 
         // Student Matricle
         $year = substr("".date('Y'),-2);
         $counter = 100;
-        $matricle = "SL".$year.$school;
+        $matricle = "SL".$campus.$year.$school;
         $sql = "select CONCAT(\'SL20T\',LPAD(RIGHT(ifnull(max(\'ID\'),\'SL20T000\'),3) + 1,3,\'100\'))";
 
         // Student Email

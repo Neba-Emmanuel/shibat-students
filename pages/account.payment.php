@@ -17,6 +17,7 @@
     <title>Account | Payment</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
     <!-- <link href="../admin/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
     <style>

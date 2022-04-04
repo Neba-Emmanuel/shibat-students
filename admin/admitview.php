@@ -97,7 +97,7 @@ if(isset($_SESSION['email']))
 			<section id="breadcrumb">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li class="active">Admissions Record</li>
+						<li class="active">Admitted Records</li>
 					</ol>
 				</div>
 			</section>
@@ -167,7 +167,7 @@ if(isset($_SESSION['email']))
 								</div>
 								<div class="col-sm-4 form-group">
 									<label>Admission Date</label>
-									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
+									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[38]; ?> " readonly>
 								</div>
 							</div>
 						</div>
@@ -227,15 +227,19 @@ if(isset($_SESSION['email']))
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-3 form-group">
+								<label>Campus Location</label>
+								<input type="text" class="form-control" value="<?php echo $details[39]; ?> " readonly>
+							</div>
+							<div class="col-sm-3 form-group">
 								<label>School of Study</label>
 								<input type="text" class="form-control" value="<?php echo $details[23]; ?> " readonly>
 							</div>
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-3 form-group">
 								<label>Field of Study</label>
 								<input type="text" class="form-control" value="<?php echo $details[24]; ?> " readonly>
 							</div>
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-3 form-group">
 								<label>Certification</label>
 								<input type="text" class="form-control" value="<?php echo $details[25]; ?> " readonly>
 							</div>

@@ -17,6 +17,7 @@
     <title>Account | Notice Board</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
     <link href="../admin/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
     <style>
@@ -65,7 +66,7 @@
                             <div class="col-sm-2 s-content" >
                                 <span style="font-size: 55px"><img src="../img/calenda.png" alt="calenda">
                                 </span>  
-         						  <h5 class="mg-sec-left-title"><?php echo date_format(date_create($row['time']),'M d, Y'); ?></h5>
+         						  <h5 class="mg-sec-left-title"><?php echo date_format(date_create($row['time']),'d M, Y'); ?></h5>
                             </div>
                             <div class="col-sm-10">
                                 <div style=" padding: 10px;font-size: 25px;font-weight: bold;color: #000;margin-bottom: 5px;">

@@ -146,7 +146,7 @@
         </div>
         <footer class="foot">
         <p>Powered by Emmis Technologies</p>
-        <p>&copy copyright swisslink 2022</p>
+        <p>&copy copyright swisslink <?php echo date("Y");?></p>
         </footer>
         <div class="right-gutter"></div>
     </div>
