@@ -53,5 +53,5 @@ $mpdf -> WriteHTML('<p>Yours Sincerly,</p>');
 $mpdf -> WriteHTML('<p><b>SwissLink Pofessional University</b></p>');
 $mpdf -> Image('../img/footer.png', '15', '265.5');
 // $mpdf->WriteHTML('<p>Date:</p>');
-$mpdf->Output();
+$mpdf->Output('Admission Letter','D');
 }
