@@ -1,57 +1,74 @@
-// const version = 1;
-// let staticName
+var cacheName = 'shibat-students-v1';
+var cacheAssets = [
+	'/index.php',
+	'/manifest.webmanifest',
+	'/icon.ico',
 
-/* service_worker.js */
-const cacheName = 'shibat-students-v1';
-const staticAssets = [
-	'./',
-	'./index.php',
-	'./manifest.webmanifest',
-	'./icon.ico',
-	'./img/Blue Circle Bullet.png',
-	'./img/nav logo.png',
-	'./img/Red Circle Bullet.png'
 ];
 
-self.addEventListener('install', async e =>{
-	const cache = await caches.open(cacheName);
-	await cache.addAll(staticAssets);
-	return self.skipWaiting();
-});
+// Call install Event
+self.addEventListener('install', e => {
+	// Wait until promise is finished
+	e.waitUntil(
+		caches.open(cacheName)
+		.then(cache => {
+			console.log(`Service Worker: Caching Files: ${cache}`);
+			cache.addAll(cacheAssets)
+				// When everything is set
+				.then(() => self.skipWaiting())
+		})
+	);
+})
 
+// Call Activate Event
 self.addEventListener('activate', e => {
-	self.clients.claim();
+	console.log('Service Worker: Activated');
+	// Clean up old caches by looping through all of the
+	// caches and deleting any old caches or caches that
+	// are not defined in the list
+	e.waitUntil(
+		caches.keys().then(cacheNames => {
+			return Promise.all(
+				cacheNames.map(
+					cache => {
+						if (cache !== cacheName) {
+							console.log('Service Worker: Clearing Old Cache');
+							return caches.delete(cache);
+						}
+					}
+				)
+			)
+		})
+	);
+})
+
+var cacheName = 'geeks-cache-v1';
+
+// Call Fetch Event
+self.addEventListener('fetch', e => {
+	console.log('Service Worker: Fetching');
+	e.respondWith(
+		fetch(e.request)
+		.then(res => {
+			// The response is a stream and in order the browser
+			// to consume the response and in the same time the
+			// cache consuming the response it needs to be
+			// cloned in order to have two streams.
+			const resClone = res.clone();
+			// Open cache
+			caches.open(cacheName)
+				.then(cache => {
+					// Add response to cache
+					cache.put(e.request, resClone);
+				});
+			return res;
+		}).catch(
+			err => caches.match(e.request)
+			.then(res => res)
+		)
+	);
 });
 
-self.addEventListener('fetch', async e => {
-	const req = e.request;
-	const url = new URL(req.url);
-
-	if(url.origin == location.origin){
-		e.respondWith(cacheFirst(req));
-	}
-	else{
-		e.respondWith(networkAndCache(req));
-	}
-});
-
-async function cacheFirst(req){
-	const cache = await caches.open(cacheName);
-	const cached = await cache.match(req);
-	return cached || fetch(req);
-}
-
-async function networkAndCache(req){
-	const cache = await caches.open(cacheName);
-	try {
-		const fresh = await fetch(req);
-		await cache.put(req, fresh.clone());
-		return fresh;
-	} catch (e) {
-		const cached = await cache.match(req);
-		return cached;
-	}
-}
 
 // const offlineCache = 'index.php';
 // // Adding the offline page
