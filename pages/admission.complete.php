@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Page</title>
+    <title>Registration Complete</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
     <link rel="manifest" href="../manifest.webmanifest">
 </head>
