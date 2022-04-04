@@ -116,7 +116,7 @@
 
     <div class="tab">
     <p style="margin-top: 20px; font-weight: 600;">Select Campus location</p>
-        <select name="school" style="margin: 20px 0 20px 0;">
+        <select name="school-location" style="margin: 20px 0 20px 0;">
             <option value="Kumba">Kumba</option>
             <option value="Douala">Douala</option>
         </select>

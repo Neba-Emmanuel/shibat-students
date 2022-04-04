@@ -27,6 +27,7 @@ session_start();
     $sponsor_num = mysqli_real_escape_string($conn, $_POST['sponsor-num']);
 
     // Program choice
+    $school_location = $_POST['school-location'];
     $school = $_POST['school'];
     $programme = $_POST['programme'];
     $level = $_POST['level'];
