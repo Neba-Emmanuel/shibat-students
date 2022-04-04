@@ -166,8 +166,8 @@ if(isset($_SESSION['email']))
 									<h4><a href="<?php echo"../upload/".$details[13]; ?>" target="_blank">Preview</a></h4>
 								</div>
 								<div class="col-sm-4 form-group">
-									<label>Admission Date</label>
-									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
+									<label>Date applied for admission</label>
+									<input type="text" name="reg_date" class="form-control" value="<?php echo date_format(date_create($details[33]),'d M, Y'); ?> " readonly>
 								</div>
 							</div>
 						</div>
