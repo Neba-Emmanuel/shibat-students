@@ -11,7 +11,7 @@ while($row = mysqli_fetch_assoc($sql)){
    
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf(['format' => 'A7-L']);
+$mpdf = new \Mpdf\Mpdf(['format' => 'A6-L']);
 $mpdf -> AddPage();
 
 // $mpdf -> Image('../img/account-logo.png', '15', '10');
@@ -28,5 +28,6 @@ if($row['level'] == 'HND'){
 else {
     $mpdf -> Cell(0,8,"Amount: 30,000FCFA",0,1,'L',1);
 }
-$mpdf->Output();
+$mpdf -> Image('../img/footer.png', '15', '5');
+$mpdf->Output('Payment reciept.pdf','I');
 }
