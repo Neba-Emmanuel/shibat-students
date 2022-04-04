@@ -15,7 +15,7 @@ $mpdf = new \Mpdf\Mpdf(['format' => 'A6-L']);
 $mpdf -> AddPage();
 
 // $mpdf -> Image('../img/account-logo.png', '15', '10');
-$mpdf -> Image('../img/header.png', '15', '5');
+$mpdf -> Image('../img/header.png', '15', '13');
 $mpdf -> SetFont('','B','12');
 $mpdf -> Cell(0,8,'PAYMENT RECIEPT',0,1,'C',1);
 $mpdf -> SetFont('','N','12');
@@ -28,6 +28,6 @@ if($row['level'] == 'HND'){
 else {
     $mpdf -> Cell(0,8,"Amount: 30,000FCFA",0,1,'L',1);
 }
-$mpdf -> Image('../img/footer.png', '15', '5');
+$mpdf -> Image('../img/footer.png', '15', '80');
 $mpdf->Output('Payment reciept.pdf','D');
 }
