@@ -29,5 +29,5 @@ else {
     $mpdf -> Cell(0,8,"Amount: 30,000FCFA",0,1,'L',1);
 }
 $mpdf -> Image('../img/footer.png', '15', '5');
-$mpdf->Output('Payment reciept.pdf','I');
+$mpdf->Output('Payment reciept.pdf','D');
 }
