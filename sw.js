@@ -1,9 +1,19 @@
 var cacheName = 'shibat-students-v1';
 var cacheAssets = [
 	'/index.php',
+	'/pages/admission.signup.php',
+	'/pages/admission.login.php',
+	'/pages/account.signup.php',
+	'/pages/account.login.php',
+	'/pages/account.profile.php',
+	'/pages/account.noticeboard.php',
+	'/pages/account.payment.php',
+	'/pages/account.timetable.php',
 	'/manifest.webmanifest',
 	'/icon.ico',
-
+	'/img/Blue Circle Bullet.png',
+	'/img/Red Circle Bullet.png',
+	'/img/nav logo.png',
 ];
 
 // Call install Event
@@ -42,7 +52,7 @@ self.addEventListener('activate', e => {
 	);
 })
 
-var cacheName = 'geeks-cache-v1';
+var cacheName = 'shibat-students-v1';
 
 // Call Fetch Event
 self.addEventListener('fetch', e => {
