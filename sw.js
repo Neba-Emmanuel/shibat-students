@@ -5,7 +5,7 @@
 const cacheName = 'shibat students-v1';
 const staticAssets = [
 	'/',
-	'./shibat-students/index.php',
+	'/index.php',
 	'/manifest.webmanifest',
 	'/icon.ico',
 	'/img/Blue Circle Bullet.png',
