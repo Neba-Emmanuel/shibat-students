@@ -4,13 +4,13 @@
 /* service_worker.js */
 const cacheName = 'shibat students-v1';
 const staticAssets = [
-	'/',
-	'/index.php',
-	'/manifest.webmanifest',
-	'/icon.ico',
-	'/img/Blue Circle Bullet.png',
-	'/img/nav logo.png',
-	'/img/Red Circle Bullet.png',
+	'./',
+	'./index.php',
+	'./manifest.webmanifest',
+	'./icon.ico',
+	'./img/Blue Circle Bullet.png',
+	'./img/nav logo.png',
+	'./img/Red Circle Bullet.png',
 ];
 
 self.addEventListener('install', async e =>{
