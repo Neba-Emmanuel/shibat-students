@@ -2,7 +2,7 @@
 // let staticName
 
 /* service_worker.js */
-const cacheName = 'shibat students-v1';
+const cacheName = 'shibat-students-v1';
 const staticAssets = [
 	'./',
 	'./index.php',
@@ -10,7 +10,7 @@ const staticAssets = [
 	'./icon.ico',
 	'./img/Blue Circle Bullet.png',
 	'./img/nav logo.png',
-	'./img/Red Circle Bullet.png',
+	'./img/Red Circle Bullet.png'
 ];
 
 self.addEventListener('install', async e =>{
@@ -27,11 +27,11 @@ self.addEventListener('fetch', async e => {
 	const req = e.request;
 	const url = new URL(req.url);
 
-	if(url.origin = location.origin){
-		e.respondWidth(cacheFirst(req));
+	if(url.origin == location.origin){
+		e.respondWith(cacheFirst(req));
 	}
 	else{
-		e.respondWidth(networkAndCache(req));
+		e.respondWith(networkAndCache(req));
 	}
 });
 
