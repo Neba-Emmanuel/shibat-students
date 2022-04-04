@@ -6,7 +6,7 @@ if(isset($_POST['admit'])){
     $id = $_POST['id'];
 
     // Admission Date
-    $date = date("d/m/Y");
+    $date = date("d M, y");
     $sql = "UPDATE admission SET `status` = 'admitted', admissionDate = '$date' WHERE ID = '$id'";
     $result =mysqli_query($mysqli, $sql);
     $query = mysqli_query($mysqli,"SELECT * FROM admission WHERE ID = '$id'");
