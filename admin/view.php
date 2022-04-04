@@ -227,15 +227,19 @@ if(isset($_SESSION['email']))
 					</div>
 					<div class="panel-body">
 						<div class="row">
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-3 form-group">
+								<label>Campus Location</label>
+								<input type="text" class="form-control" value="<?php echo $details[39]; ?> " readonly>
+							</div>
+							<div class="col-sm-3 form-group">
 								<label>School of Study</label>
 								<input type="text" class="form-control" value="<?php echo $details[23]; ?> " readonly>
 							</div>
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-3 form-group">
 								<label>Field of Study</label>
 								<input type="text" class="form-control" value="<?php echo $details[24]; ?> " readonly>
 							</div>
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-3 form-group">
 								<label>Certification</label>
 								<input type="text" class="form-control" value="<?php echo $details[25]; ?> " readonly>
 							</div>
