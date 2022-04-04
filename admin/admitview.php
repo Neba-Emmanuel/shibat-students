@@ -97,7 +97,7 @@ if(isset($_SESSION['email']))
 			<section id="breadcrumb">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li class="active">Admissions Record</li>
+						<li class="active">Admitted Records</li>
 					</ol>
 				</div>
 			</section>
@@ -167,7 +167,7 @@ if(isset($_SESSION['email']))
 								</div>
 								<div class="col-sm-4 form-group">
 									<label>Admission Date</label>
-									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[33]; ?> " readonly>
+									<input type="text" name="reg_date" class="form-control" value="<?php echo $details[38]; ?> " readonly>
 								</div>
 							</div>
 						</div>
