@@ -14,7 +14,7 @@ if(isset($_POST['admit'])){
         if($row == TRUE){
             $school = substr($row['school'],10,1);
             $name = $row['name'];
-            $campus = substr($row['campus_location'],0,1);
+            $campus = substr($row['campus_location'],0,1 );
         }
 
         // Student Matricle
