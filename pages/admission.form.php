@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admission Form</title>
     <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
     <style>
