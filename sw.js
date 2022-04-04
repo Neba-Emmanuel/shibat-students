@@ -9,6 +9,8 @@ var cacheAssets = [
 	'/pages/account.noticeboard.php',
 	'/pages/account.payment.php',
 	'/pages/account.timetable.php',
+	'/drivers/account.login.php',
+	'/drivers/admission.login.php',
 	'/manifest.webmanifest',
 	'/icon.ico',
 	'/css/style.css',
