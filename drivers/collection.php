@@ -2,9 +2,10 @@
 require_once("vendor\autoload.php");
 require_once("vendor\patricpoba\mtn-momo-api-php\src\MtnCollection.php");
 require_once("vendor\patricpoba\mtn-momo-api-php\src\Http\ApiResponse.php");
+use vendor\autoload;
 use PatricPoba\MtnMomo\MtnConfig;
 use PatricPoba\MtnMomo\MtnCollection;
-use PatricPoba\MtnMomo\ApiResponse;
+use PatricPoba\MtnMomo\Http\ApiResponse;
  
 $config = new MtnConfig([ 
     // mandatory credentials
@@ -32,4 +33,5 @@ $params = [
 $transactionId = $collection->requestToPay($params);
 
 $transaction = $collection->getTransaction($transactionId);
+
 ?>

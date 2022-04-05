@@ -19,13 +19,13 @@ return [
 
     'collection' => [
 
-        'api_secret'    => env('MTN_MOMO_COLLECTION_API_SECRET'),
+        'api_secret'    => env('MTN_MOMO_COLLECTION_API_SECRET', '32bfa2c1ad084d1c9fabf29da9dfa806'),
         
-        'primary_key'   => env('MTN_MOMO_COLLECTION_PRIMARY_KEY'),
+        'primary_key'   => env('MTN_MOMO_COLLECTION_PRIMARY_KEY', '64aaacbf2dbe4de98ae2839ea6e89243'),
 
-        'user_id'       => env('MTN_MOMO_COLLECTION_USER_ID'),
+        'user_id'       => env('MTN_MOMO_COLLECTION_USER_ID', 'c5617f01-9970-4afb-b290-a1d930b6c118'),
 
-        'callback_url'  => env('MTN_MOMO_COLLECTION_CALLBACK_URL')
+        'callback_url'  => env('MTN_MOMO_COLLECTION_CALLBACK_URL', 'localhost:shibat-students/')
     ],
  
 
