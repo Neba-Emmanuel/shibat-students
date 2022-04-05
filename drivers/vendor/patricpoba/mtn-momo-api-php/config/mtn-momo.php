@@ -29,26 +29,26 @@ return [
     ],
  
 
-    'disbursement' => [
+    // 'disbursement' => [
 
-        'primary_key'   => env('MTN_MOMO_DISBURSEMENT_PRIMARY_KEY'),
+    //     'primary_key'   => env('MTN_MOMO_DISBURSEMENT_PRIMARY_KEY'),
 
-        'api_secret'    => env('MTN_MOMO_DISBURSEMENT_API_SECRET'),
+    //     'api_secret'    => env('MTN_MOMO_DISBURSEMENT_API_SECRET'),
 
-        'user_id'       => env('MTN_MOMO_DISBURSEMENT_USER_ID'),
+    //     'user_id'       => env('MTN_MOMO_DISBURSEMENT_USER_ID'),
 
-        'callback_url'  => env('MTN_MOMO_DISBURSEMENT_CALLBACK_URL')
-    ],
+    //     'callback_url'  => env('MTN_MOMO_DISBURSEMENT_CALLBACK_URL')
+    // ],
  
 
-    'remittance' => [
+    // 'remittance' => [
 
-        'primary_key'   => env('MTN_MOMO_REMITTANCE_PRIMARY_KEY'),
+    //     'primary_key'   => env('MTN_MOMO_REMITTANCE_PRIMARY_KEY'),
 
-        'api_secret'    => env('MTN_MOMO_REMITTANCE_API_SECRET'),
+    //     'api_secret'    => env('MTN_MOMO_REMITTANCE_API_SECRET'),
 
-        'user_id'       => env('MTN_MOMO_REMITTANCE_USER_ID'),
+    //     'user_id'       => env('MTN_MOMO_REMITTANCE_USER_ID'),
 
-        'callback_url'  => env('MTN_MOMO_REMITTANCE_CALLBACK_URL')
-    ],
+    //     'callback_url'  => env('MTN_MOMO_REMITTANCE_CALLBACK_URL')
+    // ],
 ];
