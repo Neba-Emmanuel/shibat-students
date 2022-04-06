@@ -31,7 +31,7 @@
             <nav>            
             <div class="dropdown" style="margin-left: 550px;">
                     <button onclick="myFunction()" class="dropbtn">
-                        <img src="../img/default.png" alt="user-icon" width="20" height="20">
+                        <img src="<?php echo '../upload/'.$details1[6];?>" alt="user-icon" width="20" height="20">
                         <?php echo $_SESSION['studname']; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
