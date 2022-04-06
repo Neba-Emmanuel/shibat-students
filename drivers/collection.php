@@ -25,9 +25,9 @@ $transactionInfo = $response->getMessage(); //an array containing transaction da
 if($response){
     //save transaction to database and notify the user
     //.....
-    print_r($response);
+    echo "Payment Accepted";
 }else{
     //get error from the message and notify the user
     //......
-    echo $response->getMessage();
+    echo "An error occured";
 }
