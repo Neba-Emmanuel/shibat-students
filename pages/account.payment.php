@@ -36,7 +36,7 @@
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
-                        <p><a href="../admin/admission_letter.php">Admission Letter</a></p>
+                        <!-- <p><a href="../admin/admission_letter.php">Admission Letter</a></p> -->
                         <a href="../drivers/logout.php"><img src="../img/logout.png" alt="logout" width="20">Logout</a>
                     </div>
                 </div>
