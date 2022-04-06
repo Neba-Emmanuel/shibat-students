@@ -76,7 +76,9 @@
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[1]; ?></p>
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[34]; ?></p>
                 <div class="edit" style="display: flex; justify-content: center; margin-top: 20px;">
-                    <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Change Picture</a></p>
+                    <form method="post" action="../drivers/editPic.php">
+                        <input type="submit" value="Change Picture" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">
+                    </form>
                 </div>
             </div>
             <div class="details">
