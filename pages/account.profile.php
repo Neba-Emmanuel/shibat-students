@@ -64,6 +64,9 @@
                 <p><img src="../img/default.png" alt="profile-pic" height="210" width="230" style="border-radius: 5px;"></p>
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[1]; ?></p>
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[34]; ?></p>
+                <div class="edit" style="display: flex; justify-content: center; margin-top: 20px;">
+                    <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Change Picture</a></p>
+                </div>
             </div>
             <div class="details">
                 <table>
@@ -116,9 +119,9 @@
                         <td class="info"><?php echo $details[10]; ?></td>
                     </tr>
                 </table>
-                <div class="edit" style="display: flex; justify-content: flex-end;">
+                <!-- <div class="edit" style="display: flex; justify-content: flex-end;">
                     <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Edit Profile</a></p>
-                </div>
+                </div> -->
             </div>           
        </div>
        <div class="footer">
