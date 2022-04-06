@@ -18,6 +18,17 @@
 			$sid=$details[0];
 		}   
 	}
+
+    $query1 = "SELECT * FROM student_account WHERE institute_Email ='$email'"; 
+	$result1 = $conn->query($query1) or die($conn->error);
+	if($result1->num_rows > 0) {
+		while($row1 = $result1->fetch_assoc()) {
+			foreach($row1 as $val1) {
+				$details1[] = $val1;
+			}
+			$sid1=$details1[0];
+		}   
+	}
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +53,7 @@
             <nav>            
             <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">
-                        <img src="../img/default.png" alt="user-icon" width="20" height="20">
+                        <img src="<?php echo '../upload/'.$details1[6];?>" alt="user-icon" width="20" height="20">
                         <?php echo $details[1]; $_SESSION['studname'] = $details[1]; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
@@ -61,9 +72,14 @@
        </div>
        <div class="main-content">
             <div class="profile-pic">
-                <p><img src="../img/default.png" alt="profile-pic" height="210" width="230" style="border-radius: 5px;"></p>
+                <p><img src="<?php echo '../upload/'.$details1[6];?>" alt="profile-pic" height="210" width="230" style="border-radius: 5px;"></p>
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[1]; ?></p>
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[34]; ?></p>
+                <div class="edit" style="display: flex; justify-content: center; margin-top: 20px;">
+                    <form method="post" action="../drivers/editPic.php">
+                        <input type="file" value="Change Picture" name="editPic" style="padding: 10px 0 10px 5px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">
+                    </form>
+                </div>
             </div>
             <div class="details">
                 <table>
@@ -116,9 +132,9 @@
                         <td class="info"><?php echo $details[10]; ?></td>
                     </tr>
                 </table>
-                <div class="edit" style="display: flex; justify-content: flex-end;">
+                <!-- <div class="edit" style="display: flex; justify-content: flex-end;">
                     <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Edit Profile</a></p>
-                </div>
+                </div> -->
             </div>           
        </div>
        <div class="footer">

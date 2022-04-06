@@ -1,0 +1,33 @@
+{
+    "name": "larrytech7/omnipay-momocm",
+    "description": "MTN CAM mobile money driver gateway for Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "momoc",
+        "mobile",
+        "money",
+        "payment"
+    ],
+    "homepage" : "https://github.com/larrytech7/omnipay-momocm",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Akah Harvey",
+            "email": "larryakah@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "require": {
+        "omnipay/common": "^3"
+    },
+    "require-dev": {
+        "omnipay/tests": "3.0-beta.1"
+    },
+    "autoload": {
+        "psr-4": { "Omnipay\\Momoc\\" : "src/" }
+    }
+}

@@ -31,12 +31,12 @@
             <nav>            
             <div class="dropdown" style="margin-left: 550px;">
                     <button onclick="myFunction()" class="dropbtn">
-                        <img src="../img/default.png" alt="user-icon" width="20" height="20">
+                        <img src="<?php echo '../upload/'.$details1[6];?>" alt="user-icon" width="20" height="20">
                         <?php echo $_SESSION['studname']; ?>
                         <img src="../img/dropdown.png" alt="dropdown">
                     </button>
                     <div id="myDropdown" class="dropdown-content">
-                        <p><a href="../admin/admission_letter.php">Admission Letter</a></p>
+                        <!-- <p><a href="../admin/admission_letter.php">Admission Letter</a></p> -->
                         <a href="../drivers/logout.php"><img src="../img/logout.png" alt="logout" width="20">Logout</a>
                     </div>
                 </div>

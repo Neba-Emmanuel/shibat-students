@@ -1,39 +1,34 @@
 <?php
-require_once("vendor\autoload.php");
-require_once("vendor\patricpoba\mtn-momo-api-php\src\MtnCollection.php");
-require_once("vendor\patricpoba\mtn-momo-api-php\src\Http\ApiResponse.php");
-use vendor\autoload;
-use PatricPoba\MtnMomo\MtnConfig;
-use PatricPoba\MtnMomo\MtnCollection;
-use PatricPoba\MtnMomo\Http\ApiResponse;
- 
-$config = new MtnConfig([ 
-    // mandatory credentials
+require "vendor/autoload.php";
+// use Omnipay\Common\GatewayFactory;
+// require "vendor/omnipay/common/src/omnipay.php";
+use Omnipay\Omnipay;
+
+$gateway = Omnipay::create('Momoc');
+$gateway->setTestMode(TRUE);
+$config = [
     'baseUrl'               => 'https://sandbox.momodeveloper.mtn.com', 
     'currency'              => 'EUR', 
-    'targetEnvironment'     => 'sandbox', 
-
-    // collection credentials
-    "collectionApiSecret"   => '32bfa2c1ad084d1c9fabf29da9dfa806', 
-    "collectionPrimaryKey"  => '64aaacbf2dbe4de98ae2839ea6e89243', 
-    "collectionUserId"      => 'c5617f01-9970-4afb-b290-a1d930b6c118'
-]);
-
-
-$collection = new MtnCollection($config); 
-
-$params = [
-    "mobileNumber"      => '233540000000', 
-    "amount"            => '100', 
-    "externalId"        => '46733123453',
-    "payerMessage"      => 'some note',
-    "payeeNote"         => '1212'
+    'targetEnvironment'     => 'sandbox',
+    'providerCallbackHost' =>'http://localhost',
+    'amount' => 100.00, //amount the client should pay
+    'api_user' => 'c0a9acdb-636b-4267-995c-4df86298165a', //your provided profile apiuser
+    'api_key' => 'c7ecfae4f8ea4fe8839542e2a7688ddc', //your provided profile api key
+    'subscription_key' => '8af9716e90c48d9a93fa8f62a3a5807d', //your provided subscription key 8af9716e90c48d9a93fa8f62a3a5807d
 ];
 
-$transactionId = $collection->requestToPay($params);
+$gateway->authorize($config);
+$response = $gateway->purchase($config)->send();
 
-$transaction = $collection->getTransaction($transactionId);
+$transactionInfo = $response->getMessage(); //an array containing transaction data
 
-$response = $transactionId->isSuccess($params);
-
-?>
+if($response){
+    //save transaction to database and notify the user
+    //.....
+    echo "Payment Accepted";
+    header ("refresh:5;url=../pages/admission.form.php");
+}else{
+    //get error from the message and notify the user
+    //......
+    echo "An error occured";
+}

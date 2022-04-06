@@ -50,13 +50,16 @@
             </div>
             <div class="mtn-to-shibat">
                 <img src="../img/mtn2shibat.png" alt="mtn2shibat" style="width: 100%; height: auto;">
+                <p></p>
+                <form action="../drivers/collection.php" method="post">
                 <table>
                     <tr>
                         <td>MTN Mobile Money Number</td>
                         <td><input type="text" placeholder="+237" disabled class="disabled"><input type="number" placeholder="Mobile Money Number" class="momo-number" name="mobile-number"></td>
                     </tr>
                 </table>
-                <p><a href="admission.form.php"><input type="submit" value="Make Payment" class="payment-btn"></a></p>
+                <p><a href="#"><input type="submit" value="Make Payment" class="payment-btn" name="payment-btn"></a></p>
+                </form>
             </div>
         </div>
         <footer>
