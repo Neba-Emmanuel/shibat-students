@@ -34,4 +34,6 @@ $transactionId = $collection->requestToPay($params);
 
 $transaction = $collection->getTransaction($transactionId);
 
+$response = $transactionId->isSuccess($params);
+
 ?>
