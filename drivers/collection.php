@@ -26,6 +26,7 @@ if($response){
     //save transaction to database and notify the user
     //.....
     echo "Payment Accepted";
+    header ("refresh:5;url=../pages/admission.form.php");
 }else{
     //get error from the message and notify the user
     //......
