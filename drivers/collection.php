@@ -14,9 +14,9 @@ $config = new MtnConfig([
     'targetEnvironment'     => 'sandbox', 
 
     // collection credentials
-    "collectionApiSecret"   => '32bfa2c1ad084d1c9fabf29da9dfa806', 
-    "collectionPrimaryKey"  => '64aaacbf2dbe4de98ae2839ea6e89243', 
-    "collectionUserId"      => 'c5617f01-9970-4afb-b290-a1d930b6c118'
+    "collectionApiSecret"   => 'c7ecfae4f8ea4fe8839542e2a7688ddc', 
+    "collectionPrimaryKey"  => '8daf9716e90c48d9a93fa8f62a3a5807', 
+    "collectionUserId"      => 'c0a9acdb-636b-4267-995c-4df86298165a'
 ]);
 
 
@@ -33,7 +33,16 @@ $params = [
 $transactionId = $collection->requestToPay($params);
 
 $transaction = $collection->getTransaction($transactionId);
+$response = $collection->requestToPay($params);
 
-$response = $transactionId->isSuccess($params);
+if($response->isSuccessful()){
+    //save transaction to database and notify the user
+    //.....
+    print_r($response);
+}else{
+    //get error from the message and notify the user
+    //......
+    echo $response->requestToPay();
+}
 
 ?>
