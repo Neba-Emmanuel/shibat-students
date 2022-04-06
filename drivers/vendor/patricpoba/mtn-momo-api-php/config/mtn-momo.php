@@ -25,7 +25,7 @@ return [
 
         'user_id'       => env('MTN_MOMO_COLLECTION_USER_ID', 'c5617f01-9970-4afb-b290-a1d930b6c118'),
 
-        'callback_url'  => env('MTN_MOMO_COLLECTION_CALLBACK_URL', 'localhost:shibat-students/')
+        'callback_url'  => env('MTN_MOMO_COLLECTION_CALLBACK_URL','localhost:shibat-students')
     ],
  
 

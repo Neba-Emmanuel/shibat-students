@@ -1,9 +1,9 @@
 {
     "name": "SwissLink University Students",
     "short_name": "SHIBAT Students",
-    "start_url": "shibat-students/index.php",
+    "start_url": ".",
     "display": "standalone",
-    "background_color": "#fff",
+    "background_color": "#0487D9C1",
     "description": "A student management system to manage students in SwissLink Higher Institute of Business and Technology Kumba & Bonaberi-Douala",
     "icons": [
         {
