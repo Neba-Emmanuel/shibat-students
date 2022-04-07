@@ -22,7 +22,7 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 134px 525px 1698px 2500px 425px 100px;
+    grid-template-rows: 100pt 425pt 1198pt 1900pt 325pt 100pt;
     grid-template-areas: "nav nav nav nav nav nav nav nav"
     "hero hero hero hero hero hero hero hero"
     "left-gutter admission admission admission admission admission admission right-gutter"
@@ -52,8 +52,8 @@ header nav ul{
 nav ul li a{
     color: #FFF;
     text-transform: uppercase;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 5pt;
+    padding: 15pt;
     font-weight: bold;
 }
 
@@ -280,7 +280,7 @@ footer p{
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
 
-@media only screen and (min-width: 568px) {
+@media only screen and (max-width: 550px) {
     .container{
         display: grid;
         height: 100vh;
