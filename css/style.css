@@ -299,7 +299,7 @@ footer p{
     }
 
     header a p{
-        background: url("img/logo.png");
+        background: url("../img/logo.png");
     }
     
     header nav ul{
@@ -316,7 +316,6 @@ footer p{
     }
     
     nav ul li a:hover{
-        color: #0487D9;
         text-decoration: underline;
     }
 
