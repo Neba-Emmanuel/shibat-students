@@ -52,9 +52,9 @@ $mpdf -> SetFont('','N','12');
 $mpdf -> Cell(0,8,'Date: '.date("d M, Y"),0,1,'L',1);
 $mpdf -> Cell(0,8,'Name: '.$_SESSION['studname'],0,1,'L',1);
 $mpdf -> Cell(0,8,'Entry Level: '.$_SESSION['level'],0,1,'L',1);
+$mpdf -> Cell(0,8,"Matricle: ". $_SESSION['matricle'],0,1,'L',1);
 $mpdf -> Cell(0,8,"Number: ". $_SESSION['number'],0,1,'L',1);
 $mpdf -> Cell(0,8,"Amount: ". $_SESSION['amt'],0,1,'L',1);
-$mpdf -> Cell(0,8,"Amount: ". $_SESSION['matricle'],0,1,'L',1);
 $mpdf -> Image('../img/footer.png', '15', '80');
 $mpdf->Output('Payment reciept.pdf','I');
 }
