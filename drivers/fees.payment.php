@@ -55,7 +55,7 @@ $mpdf -> Cell(0,8,'Entry Level: '.$_SESSION['level'],0,1,'L',1);
 $mpdf -> Cell(0,8,"Number: ". $_SESSION['number'],0,1,'L',1);
 $mpdf -> Cell(0,8,"Amount: ". $_SESSION['amt'],0,1,'L',1);
 $mpdf -> Image('../img/footer.png', '15', '80');
-$mpdf->Output('Payment reciept.pdf','D');
+$mpdf->Output('Payment reciept.pdf','I');
 }
     header ("refresh:5;url=../drivers/fees.reciept.php");
 
