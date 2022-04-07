@@ -72,8 +72,8 @@
                     <option value="100000">100,000</option>
                   </select></p>
                   <p><input type="text" name="number" placeholder="Phone Number"></p>
-                  <p><input type="hidden" name="name" value=""></p>
-                  <p><input type="hidden" name="level" value=""></p>
+                  <!-- <p><input type="hidden" name="name" value=""></p>
+                  <p><input type="hidden" name="level" value=""></p> -->
                   <p><input type="submit" name="submit" value="Make Payment"></p>
                 </form>
             </div>
