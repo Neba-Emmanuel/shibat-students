@@ -124,7 +124,8 @@ nav ul li a:hover{
 }
 
 .admission-info h1{
-    font-size: 30pt;
+    height: 73pt;
+    font-size: 26pt;
     color: #CE3E3E;
     text-transform: uppercase;
     margin-bottom: 31px;
@@ -147,7 +148,7 @@ nav ul li a:hover{
 }
 
 .admission-info #enrolment-txt{
-    margin-top: 60px;
+    margin-top: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,7 +286,94 @@ footer p{
         display: grid;
         height: 100vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 134px 525px 1698px 2500px 425px 100px;
+        grid-template-rows: 134px 525px 1698px 2500px 1170px 100px;
         grid-template-areas: "nav" "hero" "admission" "programs" "footer" "foot";
+    }
+
+    header{
+        background-color: #0487D9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: nav;
+    }
+
+    header a p{
+        background: url("img/logo.png");
+    }
+    
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav ul li a{
+        color: #FFF;
+        text-transform: uppercase;
+        border-radius: 5pt;
+        padding: 15pt;
+        font-weight: bold;
+    }
+    
+    nav ul li a:hover{
+        color: #0487D9;
+        background-color: #FFF;
+    }
+
+    .our-programs h1{
+        display: flex;
+        width: auto;
+        height: 63pt;
+        justify-content: center;
+        align-items: center;
+        font-size: 26pt;
+        background: #CE3E3E;
+        color: #FFF;
+    }
+    
+    .our-programs{
+        grid-area: programs;
+        margin-top: 140pt;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: footer;
+        background: #0487D9C1;
+        margin-top: 470px;
+        /* margin-bottom: 220px; */
+    }
+
+    .social{
+        margin-right: 100px;
+    }
+
+    .social p{
+        margin: 10px 0 5px 0;
+    }
+    
+    .social a{
+        color:#FFF;
+        font-size: 14pt;
+        margin-left: 10px;
+    }
+
+    .foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #0487D9;
+        color: #FFF;
+        grid-area: foot;
+        /* margin-top: 60px; */
+    }
+    
+    footer p{
+        color: #FFF;
     }
 }
