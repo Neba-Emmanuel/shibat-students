@@ -132,6 +132,10 @@
                         <td>STUDENT ADDRESS</td>
                         <td class="info"><?php echo $details[10]; ?></td>
                     </tr>
+                    <tr>
+                        <td>ADMISSION DATE</td>
+                        <td class="info"><?php echo $details[38]; ?></td>
+                    </tr>
                 </table>
                 <!-- <div class="edit" style="display: flex; justify-content: flex-end;">
                     <p><a href="#" style="padding: 10px 20px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">Edit Profile</a></p>
