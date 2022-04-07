@@ -83,7 +83,7 @@ ul{
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 2.7fr;
-    grid-template-areas: "pic details";
+    grid-template-areas: "pic details" "note note" "form form";
     background: url('../img/account-logo.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -214,22 +214,24 @@ table td{
 
 
 /* Payment */
-/* .note p{
+.note p{
+    grid-area: note;
     display: flex;
     width: auto;
-    height: 100pt;
+    /* height: 100pt; */
     justify-content: center;
-    background-color: aquamarine;
-    margin: 20pt 0 0 80pt;
-} */
+    /* background-color: aquamarine;
+    margin: 20pt 0 0 80pt; */
+}
 
 .form-container{
+    grid-area: form;
     display: flex;
     width: 300pt;
     height: 350pt;
     justify-content: center;
     align-items: center;
-    margin: 35pt 0 0 340pt;
+    margin: 0 0 35pt 340pt;
     background-color: rgb(205, 159, 248);
 }
 
