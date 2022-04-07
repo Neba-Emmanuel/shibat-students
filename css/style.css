@@ -58,8 +58,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #0487D9;
-    background-color: #FFF;
+    text-decoration: underline;
 }
 
 /* --------------------------------------- Hero section -------------------------------------------- */
@@ -318,7 +317,7 @@ footer p{
     
     nav ul li a:hover{
         color: #0487D9;
-        background-color: #FFF;
+        text-decoration: underline;
     }
 
     .our-programs h1{
