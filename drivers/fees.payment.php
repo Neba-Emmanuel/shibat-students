@@ -7,10 +7,9 @@ use Omnipay\Omnipay;
 if(isset($_POST['submit'])){
     include_once '../include/db_connection.php';
 
-    $amt = $_POST['amount'];
-    $tel = $_POST['number'];
-    $name = $_POST['name'];
-    $level = $_POST['level'];
+    $_SESSION['amt'] = $_POST['amount'];
+    $_SESSION['number'] = $_POST['number'];
+    
 
 $gateway = Omnipay::create('Momoc');
 $gateway->setTestMode(TRUE);
