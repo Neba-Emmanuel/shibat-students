@@ -65,7 +65,7 @@
            <p>NB: Fees can be paid in installments (First, Second, and Third)<br>Click on the Amount dropdown to seleect installment</p>
          </div>
             <div class="form-container">
-                <form action="../drivers/mpdf1/fees.payment.php" method="post">
+                <form action="../drivers/fees.payment.php" method="post">
                   <p><select name="amount">
                     <option value="">Select Amount</option>
                     <option value="100000">100,000</option>

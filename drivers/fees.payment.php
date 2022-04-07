@@ -36,7 +36,8 @@ if($response){
     // include_once '../include/db_connection.php';
 
     
-    header ("refresh:5;url=../drivers/fees.insertion.php");
+    header ("Location: ../admin/fees.insertion.php");
+    
 
 }else{
     //get error from the message and notify the user
