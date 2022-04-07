@@ -279,3 +279,13 @@ footer p{
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
+
+@media only screen and (min-width: 568px) {
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 134px 525px 1698px 2500px 425px 100px;
+        grid-template-areas: "nav" "hero" "admission" "programs" "footer" "foot";
+    }
+}
