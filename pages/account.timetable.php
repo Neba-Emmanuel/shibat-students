@@ -60,7 +60,8 @@
             <p><a href="#" class="link active"><img src="../img/time-table.png" alt="calender-icon">&nbsp;TIME TABLE</a></p>
        </div>
        <div class="main-content">
-            
+            <embed src="../upload/atestation-2.pdf" type="" style="width: 1316px; height: 100%;">
+            <!-- <iframe src="../upload/atestation-2.pdf" frameborder="0" style="width: 100vw; height: 100%;"></iframe> -->
        </div>
        <div class="footer">
             <p>Powered by Emmis Technologies</p>
