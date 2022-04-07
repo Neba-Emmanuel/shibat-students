@@ -97,7 +97,7 @@
                     </tr>
                     <tr>
                         <td>LEVEL</td>
-                        <td class="info"><?php echo $details[25]; ?></td>
+                        <td class="info"><?php echo $details[25]; $_SESSION['level'] = $details[25];?></td>
                     </tr>
                     <tr>
                         <td>MATRICULATION No.</td>
