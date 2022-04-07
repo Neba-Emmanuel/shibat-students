@@ -11,7 +11,8 @@ if($sql){
              </script>";
 }
 else{
-    echo "<script language='javascript'>alert('Submission was unsucessful!');
-			window.location.href='/shibat-students/pages/account.payment.php';
-             </script>";
+    // echo "<script language='javascript'>alert('Submission was unsucessful!');
+	// 		window.location.href='/shibat-students/pages/account.payment.php';
+    //          </script>";
+    echo(mysqli_error($conn));
 }
