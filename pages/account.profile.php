@@ -74,10 +74,10 @@
             <div class="profile-pic">
                 <p><img src="<?php echo '../upload/'.$details1[6];?>" alt="profile-pic" height="210" width="230" style="border-radius: 5px;"></p>
                 <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[1]; ?></p>
-                <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[34]; ?></p>
+                <p style="text-align: center; color: #667; font-weight: 600; font-size: 24px"><?php echo $details[34]; $_SESSION['matricle'] = $details[34];?></p>
                 <div class="edit" style="display: flex; justify-content: center; margin-top: 20px;">
                     <form method="post" action="../drivers/editPic.php">
-                        <input type="file" value="Change Picture" name="editPic" style="padding: 10px 0 10px 5px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">
+                        <input type="submit" value="Change Picture" name="editPic" style="padding: 10px; color: #FFF; background: #00985A; font-size: 20px; border: none; border-radius: 5px; cursor:pointer;">
                     </form>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                     </tr>
                     <tr>
                         <td>LEVEL</td>
-                        <td class="info"><?php echo $details[25]; ?></td>
+                        <td class="info"><?php echo $details[25]; $_SESSION['level'] = $details[25];?></td>
                     </tr>
                     <tr>
                         <td>MATRICULATION No.</td>

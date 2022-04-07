@@ -83,7 +83,7 @@ ul{
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 2.7fr;
-    grid-template-areas: "pic details";
+    grid-template-areas: "pic details" "note note" "form form";
     background: url('../img/account-logo.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -211,6 +211,53 @@ table td{
     background-color: gold; 
     grid-area: content3;
 } */
+
+
+/* Payment */
+.note p{
+    grid-area: note;
+    display: flex;
+    width: auto;
+    /* height: 100pt; */
+    justify-content: center;
+    background-color: #59bbf8c1;
+    font-size: 18pt;
+    padding: 30pt;
+    margin: 20pt 0 0 220pt;
+}
+
+.form-container{
+    grid-area: form;
+    display: flex;
+    width: 300pt;
+    height: 160pt;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 120pt 340pt;
+    background-color: rgb(177, 174, 179);
+}
+
+form p{
+    padding-bottom: 10px;
+}
+
+form p select{
+    width: 250pt;
+    height: 30pt;
+    margin-top: -10px;
+}
+
+form p input{
+    width: 250pt;
+    height: 30pt;
+}
+
+form p input[type="submit"]{
+    background: #0487D9;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+}
 
 .footer{
     display: flex;

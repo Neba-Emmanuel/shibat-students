@@ -22,7 +22,7 @@ ul{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 134px 525px 1698px 2500px 425px 100px;
+    grid-template-rows: 100pt 425pt 1198pt 1900pt 325pt 100pt;
     grid-template-areas: "nav nav nav nav nav nav nav nav"
     "hero hero hero hero hero hero hero hero"
     "left-gutter admission admission admission admission admission admission right-gutter"
@@ -52,14 +52,13 @@ header nav ul{
 nav ul li a{
     color: #FFF;
     text-transform: uppercase;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 5pt;
+    padding: 15pt;
     font-weight: bold;
 }
 
 nav ul li a:hover{
-    color: #0487D9;
-    background-color: #FFF;
+    text-decoration: underline;
 }
 
 /* --------------------------------------- Hero section -------------------------------------------- */
@@ -103,13 +102,13 @@ nav ul li a:hover{
 }
 
 .hero-section h1{
-    font-size: 56px;
+    font-size: 46pt;
     text-transform: uppercase;
     color: #FFF;
 }
 
 .hero-section p{
-    font-size: 36px;
+    font-size: 30pt;
     color: #FFF;
 }
 
@@ -124,7 +123,8 @@ nav ul li a:hover{
 }
 
 .admission-info h1{
-    font-size: 36px;
+    height: 73pt;
+    font-size: 26pt;
     color: #CE3E3E;
     text-transform: uppercase;
     margin-bottom: 31px;
@@ -132,7 +132,7 @@ nav ul li a:hover{
 
 .admission-info p{
     margin-bottom: 21px;
-    font-size: 24px;
+    font-size: 18pt;
 }
 
 .admission-info p img{
@@ -147,16 +147,16 @@ nav ul li a:hover{
 }
 
 .admission-info #enrolment-txt{
-    margin-top: 112px;
+    margin-top: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 18pt;
 }
 
 .admission-info #apply-btn{
-    font-size: 37px;
+    font-size: 27pt;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -164,8 +164,8 @@ nav ul li a:hover{
 }
 
 .admission-info a{
-    width: 250px;
-    height: 73px;
+    width: 190pt;
+    height: 53pt;
     background-color: #0487D9C1;
     border-radius: 6px;
     color: #FFF;
@@ -179,10 +179,10 @@ nav ul li a:hover{
 .our-programs h1{
     display: flex;
     width: auto;
-    height: 73px;
+    height: 63pt;
     justify-content: center;
     align-items: center;
-    font-size: 36px;
+    font-size: 26pt;
     background: #CE3E3E;
     color: #FFF;
 }
@@ -192,7 +192,7 @@ nav ul li a:hover{
 }
 
 .school{
-    font-size: 36px;
+    font-size: 26pt;
     font-weight: bold;
     color: rgb(46, 45, 45);
     margin-top: 15px;
@@ -209,7 +209,7 @@ nav ul li a:hover{
 .departments p{
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18pt;
 }
 
 .departments p img{
@@ -236,7 +236,7 @@ nav ul li a:hover{
 
 .addresses{
     color:#FFF;
-    font-size: 20px;
+    font-size: 14pt;
 }
 
 .addresses p{
@@ -249,7 +249,7 @@ nav ul li a:hover{
 
 .social{
     color:#FFF;
-    font-size: 20px;
+    font-size: 14pt;
 }
 
 .social p{
@@ -258,7 +258,7 @@ nav ul li a:hover{
 
 .social a{
     color:#FFF;
-    font-size: 20px;
+    font-size: 14pt;
     margin-left: 10px;
 }
 
@@ -279,3 +279,99 @@ footer p{
 /* ------------------------------------------------ */
 /* ------------ Mobile Version --------------------- */
 /* ------------------------------------------------ */
+
+@media only screen and (max-width: 550px) {
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 134px 525px 1698px 2500px 1170px 100px;
+        grid-template-areas: "nav" "hero" "admission" "programs" "footer" "foot";
+    }
+
+    header{
+        background-color: #0487D9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: nav;
+    }
+
+    header a p{
+        background: url("../img/logo.png");
+    }
+    
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav ul li a{
+        color: #FFF;
+        text-transform: uppercase;
+        border-radius: 5pt;
+        padding: 15pt;
+        font-weight: bold;
+    }
+    
+    nav ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .our-programs h1{
+        display: flex;
+        width: auto;
+        height: 63pt;
+        justify-content: center;
+        align-items: center;
+        font-size: 26pt;
+        background: #CE3E3E;
+        color: #FFF;
+    }
+    
+    .our-programs{
+        grid-area: programs;
+        margin-top: 140pt;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: footer;
+        background: #0487D9C1;
+        margin-top: 470px;
+        /* margin-bottom: 220px; */
+    }
+
+    .social{
+        margin-right: 100px;
+    }
+
+    .social p{
+        margin: 10px 0 5px 0;
+    }
+    
+    .social a{
+        color:#FFF;
+        font-size: 14pt;
+        margin-left: 10px;
+    }
+
+    .foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #0487D9;
+        color: #FFF;
+        grid-area: foot;
+        /* margin-top: 60px; */
+    }
+    
+    footer p{
+        color: #FFF;
+    }
+}

@@ -7,6 +7,18 @@
         header("location:account.login.php");
         exit;
     }
+
+    $email = $_SESSION["email"];
+    $query1 = "SELECT * FROM student_account WHERE institute_Email ='$email'"; 
+	$result1 = $conn->query($query1) or die($conn->error);
+	if($result1->num_rows > 0) {
+		while($row1 = $result1->fetch_assoc()) {
+			foreach($row1 as $val1) {
+				$details1[] = $val1;
+			}
+			$sid1=$details1[0];
+		}   
+	}
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +61,22 @@
             <p><a href="account.timetable.php" class="link"><img src="../img/time-table.png" alt="calender-icon">&nbsp;TIME TABLE</a></p>
        </div>
        <div class="main-content">
-            
+         <div class="note">
+           <p>NB: Fees can be paid in installments (First, Second, and Third)<br>Click on the Amount dropdown to seleect installment</p>
+         </div>
+            <div class="form-container">
+                <form action="../drivers/fees.payment.php" method="post">
+                  <p><select name="amount">
+                    <option value="">Select Amount</option>
+                    <option value="100000">100,000</option>
+                    <option value="100000">100,000</option>
+                  </select></p>
+                  <p><input type="text" name="number" placeholder="Phone Number"></p>
+                  <!-- <p><input type="hidden" name="name" value=""></p>
+                  <p><input type="hidden" name="level" value=""></p> -->
+                  <p><input type="submit" name="submit" value="Make Payment"></p>
+                </form>
+            </div>
        </div>
        <div class="footer">
             <p>Powered by Emmis Technologies</p>

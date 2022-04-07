@@ -7,6 +7,17 @@
         header("location:account.login.php");
         exit;
     }
+    $email = $_SESSION["email"];
+    $query1 = "SELECT * FROM student_account WHERE institute_Email ='$email'"; 
+	$result1 = $conn->query($query1) or die($conn->error);
+	if($result1->num_rows > 0) {
+		while($row1 = $result1->fetch_assoc()) {
+			foreach($row1 as $val1) {
+				$details1[] = $val1;
+			}
+			$sid1=$details1[0];
+		}   
+	}
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +60,8 @@
             <p><a href="#" class="link active"><img src="../img/time-table.png" alt="calender-icon">&nbsp;TIME TABLE</a></p>
        </div>
        <div class="main-content">
-            
+            <embed src="../upload/atestation-2.pdf" type="" style="width: 1316px; height: 100%;">
+            <!-- <iframe src="../upload/atestation-2.pdf" frameborder="0" style="width: 100vw; height: 100%;"></iframe> -->
        </div>
        <div class="footer">
             <p>Powered by Emmis Technologies</p>
