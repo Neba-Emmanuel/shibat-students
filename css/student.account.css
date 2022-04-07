@@ -212,6 +212,27 @@ table td{
     grid-area: content3;
 } */
 
+
+/* Payment */
+/* .note p{
+    display: flex;
+    width: auto;
+    height: 100pt;
+    justify-content: center;
+    background-color: aquamarine;
+    margin: 20pt 0 0 80pt;
+} */
+
+.form-container{
+    display: flex;
+    width: 300pt;
+    height: 350pt;
+    justify-content: center;
+    align-items: center;
+    margin: 35pt 0 0 340pt;
+    background-color: rgb(205, 159, 248);
+}
+
 .footer{
     display: flex;
     flex-direction: column;
