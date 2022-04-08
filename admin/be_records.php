@@ -134,6 +134,7 @@
                                 <input type="hidden" name="author" value="<?php echo $details[3];?>">
                                 <label>Title</label>
                                 <input type="text" name='title' placeholder="Title" class="form-control" style="margin-bottom: 10px">
+                                <label>Attachment</label><input type="file" name='attachment' class="form-control" style="margin-bottom: 10px">
                                 <textarea id="textarea" placeholder="Enter info ..." name="body" class="form-control" style="width: 825px; height: 200px; margin-bottom: 10px;"></textarea>
                                 <script type="text/javascript">
                                 $('#textarea').wysihtml5();
@@ -169,6 +170,7 @@
                                 <div class="row contentbody" style="margin-left: -3px;">
                                     <div class="col-sm-12">
                                       <p> <?php echo $row['body']; ?></p> 
+                                      <p><a href="<?php echo"../upload/".$row['attachment']; ?>" target="_blank">Preview</a></p>
                                     </div>
                                 
                                     <div class="col-sm-12 f-author">
