@@ -64,7 +64,7 @@
                      <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>                 
                       <?php echo $val; ?>
                      </h2>
-                     <h4>Admissions</h4>
+                     <h4>Student on Admission</h4>
                   </div>
                </div>
             </div>

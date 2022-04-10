@@ -29,7 +29,7 @@ if(isset($_POST['admit'])){
         $first_name = explode(' ', trim($name));
         $email = strtolower($first_name[0].".".$last_name."@swisslinkedu.com");        
 
-    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$counter'+1), instituteEmail = '$email' WHERE ID = '$id'");   
+    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$counter'+4), instituteEmail = '$email' WHERE ID = '$id'");   
     echo "<script language='javascript'>alert('Student Admitted!');
         window.location.href='records.php';
      </script>";
