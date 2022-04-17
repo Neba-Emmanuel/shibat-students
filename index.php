@@ -16,7 +16,7 @@
     <div class="container">
         <div class="left-gutter"></div>
         <header>
-            <a href="#"><p><img src="img/nav logo.png" alt="SwissLink logo"></p></a>
+            <a href="#"></p></a>
             <nav>
                 <ul>
                     <li><a href="#">Back to SHIBAT</a></li>
