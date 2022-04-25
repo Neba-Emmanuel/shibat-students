@@ -25,13 +25,11 @@
             <nav>
                 <ul>
                     <span onclick="toggle()">
-                    <li class="menu" onclick="toggle()"></li>
-                    <li class="menu" onclick="toggle()"></li>
-                    <li class="menu" onclick="toggle()"></li>
+                    <li class="menu" onclick="toggle()"><img src="img/menu.png" alt="other links"></li>
                     </span>
-                    <li><a href="#">Back to SHIBAT</a></li>
-                    <li><a href="pages/account.signup.php">Already a Student</a></li>
-                    <li><a href="pages/admission.signup.php">Admission</a></li>
+                    <li><a href="#" id="show">Back to SHIBAT</a></li>
+                    <li><a href="pages/account.signup.php" id="show">Already a Student</a></li>
+                    <li><a href="pages/admission.signup.php" id="show">Admission</a></li>
                 </ul>
             </nav>
         </header>
@@ -181,12 +179,12 @@
 
             // mobile menu
             function toggle(){
-                var menu = document.getElementByClass("menu");
-                if(menu.style.display === "none"){
-                    menu.style.display = "block";
+                var x = document.getElementById("show");
+                if(x.style.display === "none"){
+                    x.style.display = "flex";
                 }
                 else {
-                    menu.style.display = "none";
+                    x.style.display = "none";
                 }
             }
         }
