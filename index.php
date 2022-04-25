@@ -16,7 +16,7 @@
     <div class="container">
         <div class="left-gutter"></div>
         <header>
-            <a href="../index.php"><p>
+            <a href="#"><p>
                 <picture>
                     <source media="(max-width: 550px)" srcset="img/logo.png">
                     <img src="img/nav logo.png" alt="SwissLink logo" id="image">
@@ -24,6 +24,11 @@
             </p></a>
             <nav>
                 <ul>
+                    <span onclick="toggle()">
+                    <li class="menu"></li>
+                    <li class="menu"></li>
+                    <li class="menu"></li>
+                    </span>
                     <li><a href="#">Back to SHIBAT</a></li>
                     <li><a href="pages/account.signup.php">Already a Student</a></li>
                     <li><a href="pages/admission.signup.php">Admission</a></li>
@@ -173,6 +178,17 @@
                     .catch(swErr => console.log(
                       `Service Worker Error: ${swErr}}`));
             });
+
+            // mobile menu
+            function toggle(){
+                var menu = document.getElementByClass("menu");
+                if(menu.style.display === "none"){
+                    menu.style.display = "block";
+                }
+                else {
+                    menu.style.display = "none";
+                }
+            }
         }
     </script>
 </body>

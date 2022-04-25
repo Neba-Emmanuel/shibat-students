@@ -301,14 +301,31 @@ footer p{
         align-items: center;
         grid-area: nav;
     }
+    
+    
 
-    /* header a p img{
-        margin-left: 50px;
-    } */
+    header a p img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* display: none; */
+    }
 
     header nav ul{
         display: flex;
+        margin-left: 180pt;
+        margin-top: -70pt;
         flex-direction: column;
+        /* display: none; */
+    }
+
+    .menu{
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: #FFF;
+        margin: 3px 0;
+        margin-left: 80pt;
     }
 
     .hero-section h1{
