@@ -112,9 +112,9 @@ nav ul li a:hover{
     color: #FFF;
 }
 
-/* header a p img{
+ /* header a p img{
     width: 100pt;
-} */
+}  */
 
 /* ------------------------------------------------ Admission Info -------------------------------------- */
 
@@ -301,14 +301,31 @@ footer p{
         align-items: center;
         grid-area: nav;
     }
+    
+    
 
     header a p img{
-        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* display: none; */
     }
 
     header nav ul{
         display: flex;
+        margin-left: 180pt;
+        margin-top: -70pt;
         flex-direction: column;
+        /* display: none; */
+    }
+
+    .menu{
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: #FFF;
+        margin: 3px 0;
+        margin-left: 80pt;
     }
 
     .hero-section h1{
