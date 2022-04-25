@@ -25,9 +25,9 @@
             <nav>
                 <ul>
                     <span onclick="toggle()">
-                    <li class="menu"></li>
-                    <li class="menu"></li>
-                    <li class="menu"></li>
+                    <li class="menu" onclick="toggle()"></li>
+                    <li class="menu" onclick="toggle()"></li>
+                    <li class="menu" onclick="toggle()"></li>
                     </span>
                     <li><a href="#">Back to SHIBAT</a></li>
                     <li><a href="pages/account.signup.php">Already a Student</a></li>
