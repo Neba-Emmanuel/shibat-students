@@ -302,13 +302,9 @@ footer p{
         grid-area: nav;
     }
 
-    header a p img{
+    /* header a p img{
         margin-left: 50px;
-    }
-
-    #image{
-        background-image: url("../img/logo.png");
-    }
+    } */
 
     header nav ul{
         display: flex;
