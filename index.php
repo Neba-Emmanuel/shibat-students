@@ -24,9 +24,7 @@
             </p></a>
             <nav>
                 <ul>
-                    <span onclick="toggle()">
                     <li class="menu" onclick="toggle()"><img src="img/menu.png" alt="other links"></li>
-                    </span>
                     <li><a href="#" id="show">Back to SHIBAT</a></li>
                     <li><a href="pages/account.signup.php" id="show">Already a Student</a></li>
                     <li><a href="pages/admission.signup.php" id="show">Admission</a></li>
