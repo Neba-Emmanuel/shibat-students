@@ -24,10 +24,12 @@
             </p></a>
             <nav>
                 <ul>
-                    <li class="menu" onclick="toggle()"><img src="img/menu.png" alt="other links"></li>
-                    <li><a href="#" id="show">Back to SHIBAT</a></li>
-                    <li><a href="pages/account.signup.php" id="show">Already a Student</a></li>
-                    <li><a href="pages/admission.signup.php" id="show">Admission</a></li>
+                    <p class="menu" onclick="toggle()"><img src="img/menu.png" alt="other links"></p>
+                    <span  id="show" style="display: none;">
+                        <li><a href="#">Back to SHIBAT</a></li>
+                        <li><a href="pages/account.signup.php">Already a Student</a></li>
+                        <li><a href="pages/admission.signup.php">Admission</a></li>
+                    </span>
                 </ul>
             </nav>
         </header>
@@ -179,7 +181,7 @@
             function toggle(){
                 var x = document.getElementById("show");
                 if(x.style.display === "none"){
-                    x.style.display = "flex";
+                    x.style.display = "block";
                 }
                 else {
                     x.style.display = "none";
