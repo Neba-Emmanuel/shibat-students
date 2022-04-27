@@ -298,7 +298,7 @@ footer p{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         grid-area: nav;
     }
     
@@ -308,7 +308,6 @@ footer p{
         display: flex;
         justify-content: center;
         align-items: center;
-        /* display: none; */
     }
 
     header nav ul{
@@ -316,14 +315,11 @@ footer p{
         margin-left: 180pt;
         margin-top: -70pt;
         flex-direction: column;
-        /* display: none; */
     }
 
     .menu{
+        cursor: pointer;
         display: block;
-        width: 35px;
-        height: 5px;
-        background-color: #FFF;
         margin: 3px 0;
         margin-left: 80pt;
     }
