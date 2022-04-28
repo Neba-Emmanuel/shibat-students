@@ -45,7 +45,11 @@ header{
     grid-area: nav;
 }
 
-header nav ul{
+.menu{
+    display: none;
+}
+
+header nav ul span{
     display: flex;
 }
 
@@ -301,25 +305,24 @@ footer p{
         align-items: flex-start;
         grid-area: nav;
     }
-    
-    
 
     header a p img{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 60pt;
     }
 
-    header nav ul{
+    header nav ul span{
         display: flex;
         margin-left: 180pt;
-        margin-top: -70pt;
+        margin-top: -50pt;
         flex-direction: column;
     }
 
     .menu{
         cursor: pointer;
-        display: block;
+        display: none;
         margin: 3px 0;
         margin-left: 80pt;
     }
