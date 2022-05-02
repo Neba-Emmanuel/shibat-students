@@ -26,7 +26,7 @@ if(isset($_POST['admit'])){
         $query1 = mysqli_query($mysqli,"SELECT Matricle FROM admission WHERE ID = '$id' ORDER BY Matricle LIMIT DESC 1");
         $row1  = mysqli_fetch_assoc($query1);
         if($row1 == TRUE){
-            $counter = substr($row['Matricle'],-1,-3);
+            $counter = substr($row1['Matricle'],-3);
         }
 
         // Student Email
