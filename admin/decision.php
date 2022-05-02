@@ -19,9 +19,15 @@ if(isset($_POST['admit'])){
 
         // Student Matricle
         $year = substr("".date('Y'),-2);
-        $counter = 100;
-        $matricle = "SL".$campus.$year.$school;
-        $sql = "select CONCAT(\'SL20T\',LPAD(RIGHT(ifnull(max(\'ID\'),\'SL20T000\'),3) + 1,3,\'100\'))";
+        //$counter = 100;
+        //$matricle = "SL".$campus.$year.$school;
+        //$sql = "select CONCAT(\'SL20T\',LPAD(RIGHT(ifnull(max(\'ID\'),\'SL20T000\'),3) + 1,3,\'100\'))";
+
+        $query1 = mysqli_query($mysqli,"SELECT Matricle FROM admission WHERE ID = '$id' ORDER BY Matricle LIMIT DESC 1");
+        $row1  = mysqli_fetch_assoc($query1);
+        if($row1 == TRUE){
+            
+        }
 
         // Student Email
         $pieces = explode(' ', $name);
