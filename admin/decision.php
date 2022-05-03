@@ -64,9 +64,9 @@ if(isset($_POST['admit'])){
         // Process your response here
         echo $response;
 
-    // echo "<script language='javascript'>alert('Student Admitted!');
-    //     window.location.href='records.php';
-    //  </script>";
+    echo "<script language='javascript'>alert('Student Admitted!');
+        window.location.href='records.php';
+     </script>";
 }
 
 if(isset($_POST['reject'])){
