@@ -19,23 +19,24 @@ if(isset($_POST['admit'])){
 
         // Student Matricle
         $year = substr("".date('Y'),-2);
-        //$counter = 100;
+        $counter = 100;
         $matricle = "SL".$campus.$year.$school;
         //$sql = "select CONCAT(\'SL20T\',LPAD(RIGHT(ifnull(max(\'ID\'),\'SL20T000\'),3) + 1,3,\'100\'))";
 
-        $query1 = mysqli_query($mysqli,"SELECT Matricle FROM admission WHERE ID = '$id' ORDER BY Matricle LIMIT DESC 1");
+        $query1 = mysqli_query($mysqli,"SELECT Matricle FROM admission WHERE ID = '$id' ORDER BY Matricle DESC LIMIT 1");
         $row1  = mysqli_fetch_assoc($query1);
         if($row1 == TRUE){
-            $counter = substr($row1['Matricle'],-3);
+            $idnum = $row['ID'];
         }
-
+        $num = $counter + $idnum;
+        
         // Student Email
         $pieces = explode(' ', $name);
         $last_name = array_pop($pieces);
         $first_name = explode(' ', trim($name));
         $email = strtolower($first_name[0].".".$last_name."@swisslinkedu.com");        
 
-    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$counter'+1), instituteEmail = '$email' WHERE ID = '$id'");   
+    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$num'), instituteEmail = '$email' WHERE ID = '$id'");   
     echo "<script language='javascript'>alert('Student Admitted!');
         window.location.href='records.php';
      </script>";
