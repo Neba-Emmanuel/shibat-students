@@ -18,18 +18,28 @@ if(isset($_POST['create-account'])){
 			 </script>";
         exit;
     }
+
     elseif (mysqli_fetch_assoc($sql)>0) {        
         echo "<script language='javascript'>alert('Account Already Exist!');
 			window.location.href='../pages/account.signup.php';
 			 </script>";
         exit;
     }
+
     elseif ($pwd != $cpwd) {
         echo "<script language='javascript'>alert('Password do not match!');
 			window.location.href='../pages/account.signup.php';
 			 </script>";
         exit;
     }
+
+    elseif ($pwd < 8 || $cpwd < 8) {
+        echo "<script language='javascript'>alert('Password is less than 8 characters');
+        window.location.href='../pages/account.signup.php';
+         </script>";
+        exit;
+    }
+
     else{
         $query = "INSERT INTO student_account(`Matricle_Number`, `Institute_Email`, `Phone_No.`, `Password`) VALUES('$mat_num', '$email', '$tel', '$hpwd')";
         $sql = mysqli_query($conn,$query);
