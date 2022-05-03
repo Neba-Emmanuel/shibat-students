@@ -44,11 +44,11 @@ if(isset($_POST['admit'])){
         $apiKey = urlencode('NmYzNjZhNzQ2MTM1NTc2ODZjNGU3YTUwMzg1YTQ4NmE=');
 	
         // Message details
-        $numbers = ('+237'.$tel);
+        $numbers = array('+237'.$tel);
         $sender = urlencode('SHIBAT');
         $message = rawurlencode('Congratulations, you have been admitted into SwissLink Higher Institute of Business and Technology, '.$row['campus_location'].' Campus. Below are you account details: Matricle No.: '.$matricle.$num.'. Institution Email: '.$email);
     
-        // $numbers = implode(',', $numbers);
+        $numbers = implode(',', $numbers);
     
         // Prepare data for POST request
         $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
@@ -64,9 +64,9 @@ if(isset($_POST['admit'])){
         // Process your response here
         echo $response;
 
-    echo "<script language='javascript'>alert('Student Admitted!');
-        window.location.href='records.php';
-     </script>";
+    // echo "<script language='javascript'>alert('Student Admitted!');
+    //     window.location.href='records.php';
+    //  </script>";
 }
 
 if(isset($_POST['reject'])){
