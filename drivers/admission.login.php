@@ -17,12 +17,21 @@
 			 </script>";
             exit;
         }
+
         elseif ($pwd != $cpwd) {
             echo "<script language='javascript'>alert('Password do not match!');
 			window.location.href='../pages/admission.signup.php';
 			 </script>";
             exit;
         }
+
+        elseif ($pwd < 8 || $cpwd < 8) {
+            echo "<script language='javascript'>alert('Password is less than 8 characters');
+			window.location.href='../pages/admission.signup.php';
+			 </script>";
+            exit;
+        }
+        
         else{
             $query = "INSERT INTO registration_account(`Name`, `Email`, `DOB`, `Password`) VALUES('$name','$email','$dob','$hpwd')";
             $sql = mysqli_query($conn,$query);
