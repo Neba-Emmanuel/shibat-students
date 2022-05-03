@@ -12,6 +12,7 @@ if(isset($_POST['admit'])){
     $query = mysqli_query($mysqli,"SELECT * FROM admission WHERE ID = '$id'");
         $row  = mysqli_fetch_assoc($query);
         if($row == TRUE){
+            $tel = $row['tel'];
             $school = substr($row['school'],10,1);
             $name = $row['name'];
             $campus = substr($row['campus_location'],0,1 );
@@ -36,7 +37,33 @@ if(isset($_POST['admit'])){
         $first_name = explode(' ', trim($name));
         $email = strtolower($first_name[0].".".$last_name."@swisslinkedu.com");        
 
-    $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$num'), instituteEmail = '$email' WHERE ID = '$id'");   
+        $result1 = mysqli_query($mysqli,"UPDATE admission SET matricle = CONCAT('$matricle','$num'), instituteEmail = '$email' WHERE ID = '$id'");   
+        
+
+        // Text Local SMS API added
+        $apiKey = urlencode('NmYzNjZhNzQ2MTM1NTc2ODZjNGU3YTUwMzg1YTQ4NmE=');
+	
+        // Message details
+        $numbers = ('+237'.$tel);
+        $sender = urlencode('SHIBAT');
+        $message = rawurlencode('Congratulations, you have been admitted into SwissLink Higher Institute of Business and Technology, '.$row['campus_location'].' Campus. Below are you account details: Matricle No.: '.$matricle.$num.'. Institution Email: '.$email);
+    
+        // $numbers = implode(',', $numbers);
+    
+        // Prepare data for POST request
+        $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+    
+        // Send the POST request with cURL
+        $ch = curl_init('https://api.txtlocal.com/send/');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        curl_close($ch);
+        
+        // Process your response here
+        echo $response;
+
     echo "<script language='javascript'>alert('Student Admitted!');
         window.location.href='records.php';
      </script>";
