@@ -123,7 +123,7 @@
                         $count = 0;
                         $count++;
                 $mysqli = mysqli_connect($databaseHost,$databaseUsername,$databasePassword,$databaseName);
-                  $query = "SELECT * FROM admission";
+                  $query = "SELECT * FROM admission WHERE `status` = 'pending'";
                   $result = mysqli_query($mysqli,$query);
                   while($addrow = mysqli_fetch_array($result)){
                     $newDate = date('d-M-Y',strtotime($addrow[11]));
