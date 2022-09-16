@@ -48,9 +48,10 @@ account</b> at <b>UNICS PLC, Kumba</b> - Acoount No: <b>37131300357006</b></p>')
 $mpdf -> WriteHTML('<p>Your personal school email account (In partnership with Google Education) will follow this format.</p>');
 $mpdf -> WriteHTML('<p><b>Username: </b>'.$email.'</p>');
 $mpdf -> WriteHTML('<p><b>Password: <b/>******** (Contact Admin)</p>');
-$mpdf -> Ln(15);
-$mpdf -> WriteHTML('<p>Yours Sincerly,</p>');
-$mpdf -> WriteHTML('<p><b>SwissLink Pofessional University</b></p>');
+// $mpdf -> Ln(15);
+$mpdf -> WriteHTML('<br><br><p>Yours Sincerly,</p>');
+$mpdf -> Image('../img/signature.png','15','235');
+$mpdf -> WriteHTML('<p><b>SwissLink Pofessional University</b></p><br>');
 $mpdf -> Image('../img/footer.png', '15', '265.5');
 // $mpdf->WriteHTML('<p>Date:</p>');
 $mpdf->Output('Admission Letter.pdf','D');
