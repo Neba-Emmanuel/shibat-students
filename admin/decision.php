@@ -20,7 +20,7 @@ if(isset($_POST['admit'])){
 
         // Student Matricle
         $year = substr("".date('Y'),-2);
-        $counter = 100;
+        $counter = 101;
         $matricle = "SL".$campus.$year.$school;
         //$sql = "select CONCAT(\'SL20T\',LPAD(RIGHT(ifnull(max(\'ID\'),\'SL20T000\'),3) + 1,3,\'100\'))";
 
